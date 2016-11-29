@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="ed2b9f08-7d47-43b9-a286-4a110d8e3733"
+  name="SWD Diagram" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="6bbe0a33-4a67-4fcb-9418-4718a943e7fa"
+        name="HusPrDag"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="cf555f05-3fab-4e50-a0a2-372f175d0864"
+            isDerived="false"
+            sourceEndRoleName="HusPrDag"
+            targetEndRoleName="AlleHusePrDagListe"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="1f1d2e28-6a95-430b-955f-5e7cb82e09de"
+              LastKnownName="AlleHusePrDagListe"
+              LastKnownLocation="SWD Diagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="249295c8-c3ff-406a-91ad-076158ecb510"
+                  name="HusPrDag"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="195d5d81-0e20-4038-a599-48b2cc903c2b"
+                  name="AlleHusePrDagListe"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f01f9423-a240-49ab-aadb-f780db5dbce0"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c3606592-60dd-488d-8d82-1d1faab2ed7a"
+                      name="Upper"
+                      value=".*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="d169b914-c2dd-4ad1-a443-16aaa0e37f2b"
+            name="Børn 3-7"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="727a213b-39f6-460b-9471-54d92719d55f"
+            name="børn under 3"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="0bc16c66-718b-46e4-b84e-fb847bc624af"
+            name="HusNr"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="df81de6f-57e2-475d-81be-89d9e1a40e45"
+            name="Teenagere"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="0fd037d2-9b4b-4633-9857-0e5c855ffff4"
+            name="Voksne"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1f1d2e28-6a95-430b-955f-5e7cb82e09de"
+        name="AlleHusePrDagListe"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="85a6ae4d-95a5-4186-8fb5-cc32fe416dc8"
+            isDerived="false"
+            sourceEndRoleName="AlleHusePrDagListe"
+            targetEndRoleName="AlleHuseHeleUgenListe"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4d546e14-a245-4ac1-84d4-6244e06911ee"
+              LastKnownName="AlleHuseHeleUgenListe"
+              LastKnownLocation="SWD Diagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3e93b4ab-cd88-41dd-91de-3598be943108"
+                  name="AlleHusePrDagListe"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b9735ce6-c082-48a1-8dd5-a1a81647eb15"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="9d96617e-bcb8-4bdc-9e31-699593806a98"
+                      name="Upper"
+                      value=".*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6bfe831d-bc8d-4d08-b874-b86ca31c16a5"
+                  name="AlleHuseHeleUgenListe"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c61efa17-038b-4cca-b6cb-a6da1d99dcd2"
+                      name="Lower"
+                      value="7" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ef243ce7-b654-4eba-9294-42ff30008ee4"
+                      name="Upper"
+                      value="7" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4d546e14-a245-4ac1-84d4-6244e06911ee"
+        name="AlleHuseHeleUgenListe"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="3bcf51fe-ec5a-4145-af53-f42ece6f5059">
+            <enumerationMoniker
+              Id="b0cf801e-2df0-4ce1-982c-a9bd7082facf"
+              LastKnownName="DagsPlan"
+              LastKnownLocation="SWD Diagram.uml" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3726e38e-394d-45be-aa38-bcee2e652e86"
+        name="UgeMadPlan"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="07857ba1-a0b1-494f-ab65-5b4d57de8c70">
+            <enumerationMoniker
+              Id="b0cf801e-2df0-4ce1-982c-a9bd7082facf"
+              LastKnownName="DagsPlan"
+              LastKnownLocation="SWD Diagram.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="371afe81-c789-4446-82a8-a07f6d170588"
+            isDerived="false"
+            sourceEndRoleName="UgeMaPlan"
+            targetEndRoleName="ChefKok"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="51e79d3d-1d3c-43ab-9501-4415751ceea4"
+              LastKnownName="ChefKok"
+              LastKnownLocation="SWD Diagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="92b0b1df-a229-42f8-a152-e5652e10042a"
+                  name="UgeMaPlan"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="701d6806-cf8d-44b8-aad1-37b6b14957eb"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6b4a0d90-afbd-4762-946d-623c8c0bf8b7"
+                      name="Upper"
+                      value="7" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0256a529-c605-4885-baa3-b55add549ec9"
+                  name="ChefKok"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="6238d149-d0ed-4ef1-bc99-84af75121b0a"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="1dc5eb1c-0316-4d61-8f21-106fd04f7d8b"
+                      name="Upper"
+                      value="7" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="413e60c1-4678-4333-97f8-fb166a3be07d"
+            name="ChefKok"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="6e24f79d-a5f0-4fb8-b3b3-a94df010cefc"
+            name="Hjælpere"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c60e65db-9d79-4a8c-992b-004ba4be6eae"
+            name="Menu"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b453fd6f-4045-45b4-8f60-751ad8f6f4f3"
+            name="Oprydning"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="51e79d3d-1d3c-43ab-9501-4415751ceea4"
+        name="ChefKok"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="4cb321bc-4586-435f-b13c-d79b4cd0ce1a"
+            isDerived="false"
+            sourceEndRoleName="ChefKok"
+            targetEndRoleName="AlleHusePrDagListe"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="1f1d2e28-6a95-430b-955f-5e7cb82e09de"
+              LastKnownName="AlleHusePrDagListe"
+              LastKnownLocation="SWD Diagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f8def7ad-5edf-45d6-9551-598dfaa2f61c"
+                  name="ChefKok"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="035d928c-20fb-43ce-aa5c-b5af08a3568d"
+                  name="AlleHusePrDagListe"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="f14616f1-9276-4553-885b-be49b637fc05"
+            name="HusNr"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="669ca371-8900-4800-b996-4ee7feebf9d9"
+            name="Navn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="07df0bf3-31f8-43f0-9a3a-ea56cd6dd2aa"
+            name="Udlæg"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="b0cf801e-2df0-4ce1-982c-a9bd7082facf"
+        name="DagsPlan"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="7d342f12-1c59-45b4-8074-68585455d2c5"
+            name="Mandag" />
+          <enumerationLiteral
+            Id="37aceaf6-da0e-41af-ae61-e51cf3f273ea"
+            name="Tirsdag" />
+          <enumerationLiteral
+            Id="05a3dce2-4f74-4fee-953e-a209ed238c93"
+            name="Onsdag" />
+          <enumerationLiteral
+            Id="535b9847-f153-439c-9c16-32d13a1424b1"
+            name="Torsdag" />
+          <enumerationLiteral
+            Id="98e07c07-9d97-4721-a665-1166ec899312"
+            name="Fredag" />
+          <enumerationLiteral
+            Id="a5630cfe-bbeb-4099-9748-d6199efb91e7"
+            name="Lørdag" />
+          <enumerationLiteral
+            Id="31d2db7e-9ffa-452b-97ec-4ecc89ac4126"
+            name="Søndag" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
