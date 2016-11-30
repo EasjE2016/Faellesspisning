@@ -229,6 +229,14 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="d42afc71-4fb9-44d8-97c2-138e8310c84d" name="Beregning" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="42294dcd-4558-4a89-af0b-fb261e40e885" />
+        <ownedAttributesInternal>
+          <property Id="933c9ce0-1499-47a2-bea8-68094c917e86" name="kontonr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="397cc986-8ca7-419f-85fd-b3fb7c9794a2" />
+          </property>
+          <property Id="ae1c2026-bc50-40d4-a384-555b38ff61fb" name="mobilepay" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a5f903a3-7619-493a-aa1f-0854a70bacc8" />
+          </property>
+        </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
