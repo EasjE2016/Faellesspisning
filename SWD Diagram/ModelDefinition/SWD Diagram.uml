@@ -510,12 +510,77 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="6992ff37-cf6b-4a17-be78-44b9fa2dc763"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="cc8ee610-fc62-40ed-b4df-82e29fecdf8a"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="3980629a-e96d-4403-bca9-f5162c59b300"
                   name="hus"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4affcdbd-be83-4719-bd7c-82e4699e39b7"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="4ca9e8aa-d0ac-4b0a-b3a9-b0792bc5a5b6"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ee7beacb-8dea-4706-9e21-27fa01aacdd8"
+            isDerived="false"
+            sourceEndRoleName="Person"
+            targetEndRoleName="kok"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d8102c32-701f-48f1-8f89-8c731d93ac97"
+              LastKnownName="kok"
+              LastKnownLocation="SWD Diagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="79203608-e75d-4d32-bc20-58c4bf0c515a"
+                  name="Person"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6f5b6d1a-9942-439d-b195-1aa68b6af0b6"
+                  name="kok"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -679,6 +744,47 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="b17012c1-9fb8-442b-804e-b4dca8dfafb3"
+            isDerived="false"
+            sourceEndRoleName="Bookning"
+            targetEndRoleName="Beregning"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="42294dcd-4558-4a89-af0b-fb261e40e885"
+              LastKnownName="Beregning"
+              LastKnownLocation="SWD Diagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="47b278d2-8101-460f-abd8-5f9699c9ac39"
+                  name="Bookning"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8be926e5-7228-47a9-8db7-8283422c8927"
+                  name="Beregning"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="2420a68a-6f71-454e-945c-8c49d505167e"
@@ -758,6 +864,164 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d8102c32-701f-48f1-8f89-8c731d93ac97"
+        name="kok"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="5b51a62a-018e-42f8-ae5d-de834433c9cf"
+            isDerived="false"
+            sourceEndRoleName="kok"
+            targetEndRoleName="Bookning"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="761566f0-233c-4e8a-9192-d92a22d6e624"
+              LastKnownName="Bookning"
+              LastKnownLocation="SWD Diagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="caf53e59-10b5-4a2b-a4e5-3a800cce5dd2"
+                  name="kok"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="618fd5fe-e3a3-4ebd-8d56-997ebd386098"
+                  name="Bookning"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="42294dcd-4558-4a89-af0b-fb261e40e885"
+        name="Beregning"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0ae832c1-6384-4d1f-ac89-b0bd64d58c27"
+        name="Hjælpere"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="edce980a-78e3-44b8-9638-517541a75cae"
+            isDerived="false"
+            sourceEndRoleName="Hjælpere"
+            targetEndRoleName="kok"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d8102c32-701f-48f1-8f89-8c731d93ac97"
+              LastKnownName="kok"
+              LastKnownLocation="SWD Diagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9eedcd66-8a26-424e-a4b9-08f6afc5c72d"
+                  name="Hjælpere"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6d2659d2-3ebc-448a-9d24-83368bff13a9"
+                  name="kok"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4fa87a62-ce92-4404-84a2-e017004426bf"
+        name="Opvasker"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="b6dc4a5d-c21d-4668-b6c9-1c0119ed11be"
+            isDerived="false"
+            sourceEndRoleName="Opvasker"
+            targetEndRoleName="kok"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d8102c32-701f-48f1-8f89-8c731d93ac97"
+              LastKnownName="kok"
+              LastKnownLocation="SWD Diagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3efbbae0-6896-4302-bbc9-6e2391ebb9a2"
+                  name="Opvasker"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c3427d29-66d7-4d78-a36a-e466b867d2f1"
+                  name="kok"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
       </class>
     </packageHasNamedElement>
   </packagedElements>
