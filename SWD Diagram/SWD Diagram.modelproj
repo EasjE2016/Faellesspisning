@@ -30,6 +30,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Class Diagram.classdiagram</DependentUpon>
     </Content>
+    <Content Include="Domain model.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Domain model.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Domain model.classdiagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\SWD Diagram.uml">
       <SubType>Content</SubType>
     </Content>

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7a52cbde-ae82-4576-8a97-59cdf7ac20f7" name="Domain model" linkedPackageId="c1e169ad-a36c-440f-8a24-a94e556031e2" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="f00f5bb9-8c1f-44d1-ba36-b581ff8772fb">
+      <profileInstance Id="0a4a3579-06d4-461e-b6ad-b39dbafdd048" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ce4265f2-092b-4385-ac13-a01ac11136c5">
+      <profileInstance Id="c4479ecb-82d6-4e37-b66c-837bf5d2b087" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="50197436-73cf-470d-9e23-9ca1dee92dd2" name="Person" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a465481d-0e41-450c-8df1-1e31575436f5" />
+        <targetEnds>
+          <association Id="1b512030-0414-456e-879a-2c1b1a298caf" isDerived="false" sourceEndRoleName="Person" targetEndRoleName="hus" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6d9fe721-9a4c-4e32-9fd4-0fec5c790a35" LastKnownName="hus" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="229dd401-ac62-486e-ac98-42642a1c2d98" name="Person" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4f1821fc-985d-4511-a7e2-f40d6b45d7c5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b85265b6-fb39-4a73-8298-95876883403c" name="hus" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3980629a-e96d-4403-bca9-f5162c59b300" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="02877547-bd83-449a-ba23-3d95f493b93e" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="407a7465-b33f-49a8-bbc7-224f0cc131f8" name="voksne" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5192f7f7-71d1-4594-a236-47ad534083a4" />
+          </property>
+          <property Id="b15ef165-60cc-49db-807d-8e21cab6f29c" name="teenager" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="71df7b88-22d3-4258-9927-3de813aa2afc" />
+          </property>
+          <property Id="79ec6f4c-8871-41f2-92f6-5132356af276" name="børn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="28f9e678-cb94-4353-8425-c479dcd671d9" />
+          </property>
+          <property Id="5748c171-df3f-460e-bf23-df73c913a14e" name="baby" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2b7aab17-0907-4147-a383-1aabbee59c18" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6d9fe721-9a4c-4e32-9fd4-0fec5c790a35" name="hus" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="41925a9e-9a72-435b-aa14-1b75e2ae9197" />
+        <targetEnds>
+          <association Id="6833ff72-bcb4-4719-9ba0-feb0def22828" isDerived="false" sourceEndRoleName="hus" targetEndRoleName="Bookning" isLeaf="false" isAbstract="false">
+            <classMoniker Id="36b75771-4202-405f-9592-a3b6063facb4" LastKnownName="Bookning" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3c8213c8-cbdc-47e7-ae6d-bfdb4be63bf1" name="hus" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="adc49845-d00d-42f4-8fc9-3f21f0d9f1b0" name="Lower" value="1">
+                      <elementDefinition Id="f1cc2f13-6c77-42f2-a860-f809e18eac8f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="babcd768-a329-4c1b-b6f0-59cec2056a27" name="Upper" value="*">
+                      <elementDefinition Id="62cfc6bb-9d8f-4a78-ae0a-49b670982249" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="a5978ad5-8433-4e57-8a28-d2f367fa3872" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="126e709f-c66f-4c96-8e76-66d250cef5a3" name="Bookning" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="7de26db7-9c53-4cc1-9422-05824c5705c5" name="Lower" value="1">
+                      <elementDefinition Id="f31f849a-03c0-4e1d-a27c-733933c81796" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="cb1725b3-b54d-4aef-89df-8eb175ebad1b" name="Upper" value="*">
+                      <elementDefinition Id="f0952f4d-997a-4ff5-b7b1-48b45e3b256b" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="0b2b7756-00ae-4b5f-ada8-2fb7006bbeb0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="34f16f00-3fdb-4fff-a42e-395a8210bee4" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="8a8f7712-da30-42ac-9173-7bdc804be019" name="Hus Nr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9949d13a-70af-4ae2-89e2-b1204d8f8326" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e7926bfd-73ba-4b4c-910a-d4394b5df46b" name="Betaling" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2ebb4628-2a43-4a33-93a0-51d1c14901fa" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="36b75771-4202-405f-9592-a3b6063facb4" name="Bookning" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="761566f0-233c-4e8a-9192-d92a22d6e624" />
+        <ownedAttributesInternal>
+          <property Id="401a9e26-7d35-4fff-995a-adc0be46f5af" name="mandag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2420a68a-6f71-454e-945c-8c49d505167e" />
+          </property>
+          <property Id="806c7769-3a49-4e83-a465-bf05ec77afb2" name="tirsdag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d1129084-820b-4da6-b7ee-d480b34f5529" />
+          </property>
+          <property Id="19aa72e4-9d8d-4293-9423-cf80c0f23221" name="onsdag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1c76cadc-d8f0-4df7-8f38-efa146fa3d38" />
+          </property>
+          <property Id="81fe05bf-3884-4dd0-907c-93381a2c30aa" name="torsdag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fa969d5e-182c-43b9-a197-84988709167a" />
+          </property>
+          <property Id="3053099d-5e84-4634-a26c-b4697f11f1fc" name="fredag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5f1aa3dd-4658-4b73-8781-b21df48ce1f0" />
+          </property>
+          <property Id="90928b95-3f88-45bc-bd5a-d8836e13b5b3" name="lørdag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5e4ff4f7-fa8d-44fc-b880-f07010a6d01c" />
+          </property>
+          <property Id="281ba6a0-f492-4755-9d92-1b930116a453" name="søndag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="88723f5c-efcf-4338-8b0e-5afcc1712232" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="c1e169ad-a36c-440f-8a24-a94e556031e2" name="SWD Diagram">
+    <elementDefinition Id="ed2b9f08-7d47-43b9-a286-4a110d8e3733" />
+  </package>
+</logicalClassDesignerModel>
