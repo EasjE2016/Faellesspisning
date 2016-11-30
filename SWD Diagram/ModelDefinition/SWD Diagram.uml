@@ -82,7 +82,7 @@
         <ownedAttributesInternal>
           <property
             Id="d169b914-c2dd-4ad1-a443-16aaa0e37f2b"
-            name="Børn 3-7"
+            name="int Børn 3-7"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -93,7 +93,7 @@
             isComposite="false" />
           <property
             Id="727a213b-39f6-460b-9471-54d92719d55f"
-            name="børn under 3"
+            name="string børn under 3"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -104,7 +104,7 @@
             isComposite="false" />
           <property
             Id="0bc16c66-718b-46e4-b84e-fb847bc624af"
-            name="HusNr"
+            name="string HusNr"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -115,7 +115,7 @@
             isComposite="false" />
           <property
             Id="df81de6f-57e2-475d-81be-89d9e1a40e45"
-            name="Teenagere"
+            name="int Teenagere"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -126,7 +126,7 @@
             isComposite="false" />
           <property
             Id="0fd037d2-9b4b-4633-9857-0e5c855ffff4"
-            name="Voksne"
+            name="stinrg Voksne"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -318,7 +318,7 @@
         <ownedAttributesInternal>
           <property
             Id="413e60c1-4678-4333-97f8-fb166a3be07d"
-            name="ChefKok"
+            name="string ChefKok"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -329,7 +329,7 @@
             isComposite="false" />
           <property
             Id="6e24f79d-a5f0-4fb8-b3b3-a94df010cefc"
-            name="Hjælpere"
+            name="string Hjælpere"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -340,7 +340,7 @@
             isComposite="false" />
           <property
             Id="c60e65db-9d79-4a8c-992b-004ba4be6eae"
-            name="Menu"
+            name="string Menu"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -351,7 +351,7 @@
             isComposite="false" />
           <property
             Id="b453fd6f-4045-45b4-8f60-751ad8f6f4f3"
-            name="Oprydning"
+            name="string Oprydning"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -414,7 +414,7 @@
         <ownedAttributesInternal>
           <property
             Id="f14616f1-9276-4553-885b-be49b637fc05"
-            name="HusNr"
+            name="string HusNr"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -425,7 +425,7 @@
             isComposite="false" />
           <property
             Id="669ca371-8900-4800-b996-4ee7feebf9d9"
-            name="Navn"
+            name="string  Navn"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -436,7 +436,7 @@
             isComposite="false" />
           <property
             Id="07df0bf3-31f8-43f0-9a3a-ea56cd6dd2aa"
-            name="Udlæg"
+            name="double Udlæg"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"

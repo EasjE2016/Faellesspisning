@@ -33,19 +33,19 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="631e6ac2-c3db-4c0f-9424-b5e902d60f23" name="Børn 3-7" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="631e6ac2-c3db-4c0f-9424-b5e902d60f23" name="int Børn 3-7" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="d169b914-c2dd-4ad1-a443-16aaa0e37f2b" />
           </property>
-          <property Id="6edb6604-794e-4f3f-89e6-a807a1cab975" name="børn under 3" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="6edb6604-794e-4f3f-89e6-a807a1cab975" name="string børn under 3" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="727a213b-39f6-460b-9471-54d92719d55f" />
           </property>
-          <property Id="29db3063-4c7f-423e-be89-138c8be0505d" name="HusNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="29db3063-4c7f-423e-be89-138c8be0505d" name="string HusNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="0bc16c66-718b-46e4-b84e-fb847bc624af" />
           </property>
-          <property Id="4a85d413-b583-4446-a79b-0a027b3c4512" name="Teenagere" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="4a85d413-b583-4446-a79b-0a027b3c4512" name="int Teenagere" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="df81de6f-57e2-475d-81be-89d9e1a40e45" />
           </property>
-          <property Id="01c97b2b-c9a2-436f-9424-b9350bbbedc4" name="Voksne" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="01c97b2b-c9a2-436f-9424-b9350bbbedc4" name="stinrg Voksne" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="0fd037d2-9b4b-4633-9857-0e5c855ffff4" />
           </property>
         </ownedAttributesInternal>
@@ -153,16 +153,16 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="bf90ddbe-aa09-4d72-98ae-d408396e17c8" name="ChefKok" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="bf90ddbe-aa09-4d72-98ae-d408396e17c8" name="string ChefKok" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="413e60c1-4678-4333-97f8-fb166a3be07d" />
           </property>
-          <property Id="63f5e82d-8ac7-4aed-bed5-02bfadab268a" name="Hjælpere" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="63f5e82d-8ac7-4aed-bed5-02bfadab268a" name="string Hjælpere" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="6e24f79d-a5f0-4fb8-b3b3-a94df010cefc" />
           </property>
-          <property Id="c9699b88-9c77-4853-b45b-2da07448b7c0" name="Menu" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="c9699b88-9c77-4853-b45b-2da07448b7c0" name="string Menu" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="c60e65db-9d79-4a8c-992b-004ba4be6eae" />
           </property>
-          <property Id="8cd2a3e9-b0a6-4f0b-8def-432bf118dce3" name="Oprydning" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="8cd2a3e9-b0a6-4f0b-8def-432bf118dce3" name="string Oprydning" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="b453fd6f-4045-45b4-8f60-751ad8f6f4f3" />
           </property>
         </ownedAttributesInternal>
@@ -190,13 +190,13 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="60fa9e19-4966-4930-add7-d4fbeb9400ea" name="HusNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="60fa9e19-4966-4930-add7-d4fbeb9400ea" name="string HusNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="f14616f1-9276-4553-885b-be49b637fc05" />
           </property>
-          <property Id="b17cb10e-c0fa-46a6-b93e-18145d37a7f2" name="Navn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="b17cb10e-c0fa-46a6-b93e-18145d37a7f2" name="string  Navn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="669ca371-8900-4800-b996-4ee7feebf9d9" />
           </property>
-          <property Id="ee1661fb-9712-4505-a6f3-e7549e391775" name="Udlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="ee1661fb-9712-4505-a6f3-e7549e391775" name="double Udlæg" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="07df0bf3-31f8-43f0-9a3a-ea56cd6dd2aa" />
           </property>
         </ownedAttributesInternal>
