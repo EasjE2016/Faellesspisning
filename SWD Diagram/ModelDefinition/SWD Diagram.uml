@@ -913,7 +913,59 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="83d377bd-1c1c-492b-825b-648aba2b7c31"
+            isDerived="false"
+            sourceEndRoleName="kok"
+            targetEndRoleName="hus"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="41925a9e-9a72-435b-aa14-1b75e2ae9197"
+              LastKnownName="hus"
+              LastKnownLocation="SWD Diagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8f0c2b63-df9d-4c29-ae2b-41a26dd17b0c"
+                  name="kok"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="179e1d53-5012-4eab-acff-01fae466a9b5"
+                  name="hus"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="36aedfd8-baa9-4fcd-961a-62068fb104e0"
+            name="Hus Nr"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -955,7 +1007,20 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="994a510a-54e7-4d6d-9ccb-baa427b3c1e7"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ebca5a65-554c-47c5-9a57-330a24102fed"
+                      name="Upper"
+                      value="3" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -1005,7 +1070,20 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a48d99d3-3e05-46a9-b8af-28bbad3ceb3b"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="787f2c25-1263-4841-8fc8-681a41f1ba81"
+                      name="Upper"
+                      value="3" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd

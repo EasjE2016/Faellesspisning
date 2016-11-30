@@ -202,7 +202,28 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="5b51a62a-018e-42f8-ae5d-de834433c9cf" />
           </association>
+          <association Id="16931904-2f84-469c-9ea6-784d47b68dbc" isDerived="false" sourceEndRoleName="kok" targetEndRoleName="hus" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6d9fe721-9a4c-4e32-9fd4-0fec5c790a35" LastKnownName="hus" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c438a751-ed39-43ab-b355-6f442a1b41d9" name="kok" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8f0c2b63-df9d-4c29-ae2b-41a26dd17b0c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e4f4e290-32bf-4832-8c00-8056a10411ab" name="hus" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="179e1d53-5012-4eab-acff-01fae466a9b5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="83d377bd-1c1c-492b-825b-648aba2b7c31" />
+          </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="93b4e754-d5fb-4b3b-a4c2-04c6354678ac" name="Hus Nr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="36aedfd8-baa9-4fcd-961a-62068fb104e0" />
+          </property>
+        </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -219,6 +240,16 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="e80cefda-0b15-40ad-9e74-9cad38094f63" name="Hjælpere" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="2e6937b5-7cc8-4c6d-a32c-56203c8adca9" name="Lower" value="1">
+                      <elementDefinition Id="994a510a-54e7-4d6d-9ccb-baa427b3c1e7" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="a6ed18fa-0a47-4bcc-8623-c6c71f48a6d0" name="Upper" value="3">
+                      <elementDefinition Id="ebca5a65-554c-47c5-9a57-330a24102fed" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="9eedcd66-8a26-424e-a4b9-08f6afc5c72d" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -242,6 +273,16 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="9dc8fbff-863f-4a3e-8bce-68386e912d23" name="Opvasker" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="ec030e39-18d8-4a56-9211-bdc61a8310d4" name="Lower" value="1">
+                      <elementDefinition Id="a48d99d3-3e05-46a9-b8af-28bbad3ceb3b" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="553799ed-3ada-4e8b-b696-8a60290cdd05" name="Upper" value="3">
+                      <elementDefinition Id="787f2c25-1263-4841-8fc8-681a41f1ba81" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="3efbbae0-6896-4302-bbc9-6e2391ebb9a2" />
                 </memberEnd>
               </associationHasOwnedEnds>
