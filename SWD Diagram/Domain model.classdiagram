@@ -1,22 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7a52cbde-ae82-4576-8a97-59cdf7ac20f7" name="Domain model" linkedPackageId="c1e169ad-a36c-440f-8a24-a94e556031e2" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="f00f5bb9-8c1f-44d1-ba36-b581ff8772fb">
-      <profileInstance Id="0a4a3579-06d4-461e-b6ad-b39dbafdd048" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="ce4265f2-092b-4385-ac13-a01ac11136c5">
-      <profileInstance Id="c4479ecb-82d6-4e37-b66c-837bf5d2b087" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
-      <class Id="50197436-73cf-470d-9e23-9ca1dee92dd2" name="Person" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="50197436-73cf-470d-9e23-9ca1dee92dd2" name="HusInfo" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="a465481d-0e41-450c-8df1-1e31575436f5" />
         <targetEnds>
           <association Id="1b512030-0414-456e-879a-2c1b1a298caf" isDerived="false" sourceEndRoleName="Person" targetEndRoleName="hus" isLeaf="false" isAbstract="false">
@@ -30,7 +16,7 @@
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="1f06168b-f1d4-4ffb-a76f-2d4eaa4ea39d" name="Upper" value="*">
+                    <literalString Id="1f06168b-f1d4-4ffb-a76f-2d4eaa4ea39d" name="Upper" value="1">
                       <elementDefinition Id="cc8ee610-fc62-40ed-b4df-82e29fecdf8a" />
                     </literalString>
                   </upperValueInternal>
@@ -103,7 +89,7 @@
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="babcd768-a329-4c1b-b6f0-59cec2056a27" name="Upper" value="*">
+                    <literalString Id="babcd768-a329-4c1b-b6f0-59cec2056a27" name="Upper" value="1">
                       <elementDefinition Id="62cfc6bb-9d8f-4a78-ae0a-49b670982249" />
                     </literalString>
                   </upperValueInternal>
@@ -118,7 +104,7 @@
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="cb1725b3-b54d-4aef-89df-8eb175ebad1b" name="Upper" value="*">
+                    <literalString Id="cb1725b3-b54d-4aef-89df-8eb175ebad1b" name="Upper" value="1">
                       <elementDefinition Id="f0952f4d-997a-4ff5-b7b1-48b45e3b256b" />
                     </literalString>
                   </upperValueInternal>
@@ -305,8 +291,60 @@
         </targetEnds>
       </class>
     </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="14b5d4c5-8daf-42e6-9686-49c02ea39a44" name="Tilmeldte" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0f0a00d4-099e-4f15-b86f-7416eba36864" />
+        <targetEnds>
+          <association Id="82662e38-4fd2-4f88-94bf-eff9de1c93bd" isDerived="false" sourceEndRoleName="Tilmeldte" targetEndRoleName="Bookning" isLeaf="false" isAbstract="false">
+            <classMoniker Id="36b75771-4202-405f-9592-a3b6063facb4" LastKnownName="Bookning" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1a5c6d08-9d39-45e3-a9c4-e93d4d3bbe28" name="Tilmeldte" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="636b3aa0-b6bf-4523-a7fc-cb8f02b3ce9a" name="Lower" value="*">
+                      <elementDefinition Id="d9ef131e-2284-47c3-a090-50240053765e" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="f022d4c2-c28e-4f5d-9f91-512ee620f255" name="Upper" value="*">
+                      <elementDefinition Id="074687ce-cf57-42c5-90bd-7e17d5734786" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="724e978e-2cce-43af-bd8c-92c003b677a8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0e037f15-1e82-4d2a-a1e4-e8ed79b90f07" name="Bookning" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="82a10c5b-3d95-482a-ae1a-f6308c0a75ba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1d4bc9a1-eb1b-4c5a-97ea-bfb4ac2a429b" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="b6ae4ff5-0de2-4a06-8aa1-50b37bfeac7d" name="fx 2 voksne og 4 børn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a7e7f91c-afa3-4bf4-8973-5cb99473ac7c" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="c1e169ad-a36c-440f-8a24-a94e556031e2" name="SWD Diagram">
     <elementDefinition Id="ed2b9f08-7d47-43b9-a286-4a110d8e3733" />
+    <profileInstances>
+      <packageHasProfileInstances Id="f00f5bb9-8c1f-44d1-ba36-b581ff8772fb">
+        <profileInstance Id="0a4a3579-06d4-461e-b6ad-b39dbafdd048" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="ce4265f2-092b-4385-ac13-a01ac11136c5">
+        <profileInstance Id="c4479ecb-82d6-4e37-b66c-837bf5d2b087" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

@@ -482,7 +482,7 @@
     <packageHasNamedElement>
       <class
         Id="a465481d-0e41-450c-8df1-1e31575436f5"
-        name="Person"
+        name="HusInfo"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -521,7 +521,7 @@
                     <literalString
                       Id="cc8ee610-fc62-40ed-b4df-82e29fecdf8a"
                       name="Upper"
-                      value="*" />
+                      value="1" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -682,7 +682,7 @@
                     <literalString
                       Id="62cfc6bb-9d8f-4a78-ae0a-49b670982249"
                       name="Upper"
-                      value="*" />
+                      value="1" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -707,7 +707,7 @@
                     <literalString
                       Id="f0952f4d-997a-4ff5-b7b1-48b45e3b256b"
                       name="Upper"
-                      value="*" />
+                      value="1" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -1125,6 +1125,82 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0f0a00d4-099e-4f15-b86f-7416eba36864"
+        name="Tilmeldte"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="1d4bc9a1-eb1b-4c5a-97ea-bfb4ac2a429b"
+            isDerived="false"
+            sourceEndRoleName="Tilmeldte"
+            targetEndRoleName="Bookning"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="761566f0-233c-4e8a-9192-d92a22d6e624"
+              LastKnownName="Bookning"
+              LastKnownLocation="SWD Diagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="724e978e-2cce-43af-bd8c-92c003b677a8"
+                  name="Tilmeldte"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d9ef131e-2284-47c3-a090-50240053765e"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="074687ce-cf57-42c5-90bd-7e17d5734786"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="82a10c5b-3d95-482a-ae1a-f6308c0a75ba"
+                  name="Bookning"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="a7e7f91c-afa3-4bf4-8973-5cb99473ac7c"
+            name="fx 2 voksne og 4 børn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
   </packagedElements>
