@@ -25,6 +25,7 @@ namespace Faellesspisning.Model
             Newhus = new Model.HusInfo();
             AddHusCommand = new RelayCommand(AddNewHus);
             SletHusCommand = new RelayCommand(Slethus);
+            SletAlleCommand = new RelayCommand(Rydliste);
             
 
             localfolder = ApplicationData.Current.LocalFolder;
@@ -43,6 +44,7 @@ namespace Faellesspisning.Model
         public RelayCommand RedigerCommand { get; set; }
         public RelayCommand BeregnPrisCommand { get; set; }
         public RelayCommand PlanlægCommand { get; set; }
+        public RelayCommand SletAlleCommand { get; set; }
 
         StorageFolder localfolder = null;
 
@@ -121,7 +123,7 @@ namespace Faellesspisning.Model
             HList.IndsætJson(jsonText);
         }
 
-        public void RydlisteData()
+        public void Rydliste()
         {
             this.HList.Clear();
         }
