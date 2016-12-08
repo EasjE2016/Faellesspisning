@@ -80,10 +80,17 @@ namespace Faellesspisning.Model
         public int AntalBarnIHusstand { get; set; }
         public int AntalBabyIHusstand { get; set; }
         public string HusNummer { get; set; }
+        public bool KommerMandag { get; set; }
+        public bool KommerTirsdag { get; set; }
+        public bool KommerOnsdag { get; set; }
+        public bool KommerTorsdag { get; set; }
+        public bool KommerFredag { get; set; }
+        public bool KommerLørdag { get; set; }
+        public bool KommerSøndag { get; set; }
 
 
         //Metode
-        
+
         public double TotalUgePris()
         {
             return Mandag + Tirsdag + Onsdag + Torsdag + Fredag + Lørdag + Søndag;
@@ -91,11 +98,21 @@ namespace Faellesspisning.Model
 
         public override string ToString()
         {
-            return "Hus: " + HusNummer +
+            string s;
+
+            s= "Hus: " + HusNummer +
             ", " + "Voksne: " + AntalVoksneIHusstand +
             ", " + "Teenagere: " + AntalTeenagerIHusstand +
             ", " + "Børn: " + AntalBarnIHusstand +
-            ", " + "Baby: " + AntalBabyIHusstand;
+            ", " + "Baby: " + AntalBabyIHusstand + " Dage: ";
+            if (KommerMandag) s += "Mandag ";
+            if (KommerTirsdag) s += "Tirsdag ";
+            if (KommerOnsdag) s += "Onsdag ";
+            if (KommerTorsdag) s += "Torsdag ";
+            if (KommerFredag) s += "Fredag ";
+            if (KommerLørdag) s += "Lørdag ";
+            if (KommerSøndag) s += "Søndag ";
+            return s;
             }
         // vi skal havde lavet en metode (selectedhus) som kan vælge et hus og se hvor mange der er i den valgte husstand
 
