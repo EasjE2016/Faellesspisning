@@ -28,7 +28,7 @@ namespace Faellesspisning.Model
             SletAlleCommand = new RelayCommand(Rydliste);
             HentJsonCommand = new RelayCommand(HentDataFraDiskAsync);
             GemJsonCommand = new RelayCommand(GemDataTilDiskAsync);
-            
+            IsMandagChecked = new RelayCommand()
 
             localfolder = ApplicationData.Current.LocalFolder;
         }
@@ -50,6 +50,7 @@ namespace Faellesspisning.Model
         public RelayCommand SletAlleCommand { get; set; }
         public RelayCommand GemJsonCommand { get; set; }
         public RelayCommand HentJsonCommand { get; set; }
+        public RelayCommand IsMandagChecked { get; set; }
 
         StorageFolder localfolder = null;
 
@@ -103,6 +104,11 @@ namespace Faellesspisning.Model
             HList.Add(temphusinfo);
 
             //HList.Remove(temphusinfo);
+        }
+
+        public void MandagJa()
+        {
+            
         }
 
         public void Slethus()
