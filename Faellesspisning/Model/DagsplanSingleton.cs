@@ -211,6 +211,7 @@ namespace Faellesspisning.Model
             this.kokSøndag = "";
 
         }
+        
 
 
 

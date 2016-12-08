@@ -169,8 +169,16 @@
 
             <PivotItem Header="Filer">
                 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                    <Button x:Name="button1" Content="Hent" HorizontalAlignment="Left" Margin="666,232,0,0" VerticalAlignment="Top" Height="127" Width="193"/>
-                    <Button x:Name="button1_Copy" Content="Gem" HorizontalAlignment="Left" Margin="419,232,1,0" VerticalAlignment="Top" Height="127" Width="193"/>
+                    <Button x:Name="button1" Content="Hent" HorizontalAlignment="Left" Margin="666,232,0,0" VerticalAlignment="Top" Height="127" Width="193" Command="{Binding Mindeltager.HentJsonCommand}">
+                        <Button.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </Button.DataContext>
+                    </Button>
+                    <Button x:Name="button1_Copy" Content="Gem" HorizontalAlignment="Left" Margin="419,232,1,0" VerticalAlignment="Top" Height="127" Width="193" Command="{Binding Mindeltager.GemJsonCommand}">
+                        <Button.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </Button.DataContext>
+                    </Button>
                     <Button x:Name="button1_Copy2" Content="Vælg Fil" HorizontalAlignment="Left" Margin="1031,547,0,0" VerticalAlignment="Top" Height="55" Width="114"/>
                     <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="-1063,-74,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
                 </Grid>

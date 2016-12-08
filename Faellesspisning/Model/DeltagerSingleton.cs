@@ -26,6 +26,8 @@ namespace Faellesspisning.Model
             AddHusCommand = new RelayCommand(AddNewHus);
             SletHusCommand = new RelayCommand(Slethus);
             SletAlleCommand = new RelayCommand(Rydliste);
+            HentJsonCommand = new RelayCommand(HentDataFraDiskAsync);
+            GemJsonCommand = new RelayCommand(GemDataTilDiskAsync);
             
 
             localfolder = ApplicationData.Current.LocalFolder;
@@ -34,6 +36,7 @@ namespace Faellesspisning.Model
 
 
         private readonly string filnavn = "HusListe.json";
+        private readonly string filnavn2 = "Planlægning.json";
         public Model.HusListe HList { get; set; }
         public Model.HusInfo Newhus { get; set; }
 
@@ -45,6 +48,8 @@ namespace Faellesspisning.Model
         public RelayCommand BeregnPrisCommand { get; set; }
         public RelayCommand PlanlægCommand { get; set; }
         public RelayCommand SletAlleCommand { get; set; }
+        public RelayCommand GemJsonCommand { get; set; }
+        public RelayCommand HentJsonCommand { get; set; }
 
         StorageFolder localfolder = null;
 
@@ -111,6 +116,7 @@ namespace Faellesspisning.Model
             string jsonText = this.HList.GetJson();
             StorageFile file = await localfolder.CreateFileAsync(filnavn, CreationCollisionOption.ReplaceExisting);
             await FileIO.WriteTextAsync(file, jsonText);
+
         }
 
         public async void HentDataFraDiskAsync()
@@ -121,6 +127,7 @@ namespace Faellesspisning.Model
             string jsonText = await FileIO.ReadTextAsync(file);
 
             HList.IndsætJson(jsonText);
+
         }
 
         public void Rydliste()
