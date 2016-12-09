@@ -101,30 +101,16 @@ namespace Faellesspisning.Model
         {
             string s;
 
-            s = "Hus: " + HusNummer;
+            s = "Hus: " + HusNummer + " ";
             switch (ComboBoxIndex2)
             {
-                case 0:
-                    s += "Mandag";
-                    break;
-                case 1:
-                    s += "Tirsdag";
-                    break;
-                case 2:
-                    s += "Onsdag";
-                    break;
-                case 3:
-                    s += "Torsdag";
-                    break;
-                case 4:
-                    s += "Fredag";
-                    break;
-                case 5:
-                    s += "Lørsdag";
-                    break;
-                case 6:
-                    s += "Søndag";
-                    break;
+                case 0: s += "Mandag";  break;
+                case 1: s += "Tirsdag"; break;
+                case 2: s += "Onsdag"; break;
+                case 3: s += "Torsdag"; break;
+                case 4: s += "Fredag"; break;
+                case 5: s += "Lørdag"; break;
+                case 6: s += "Søndag"; break;
                 
             }
             s +=
