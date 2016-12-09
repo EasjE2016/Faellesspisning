@@ -50,7 +50,6 @@ namespace Faellesspisning.Model
         public RelayCommand SletAlleCommand { get; set; }
         public RelayCommand GemJsonCommand { get; set; }
         public RelayCommand HentJsonCommand { get; set; }
-        public RelayCommand IsMandagChecked { get; set; }
         public List<string> ComboBox { get; set; }
         public int ComboBoxIndex { get; set; }
 
@@ -110,10 +109,6 @@ namespace Faellesspisning.Model
             //HList.Remove(temphusinfo);
         }
 
-        public void MandagJa()
-        {
-            
-        }
 
         public void Slethus()
         {
