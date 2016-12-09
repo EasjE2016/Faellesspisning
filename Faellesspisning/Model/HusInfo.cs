@@ -111,19 +111,14 @@ namespace Faellesspisning.Model
                 case 4: s += "Fredag"; break;
                 case 5: s += "Lørdag"; break;
                 case 6: s += "Søndag"; break;
-                
             }
             s +=
             ", " + "Voksne: " + AntalVoksneIHusstand +
             ", " + "Teenagere: " + AntalTeenagerIHusstand +
             ", " + "Børn: " + AntalBarnIHusstand +
             ", " + "Baby: " + AntalBabyIHusstand;
-            
-            {
-
-            }
             return s;
-            }
+        }
         // vi skal havde lavet en metode (selectedhus) som kan vælge et hus og se hvor mange der er i den valgte husstand
 
 
