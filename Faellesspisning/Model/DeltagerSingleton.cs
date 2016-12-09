@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using Faellesspinsning;
 using Windows.Storage;
+using Newtonsoft.Json;
 
 namespace Faellesspisning.Model
 {
@@ -27,9 +28,9 @@ namespace Faellesspisning.Model
             SletHusCommand = new RelayCommand(Slethus);
             SletAlleCommand = new RelayCommand(Rydliste);
             HentJsonCommand = new RelayCommand(HentDataFraDiskAsync);
-            GemJsonCommand = new RelayCommand(GemDataTilDiskAsync);
+            GemJsonCommand = new RelayCommand(GemData);
             AddCombobox();
-
+            kokoghjælpere = DagsplanSingleton.Instance;
             localfolder = ApplicationData.Current.LocalFolder;
         }
 
@@ -39,7 +40,8 @@ namespace Faellesspisning.Model
         private readonly string filnavn2 = "Planlægning.json";
         public Model.HusListe HList { get; set; }
         public Model.HusInfo Newhus { get; set; }
-       
+        public Model.DagsplanSingleton kokoghjælpere { get; set; }
+
 
 
         public RelayCommand AddHusCommand { get; set; }
@@ -115,17 +117,18 @@ namespace Faellesspisning.Model
             HList.Remove(SelectedHus);
         }
 
-
-
-        public async void GemDataTilDiskAsync()
+        public void GemData()
         {
-            string jsonText = this.HList.GetJson();
-            StorageFile file = await localfolder.CreateFileAsync(filnavn, CreationCollisionOption.ReplaceExisting);
-            await FileIO.WriteTextAsync(file, jsonText);
+            GemDataTilDiskAsync(HList, filnavn);
+            GemDataTilDiskAsync(kokoghjælpere, filnavn2);
+        }
 
-            //string kokoghælpereText = this.HList.GetJson();
-            //StorageFile file = await localfolder.CreateFileAsync(filnavn, CreationCollisionOption.ReplaceExisting);
-            //await FileIO.WriteTextAsync(file, jsonText);
+
+        public async void GemDataTilDiskAsync(Object objToSave, String FileName)
+        {
+            string jsonText = JsonConvert.SerializeObject(objToSave);
+            StorageFile file = await localfolder.CreateFileAsync(FileName, CreationCollisionOption.ReplaceExisting);
+            await FileIO.WriteTextAsync(file, jsonText);
 
         }
 

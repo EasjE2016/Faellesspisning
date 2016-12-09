@@ -55,24 +55,24 @@ namespace Faellesspisning.Model
 
             //TODO: tilføj set metoder i husinfo
         }
-      
+
 
 
         //metoode til at hente json filen
-        public string GetJson()
-        {
-            string json = JsonConvert.SerializeObject(this);
-            return json;
-        }
-        
+        //public string GetJson()
+        //{
+        //    string json = JsonConvert.SerializeObject(this);
+        //    return json;
+        //}
+
         public void IndsætJson(string JsonText)
         {
             List<HusInfo> nyListe = JsonConvert.DeserializeObject<List<HusInfo>>(JsonText);
-            foreach(var i in nyListe)
+            foreach (var i in nyListe)
             {
                 this.Add(i);
             }
         }
-        
+
     }
 }
