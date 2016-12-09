@@ -116,6 +116,7 @@ namespace Faellesspisning.Model
         }
 
 
+
         public async void GemDataTilDiskAsync()
         {
             string jsonText = this.HList.GetJson();
