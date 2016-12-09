@@ -28,7 +28,7 @@ namespace Faellesspisning.Model
             SletAlleCommand = new RelayCommand(Rydliste);
             HentJsonCommand = new RelayCommand(HentDataFraDiskAsync);
             GemJsonCommand = new RelayCommand(GemDataTilDiskAsync);
-            IsMandagChecked = new RelayCommand()
+            AddCombobox();
 
             localfolder = ApplicationData.Current.LocalFolder;
         }
@@ -51,6 +51,8 @@ namespace Faellesspisning.Model
         public RelayCommand GemJsonCommand { get; set; }
         public RelayCommand HentJsonCommand { get; set; }
         public RelayCommand IsMandagChecked { get; set; }
+        public List<string> ComboBox { get; set; }
+        public int ComboBoxIndex { get; set; }
 
         StorageFolder localfolder = null;
 
@@ -100,6 +102,8 @@ namespace Faellesspisning.Model
             temphusinfo.AntalTeenagerIHusstand = Newhus.AntalTeenagerIHusstand;
             temphusinfo.AntalVoksneIHusstand = Newhus.AntalVoksneIHusstand;
             temphusinfo.HusNummer = Newhus.HusNummer;
+            temphusinfo.ComboBoxIndex2 = ComboBoxIndex;
+            
 
             HList.Add(temphusinfo);
 
@@ -150,5 +154,11 @@ namespace Faellesspisning.Model
             }
             return Antal;
         }
+
+        public void AddCombobox()
+        {
+            ComboBox = new List<string>() { "mandag", "tirsdag", "Onsdag", "torsdag", "fredag", "lørdag", "søndag" };
+        }
+
     }
 }

@@ -58,32 +58,55 @@
                     <TextBox x:Name="DeltagereUng715" HorizontalAlignment="Left" Margin="121,206,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalTeenagerIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Unge 7-15 år"/>
                     <TextBox x:Name="DeltagereUng36" HorizontalAlignment="Left" Margin="121,261,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalBarnIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Unge 3-6 år"/>
                     <TextBox x:Name="DeltagereBaby" HorizontalAlignment="Left" Margin="121,315,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalBabyIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Under 3 år"/>
-                    <CheckBox x:Name="DeltagereHjælperMandag" Content="Mandag" HorizontalAlignment="Left" Margin="367,91,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperTirsdag" Content="Tirsdag" HorizontalAlignment="Left" Margin="367,118,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperOnsdag" Content="Onsdag" HorizontalAlignment="Left" Margin="367,145,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperTorsdag" Content="Torsdag" HorizontalAlignment="Left" Margin="367,172,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperFredag" Content="Fredag" HorizontalAlignment="Left" Margin="367,199,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperLørdag" Content="Lørdag" HorizontalAlignment="Left" Margin="367,226,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperSøndag" Content="Søndag" HorizontalAlignment="Left" Margin="367,253,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.492,1.375"/>
                     <TextBlock x:Name="viserhusinfo" HorizontalAlignment="Left" Margin="121,392,0,0" TextWrapping="Wrap " VerticalAlignment="Top" Height="65" Width="540" Text="{Binding Mindeltager.selectedHus}">
                         <TextBlock.DataContext>
                             <Viewmodel:DeltagereViewmodel/>
                         </TextBlock.DataContext>
                     </TextBlock>
-                    <CheckBox x:Name="DeltagereHjælperMandag_Copy" Content="Mandag" HorizontalAlignment="Left" Margin="661,94,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperTirsdag_Copy" Content="Tirsdag" HorizontalAlignment="Left" Margin="661,121,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperOnsdag_Copy" Content="Onsdag" HorizontalAlignment="Left" Margin="661,148,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperTorsdag_Copy" Content="Torsdag" HorizontalAlignment="Left" Margin="661,175,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperFredag_Copy" Content="Fredag" HorizontalAlignment="Left" Margin="661,202,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperLørdag_Copy" Content="Lørdag" HorizontalAlignment="Left" Margin="661,229,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperSøndag_Copy" Content="Søndag" HorizontalAlignment="Left" Margin="661,256,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.492,1.375"/>
-                    <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="367,32,0,0" TextWrapping="Wrap" Text="Denne Uge" VerticalAlignment="Top" TextChanged="textBox_TextChanged"/>
-                    <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="661,32,0,0" TextWrapping="Wrap" Text="Alle Uger" VerticalAlignment="Top" TextChanged="textBox1_TextChanged"/>
                     <Button x:Name="button" Content="Ryd Liste" HorizontalAlignment="Left" Margin="770,485,0,0" VerticalAlignment="Top" Command="{Binding Mindeltager.SletAlleCommand}" Height="62" Width="131"/>
+                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="367,107,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Mindeltager.ComboBox}" SelectedIndex="{Binding Mindeltager.ComboBoxIndex, Mode=TwoWay}">
+                        <ComboBox x:Name="comboBox1" Height="100" Width="120"/>
+                    </ComboBox>
+                    <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="382,48,0,0" TextWrapping="Wrap" Text="Denne Uge" VerticalAlignment="Top"/>
 
                 </Grid>
             </PivotItem>
 
+            <PivotItem Header="Budget">
+                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                    <Grid.DataContext>
+                        <Viewmodel:BudgetViewmodel/>
+                    </Grid.DataContext>
+                    <Grid HorizontalAlignment="Left" Height="605" Margin="30,30,0,0" VerticalAlignment="Top" Width="300">
+                        <TextBox x:Name="BudgetHusNR" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Indtast husnummer"/>
+                        <ListView x:Name="BudgetListview" BorderThickness="2" BorderBrush="Black" Margin="0,50,0,150"/>
+                        <TextBlock x:Name="PrintPris" HorizontalAlignment="Left" Margin="0,460,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="44" Width="280" ToolTipService.ToolTip="Her kan du se din pris"/>
+                    </Grid>
+                    <StackPanel HorizontalAlignment="Left" Height="591" Margin="886,44,0,0" VerticalAlignment="Top" Width="354">
+                        <TextBlock x:Name="BudgetKonto" TextWrapping="Wrap" Text="" Height="271"/>
+                        <Image x:Name="BudgetMobilepay" Height="319" Source="ms-appx:///Assets/mobilepay.png"/>
+                    </StackPanel>
+                    <TextBlock x:Name="BudgetTotalBetal" HorizontalAlignment="Left" Margin="30,488,0,0" TextWrapping="Wrap" Text="{Binding BetalingsTextBlock}" VerticalAlignment="Top" Height="127" Width="300"/>
+
+                </Grid>
+            </PivotItem>
+
+            <PivotItem Header="Filer">
+                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                    <Button x:Name="button1" Content="Hent" HorizontalAlignment="Left" Margin="666,232,0,0" VerticalAlignment="Top" Height="127" Width="193" Command="{Binding Mindeltager.HentJsonCommand}">
+                        <Button.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </Button.DataContext>
+                    </Button>
+                    <Button x:Name="button1_Copy" Content="Gem" HorizontalAlignment="Left" Margin="419,232,1,0" VerticalAlignment="Top" Height="127" Width="193" Command="{Binding Mindeltager.GemJsonCommand}">
+                        <Button.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </Button.DataContext>
+                    </Button>
+                    <Button x:Name="button1_Copy2" Content="Vælg Fil" HorizontalAlignment="Left" Margin="1031,547,0,0" VerticalAlignment="Top" Height="55" Width="114"/>
+                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="-1063,-74,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+                </Grid>
+            </PivotItem>
             <PivotItem Header="Planlægning">
                 <PivotItem.DataContext>
                     <Viewmodel:PlanlægningViewmodel/>
@@ -145,42 +168,6 @@
                     <TextBox x:Name="PlanlægningUdlægSøndag" HorizontalAlignment="Left" Margin="958,397,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)"/>
                     <TextBox x:Name="PlanlægningHusNRSøndag" HorizontalAlignment="Left" Margin="958,483,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Husnr. udlæg"/>
                     <TextBlock x:Name="PlanlægningSøndag" HorizontalAlignment="Left" Margin="958,10,0,0" TextWrapping="Wrap" Text="Søndag" VerticalAlignment="Top" Height="38" Width="146"/>
-                </Grid>
-            </PivotItem>
-
-            <PivotItem Header="Budget">
-                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                    <Grid.DataContext>
-                        <Viewmodel:BudgetViewmodel/>
-                    </Grid.DataContext>
-                    <Grid HorizontalAlignment="Left" Height="605" Margin="30,30,0,0" VerticalAlignment="Top" Width="300">
-                        <TextBox x:Name="BudgetHusNR" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Indtast husnummer"/>
-                        <ListView x:Name="BudgetListview" BorderThickness="2" BorderBrush="Black" Margin="0,50,0,150"/>
-                        <TextBlock x:Name="PrintPris" HorizontalAlignment="Left" Margin="0,460,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="44" Width="280" ToolTipService.ToolTip="Her kan du se din pris"/>
-                    </Grid>
-                    <StackPanel HorizontalAlignment="Left" Height="591" Margin="886,44,0,0" VerticalAlignment="Top" Width="354">
-                        <TextBlock x:Name="BudgetKonto" TextWrapping="Wrap" Text="" Height="271"/>
-                        <Image x:Name="BudgetMobilepay" Height="319" Source="ms-appx:///Assets/mobilepay.png"/>
-                    </StackPanel>
-                    <TextBlock x:Name="BudgetTotalBetal" HorizontalAlignment="Left" Margin="30,488,0,0" TextWrapping="Wrap" Text="{Binding BetalingsTextBlock}" VerticalAlignment="Top" Height="127" Width="300"/>
-
-                </Grid>
-            </PivotItem>
-
-            <PivotItem Header="Filer">
-                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                    <Button x:Name="button1" Content="Hent" HorizontalAlignment="Left" Margin="666,232,0,0" VerticalAlignment="Top" Height="127" Width="193" Command="{Binding Mindeltager.HentJsonCommand}">
-                        <Button.DataContext>
-                            <Viewmodel:DeltagereViewmodel/>
-                        </Button.DataContext>
-                    </Button>
-                    <Button x:Name="button1_Copy" Content="Gem" HorizontalAlignment="Left" Margin="419,232,1,0" VerticalAlignment="Top" Height="127" Width="193" Command="{Binding Mindeltager.GemJsonCommand}">
-                        <Button.DataContext>
-                            <Viewmodel:DeltagereViewmodel/>
-                        </Button.DataContext>
-                    </Button>
-                    <Button x:Name="button1_Copy2" Content="Vælg Fil" HorizontalAlignment="Left" Margin="1031,547,0,0" VerticalAlignment="Top" Height="55" Width="114"/>
-                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="-1063,-74,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
                 </Grid>
             </PivotItem>
 
