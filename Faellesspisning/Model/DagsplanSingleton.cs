@@ -242,6 +242,14 @@ namespace Faellesspisning.Model
         {
             DagsplanSingleton nyListe = JsonConvert.DeserializeObject<DagsplanSingleton>(JsonText);
             instance.MandagMenu = nyListe.MandagMenu;
+            instance.TirsdagMenu = nyListe.TirsdagMenu;
+            instance.OnsdagMenu = nyListe.OnsdagMenu;
+            instance.TorsdagMenu = nyListe.TorsdagMenu;
+            instance.FredagMenu = nyListe.FredagMenu;
+            instance.LørdagMenu = nyListe.LørdagMenu;
+            instance.SøndagMenu = nyListe.SøndagMenu;
+            instance.kokoghjælpere = nyListe.kokoghjælpere;
+           
             //TODO:
             
 
