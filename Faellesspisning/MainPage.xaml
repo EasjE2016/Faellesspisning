@@ -58,7 +58,7 @@
                     <TextBox x:Name="DeltagereUng715" HorizontalAlignment="Left" Margin="121,206,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalTeenagerIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Unge 7-15 år"/>
                     <TextBox x:Name="DeltagereUng36" HorizontalAlignment="Left" Margin="121,261,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalBarnIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Unge 3-6 år"/>
                     <TextBox x:Name="DeltagereBaby" HorizontalAlignment="Left" Margin="121,315,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalBabyIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Under 3 år"/>
-                    <TextBlock x:Name="viserhusinfo" HorizontalAlignment="Left" Margin="121,392,0,0" TextWrapping="Wrap " VerticalAlignment="Top" Height="65" Width="540" Text="{Binding Mindeltager.selectedHus}">
+                    <TextBlock x:Name="viserhusinfo" HorizontalAlignment="Left" Margin="361,352,0,0" TextWrapping="Wrap " VerticalAlignment="Top" Height="65" Width="540" Text="{Binding Mindeltager.selectedHus}">
                         <TextBlock.DataContext>
                             <Viewmodel:DeltagereViewmodel/>
                         </TextBlock.DataContext>
@@ -68,6 +68,8 @@
                         <ComboBox x:Name="comboBox1" Height="100" Width="120"/>
                     </ComboBox>
                     <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="382,48,0,0" TextWrapping="Wrap" Text="Denne Uge" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="646,52,0,0" TextWrapping="Wrap" Text="Alle uger" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="628,107,0,0" VerticalAlignment="Top" Width="120"/>
 
                 </Grid>
             </PivotItem>
