@@ -66,5 +66,11 @@ namespace Faellesspisning
         {
 
         }
+
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+
+        {
+            comboBox.Items.Add("mandag");
+        }
     }
 }
