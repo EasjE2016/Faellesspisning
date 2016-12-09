@@ -27,7 +27,7 @@ namespace Faellesspisning.Model
             AddHusCommand = new RelayCommand(AddNewHus);
             SletHusCommand = new RelayCommand(Slethus);
             SletAlleCommand = new RelayCommand(Rydliste);
-            HentJsonCommand = new RelayCommand(HentDataFraDiskAsync);
+            HentJsonCommand = new RelayCommand(HentData);
             GemJsonCommand = new RelayCommand(GemData);
             AddCombobox();
             kokoghjælpere = DagsplanSingleton.Instance;
@@ -129,6 +129,22 @@ namespace Faellesspisning.Model
             string jsonText = JsonConvert.SerializeObject(objToSave);
             StorageFile file = await localfolder.CreateFileAsync(FileName, CreationCollisionOption.ReplaceExisting);
             await FileIO.WriteTextAsync(file, jsonText);
+
+        }
+
+        public void HentData()
+        {
+            HentDataFraDiskAsync2();
+            HentDataFraDiskAsync();
+        }
+
+        public async void HentDataFraDiskAsync2()
+        {
+
+            StorageFile file = await localfolder.GetFileAsync(filnavn2);
+            string jsonText = await FileIO.ReadTextAsync(file);
+
+            kokoghjælpere.IndsætJson(jsonText);
 
         }
 

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using Windows.UI.Xaml.Controls;
+using Newtonsoft.Json;
 
 namespace Faellesspisning.Model 
 {
@@ -25,6 +26,8 @@ namespace Faellesspisning.Model
         public string[] CrewFredag { get { return kokoghjælpere["Fredag"]; } }
         public string[] CrewLørdag { get { return kokoghjælpere["Lørdag"]; } }
         public string[] CrewSøndag { get { return kokoghjælpere["Søndag"]; } }
+
+        public Dictionary<String, String[]> kokoghjælpere { get; set; }
 
         #region vores PropertyChangedEventHandler 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -221,6 +224,7 @@ namespace Faellesspisning.Model
             //this.kokLørdag = "";
             //this.kokSøndag = "";
 
+            kokoghjælpere = new Dictionary<string, string[]>();
 
             kokoghjælpere.Add("Mandag", new string[3]);
             kokoghjælpere.Add("Tirsdag", new string[3]);
@@ -229,12 +233,23 @@ namespace Faellesspisning.Model
             kokoghjælpere.Add("Fredag", new string[3]);
             kokoghjælpere.Add("Lørdag", new string[3]);
             kokoghjælpere.Add("Søndag", new string[3]);
+            
+           
 
         }
 
-        Dictionary<string, string[]> kokoghjælpere = new Dictionary<string, string[]>();
+        public void IndsætJson(string JsonText)
+        {
+            DagsplanSingleton nyListe = JsonConvert.DeserializeObject<DagsplanSingleton>(JsonText);
+            instance.MandagMenu = nyListe.MandagMenu;
+            //TODO:
+            
 
-
+            //foreach (KeyValuePair<String, string[]> item in nyListe)
+            //{
+            //    kokoghjælpere.Add(item.Key, item.Value);
+            //}
+        }
 
 
     }
