@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using Windows.UI.Xaml.Controls;
 
 namespace Faellesspisning.Model 
 {
@@ -16,6 +17,14 @@ namespace Faellesspisning.Model
         {
             get { return instance; }
         }
+
+        public string[] CrewMandag { get { return kokoghjælpere["Mandag"]; } }
+        public string[] CrewTirsdag { get { return kokoghjælpere["Tirsdag"]; } }
+        public string[] CrewOnsdag { get { return kokoghjælpere["Onsdag"]; } }
+        public string[] CrewTorsdag { get { return kokoghjælpere["Torsdag"]; } }
+        public string[] CrewFredag { get { return kokoghjælpere["Fredag"]; } }
+        public string[] CrewLørdag { get { return kokoghjælpere["Lørdag"]; } }
+        public string[] CrewSøndag { get { return kokoghjælpere["Søndag"]; } }
 
         #region vores PropertyChangedEventHandler 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -118,78 +127,80 @@ namespace Faellesspisning.Model
         }
 #endregion
 
-        #region Kokke
-        public string KokMandag
-        {
-            get { return kokMandag; }
-            set
-            {
-                kokMandag = value;
-                OnPropertyChanged("KokMandag");
-            }
-        }
+        //#region Kokke
+        //public string KokMandag
+        //{
+        //    get { return kokMandag; }
+        //    set
+        //    {
+        //        kokMandag = value;
+        //        OnPropertyChanged("KokMandag");
+        //    }
+        //}
 
-        public string KokTirsdag
-        {
-            get { return kokTirsdag; }
-            set
-            {
-                kokTirsdag = value;
-                OnPropertyChanged("KokTirsdag");
-            }
-        }
+        //public string KokTirsdag
+        //{
+        //    get { return kokTirsdag; }
+        //    set
+        //    {
+        //        kokTirsdag = value;
+        //        OnPropertyChanged("KokTirsdag");
+        //    }
+        //}
 
-        public string KokOnsdag
-        {
-            get { return kokOnsdag; }
-            set
-            {
-                kokOnsdag = value;
-                OnPropertyChanged("KokOnsdag");
-            }
-        }
+        //public string KokOnsdag
+        //{
+        //    get { return kokOnsdag; }
+        //    set
+        //    {
+        //        kokOnsdag = value;
+        //        OnPropertyChanged("KokOnsdag");
+        //    }
+        //}
 
-        public string KokTorsdag
-        {
-            get { return kokTorsdag; }
-            set
-            {
-                kokTorsdag = value;
-                OnPropertyChanged("KokTorsdag");
-            }
-        }
+        //public string KokTorsdag
+        //{
+        //    get { return kokTorsdag; }
+        //    set
+        //    {
+        //        kokTorsdag = value;
+        //        OnPropertyChanged("KokTorsdag");
+        //    }
+        //}
 
-        public string KokFredag
-        {
-            get { return kokFredag; }
-            set
-            {
-                kokFredag = value;
-                OnPropertyChanged("KokFredag");
-            }
-        }
+        //public string KokFredag
+        //{
+        //    get { return kokFredag; }
+        //    set
+        //    {
+        //        kokFredag = value;
+        //        OnPropertyChanged("KokFredag");
+        //    }
+        //}
 
-        public string KokLørdag
-        {
-            get { return kokLørdag; }
-            set
-            {
-                kokLørdag = value;
-                OnPropertyChanged("KokLørdag");
-            }
-        }
+        //public string KokLørdag
+        //{
+        //    get { return kokLørdag; }
+        //    set
+        //    {
+        //        kokLørdag = value;
+        //        OnPropertyChanged("KokLørdag");
+        //    }
+        //}
 
-        public string KokSøndag
-        {
-            get { return kokSøndag; }
-            set
-            {
-                kokSøndag = value;
-                OnPropertyChanged("KokSøndag");
-            }
-        }
+        //public string KokSøndag
+        //{
+        //    get { return kokSøndag; }
+        //    set
+        //    {
+        //        kokSøndag = value;
+        //        OnPropertyChanged("KokSøndag");
+        //    }
+        //}
 
-        #endregion
+        
+
+        //#endregion
 
         //ctor
         private DagsplanSingleton()
@@ -202,16 +213,27 @@ namespace Faellesspisning.Model
             this.lørdagMenu = "";
             this.søndagMenu = "";
 
-            this.kokMandag = "";
-            this.kokTirsdag = "";
-            this.kokOnsdag = "";
-            this.kokTorsdag = "";
-            this.kokFredag = "";
-            this.kokLørdag = "";
-            this.kokSøndag = "";
+            //this.kokMandag = "";
+            //this.kokTirsdag = "";
+            //this.kokOnsdag = "";
+            //this.kokTorsdag = "";
+            //this.kokFredag = "";
+            //this.kokLørdag = "";
+            //this.kokSøndag = "";
+
+
+            kokoghjælpere.Add("Mandag", new string[3]);
+            kokoghjælpere.Add("Tirsdag", new string[3]);
+            kokoghjælpere.Add("Onsdag", new string[3]);
+            kokoghjælpere.Add("Torsdag", new string[3]);
+            kokoghjælpere.Add("Fredag", new string[3]);
+            kokoghjælpere.Add("Lørdag", new string[3]);
+            kokoghjælpere.Add("Søndag", new string[3]);
 
         }
-        
+
+        Dictionary<string, string[]> kokoghjælpere = new Dictionary<string, string[]>();
+
 
 
 
