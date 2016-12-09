@@ -21,6 +21,7 @@ namespace Faellesspisning.Model
             this.Add(new HusInfo()
             {
                 HusNummer = "22a",
+                ComboBoxIndex2=2,
                 AntalVoksneIHusstand = 2,
                 AntalTeenagerIHusstand = 1,
                 AntalBarnIHusstand = 2,
@@ -32,6 +33,7 @@ namespace Faellesspisning.Model
             this.Add(new HusInfo()
             {
                 HusNummer = "69",
+                ComboBoxIndex2 = 5,
                 AntalVoksneIHusstand = 2,
                 AntalTeenagerIHusstand = 3,
                 AntalBarnIHusstand = 1,
@@ -43,6 +45,7 @@ namespace Faellesspisning.Model
             this.Add(new HusInfo()
             {
                 HusNummer = "420",
+                ComboBoxIndex2 = 3,
                 AntalVoksneIHusstand = 3,
                 AntalTeenagerIHusstand = 1,
                 AntalBarnIHusstand = 0,

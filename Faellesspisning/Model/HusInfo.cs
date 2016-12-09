@@ -74,6 +74,7 @@ namespace Faellesspisning.Model
 
 
 
+        public int ComboBoxIndex2 { get; set; }
 
         public int AntalVoksneIHusstand { get; set; }
         public int AntalTeenagerIHusstand { get; set; }
@@ -100,18 +101,41 @@ namespace Faellesspisning.Model
         {
             string s;
 
-            s= "Hus: " + HusNummer +
+            s = "Hus: " + HusNummer;
+            switch (ComboBoxIndex2)
+            {
+                case 0:
+                    s += "Mandag";
+                    break;
+                case 1:
+                    s += "Tirsdag";
+                    break;
+                case 2:
+                    s += "Onsdag";
+                    break;
+                case 3:
+                    s += "Torsdag";
+                    break;
+                case 4:
+                    s += "Fredag";
+                    break;
+                case 5:
+                    s += "Lørsdag";
+                    break;
+                case 6:
+                    s += "Søndag";
+                    break;
+                
+            }
+            s +=
             ", " + "Voksne: " + AntalVoksneIHusstand +
             ", " + "Teenagere: " + AntalTeenagerIHusstand +
             ", " + "Børn: " + AntalBarnIHusstand +
-            ", " + "Baby: " + AntalBabyIHusstand + " Dage: ";
-            if (KommerMandag) s += "Mandag ";
-            if (KommerTirsdag) s += "Tirsdag ";
-            if (KommerOnsdag) s += "Onsdag ";
-            if (KommerTorsdag) s += "Torsdag ";
-            if (KommerFredag) s += "Fredag ";
-            if (KommerLørdag) s += "Lørdag ";
-            if (KommerSøndag) s += "Søndag ";
+            ", " + "Baby: " + AntalBabyIHusstand;
+            
+            {
+
+            }
             return s;
             }
         // vi skal havde lavet en metode (selectedhus) som kan vælge et hus og se hvor mange der er i den valgte husstand

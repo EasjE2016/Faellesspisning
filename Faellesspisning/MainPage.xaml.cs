@@ -67,9 +67,10 @@ namespace Faellesspisning
 
         }
 
-        private void DeltagereHjælperMandag_Checked(object sender, RoutedEventArgs e)
-        {
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
 
+        {
+            comboBox.Items.Add("mandag");
         }
     }
 }

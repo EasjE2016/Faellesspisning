@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using Faellesspinsning;
 using Windows.Storage;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
 
 namespace Faellesspisning.Model
 {
@@ -30,9 +28,7 @@ namespace Faellesspisning.Model
             SletAlleCommand = new RelayCommand(Rydliste);
             HentJsonCommand = new RelayCommand(HentDataFraDiskAsync);
             GemJsonCommand = new RelayCommand(GemDataTilDiskAsync);
-            //IsMandagChecked = new RelayCommand()
-            CheckBox checkBox1 = new CheckBox();
-            checkBox1.Content = "Mandag er valgt";
+            AddCombobox();
 
             localfolder = ApplicationData.Current.LocalFolder;
         }
@@ -55,6 +51,8 @@ namespace Faellesspisning.Model
         public RelayCommand GemJsonCommand { get; set; }
         public RelayCommand HentJsonCommand { get; set; }
         public RelayCommand IsMandagChecked { get; set; }
+        public List<string> ComboBox { get; set; }
+        public int ComboBoxIndex { get; set; }
 
         StorageFolder localfolder = null;
 
@@ -104,6 +102,8 @@ namespace Faellesspisning.Model
             temphusinfo.AntalTeenagerIHusstand = Newhus.AntalTeenagerIHusstand;
             temphusinfo.AntalVoksneIHusstand = Newhus.AntalVoksneIHusstand;
             temphusinfo.HusNummer = Newhus.HusNummer;
+            temphusinfo.ComboBoxIndex2 = ComboBoxIndex;
+            
 
             HList.Add(temphusinfo);
 
@@ -155,28 +155,9 @@ namespace Faellesspisning.Model
             return Antal;
         }
 
-
-        
-         
-        private void hvilkeDage_Click(object sender, RoutedEventArgs e)
+        public void AddCombobox()
         {
-           
-
-            string selectedDaysText = string.Empty;
-            CheckBox[] checkboxes = new CheckBox[] { DeltagereHjælperMandag, DeltagereHjælperTirsdag,
-                                             mushroomsCheckbox, onionsCheckbox };
-            foreach (CheckBox c in checkboxes)
-            {
-                if (c.IsChecked == true)
-                {
-                    if (selectedDaysText.Length > 1)
-                    {
-                        selectedDaysText += ", ";
-                    }
-                    selectedDaysText += c.Content;
-                }
-            }
-            toppingsList.Text = selectedDaysText;
+            ComboBox = new List<string>() { "mandag", "tirsdag", "Onsdag", "torsdag", "fredag", "lørdag", "søndag" };
         }
 
     }
