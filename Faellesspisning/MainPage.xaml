@@ -54,7 +54,7 @@
                         </Button.DataContext>
                     </Button>
                     <TextBox x:Name="DeltagereHusNR" HorizontalAlignment="Left" Margin="121,96,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.HusNummer, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Hus Nummer"/>
-                    <TextBox x:Name="DeltagereAntalVoksne" HorizontalAlignment="Left" Margin="121,150,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalVoksneIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Antal Voksne"/>
+                    <TextBox x:Name="DeltagereAntalVoksne" HorizontalAlignment="Left" Margin="121,150,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalVoksneIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Antal Voksne" ToolTipService.ToolTip="Antal Voksne"/>
                     <TextBox x:Name="DeltagereUng715" HorizontalAlignment="Left" Margin="121,206,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalTeenagerIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Unge 7-15 år"/>
                     <TextBox x:Name="DeltagereUng36" HorizontalAlignment="Left" Margin="121,261,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalBarnIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Unge 3-6 år"/>
                     <TextBox x:Name="DeltagereBaby" HorizontalAlignment="Left" Margin="121,315,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalBabyIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Under 3 år"/>
@@ -142,7 +142,7 @@
                         <Viewmodel:BudgetViewmodel/>
                     </Grid.DataContext>
                     <Grid HorizontalAlignment="Left" Height="605" Margin="30,30,0,0" VerticalAlignment="Top" Width="300">
-                        <TextBox x:Name="BudgetHusNR" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Indtast husnummer"/>
+                        <TextBox x:Name="BudgetHusNR" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" PlaceholderText="Indtast husnummer" Margin="0,0,0,573"/>
                         <ListView x:Name="BudgetListview" BorderThickness="2" BorderBrush="Black" Margin="0,50,0,150"/>
                         <TextBlock x:Name="PrintPris" HorizontalAlignment="Left" Margin="0,460,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="44" Width="280" ToolTipService.ToolTip="Her kan du se din pris"/>
                     </Grid>

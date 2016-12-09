@@ -101,7 +101,7 @@ namespace Faellesspisning.Model
         {
             string s;
 
-            s = "Hus: " + HusNummer + " ";
+            s = "Hus: " + HusNummer + ", ";
             switch (ComboBoxIndex2)
             {
                 case 0: s += "Mandag";  break;
