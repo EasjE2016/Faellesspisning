@@ -9,6 +9,10 @@
     x:Class="Faellesspisning.MainPage"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <local:NullableBooleanToBooleanConverter x:Key="NullableBooleanToBooleanConverter"/>
+    </Page.Resources>
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Pivot x:Name="Startside" Title="Fællesspisning version 69.420">
 
@@ -58,13 +62,13 @@
                     <TextBox x:Name="DeltagereUng715" HorizontalAlignment="Left" Margin="121,206,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalTeenagerIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Unge 7-15 år"/>
                     <TextBox x:Name="DeltagereUng36" HorizontalAlignment="Left" Margin="121,261,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalBarnIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Unge 3-6 år"/>
                     <TextBox x:Name="DeltagereBaby" HorizontalAlignment="Left" Margin="121,315,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalBabyIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Under 3 år"/>
-                    <CheckBox x:Name="DeltagereHjælperMandag" Content="Mandag" HorizontalAlignment="Left" Margin="367,91,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperTirsdag" Content="Tirsdag" HorizontalAlignment="Left" Margin="367,118,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperOnsdag" Content="Onsdag" HorizontalAlignment="Left" Margin="367,145,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperTorsdag" Content="Torsdag" HorizontalAlignment="Left" Margin="367,172,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperFredag" Content="Fredag" HorizontalAlignment="Left" Margin="367,199,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperLørdag" Content="Lørdag" HorizontalAlignment="Left" Margin="367,226,0,0" VerticalAlignment="Top"/>
-                    <CheckBox x:Name="DeltagereHjælperSøndag" Content="Søndag" HorizontalAlignment="Left" Margin="367,253,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.492,1.375"/>
+                    <CheckBox x:Name="DeltagereHjælperMandag" Content="Mandag" Click="hvilkeDage_Click" HorizontalAlignment="Left" Margin="367,91,0,0" VerticalAlignment="Top" Checked="DeltagereHjælperMandag_Checked"/>
+                    <CheckBox x:Name="DeltagereHjælperTirsdag" Content="Tirsdag" Click="hvilkeDage_Click"  HorizontalAlignment="Left" Margin="367,118,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="DeltagereHjælperOnsdag" Content="Onsdag" Click="hvilkeDage_Click"  HorizontalAlignment="Left" Margin="367,145,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="DeltagereHjælperTorsdag" Content="Torsdag" Click="hvilkeDage_Click"  HorizontalAlignment="Left" Margin="367,172,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="DeltagereHjælperFredag" Content="Fredag" Click="hvilkeDage_Click"  HorizontalAlignment="Left" Margin="367,199,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="DeltagereHjælperLørdag" Content="Lørdag" Click="hvilkeDage_Click"  HorizontalAlignment="Left" Margin="367,226,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="DeltagereHjælperSøndag" Content="Søndag" Click="hvilkeDage_Click"  HorizontalAlignment="Left" Margin="367,253,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.492,1.375"/>
                     <TextBlock x:Name="viserhusinfo" HorizontalAlignment="Left" Margin="121,392,0,0" TextWrapping="Wrap " VerticalAlignment="Top" Height="65" Width="540" Text="{Binding Mindeltager.selectedHus}">
                         <TextBlock.DataContext>
                             <Viewmodel:DeltagereViewmodel/>
