@@ -72,5 +72,10 @@ namespace Faellesspisning
         {
             comboBox.Items.Add("mandag");
         }
+
+        private void textBlock1_Copy_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

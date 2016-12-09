@@ -161,7 +161,7 @@ namespace Faellesspisning.Model
 
         public void AddCombobox()
         {
-            ComboBox = new List<string>() { "mandag", "tirsdag", "Onsdag", "torsdag", "fredag", "lørdag", "søndag" };
+            ComboBox = new List<string>() { "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag", "Alle hverdage" };
         }
 
     }

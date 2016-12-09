@@ -68,45 +68,9 @@
                         <ComboBox x:Name="comboBox1" Height="100" Width="120"/>
                     </ComboBox>
                     <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="382,48,0,0" TextWrapping="Wrap" Text="Denne Uge" VerticalAlignment="Top"/>
-                    <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="646,52,0,0" TextWrapping="Wrap" Text="Alle uger" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="646,52,0,0" TextWrapping="Wrap" Text="Fast alle uger" VerticalAlignment="Top" SelectionChanged="textBlock1_Copy_SelectionChanged"/>
                     <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="628,107,0,0" VerticalAlignment="Top" Width="120"/>
 
-                </Grid>
-            </PivotItem>
-
-            <PivotItem Header="Budget">
-                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                    <Grid.DataContext>
-                        <Viewmodel:BudgetViewmodel/>
-                    </Grid.DataContext>
-                    <Grid HorizontalAlignment="Left" Height="605" Margin="30,30,0,0" VerticalAlignment="Top" Width="300">
-                        <TextBox x:Name="BudgetHusNR" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Indtast husnummer"/>
-                        <ListView x:Name="BudgetListview" BorderThickness="2" BorderBrush="Black" Margin="0,50,0,150"/>
-                        <TextBlock x:Name="PrintPris" HorizontalAlignment="Left" Margin="0,460,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="44" Width="280" ToolTipService.ToolTip="Her kan du se din pris"/>
-                    </Grid>
-                    <StackPanel HorizontalAlignment="Left" Height="591" Margin="886,44,0,0" VerticalAlignment="Top" Width="354">
-                        <TextBlock x:Name="BudgetKonto" TextWrapping="Wrap" Text="" Height="271"/>
-                        <Image x:Name="BudgetMobilepay" Height="319" Source="ms-appx:///Assets/mobilepay.png"/>
-                    </StackPanel>
-                    <TextBlock x:Name="BudgetTotalBetal" HorizontalAlignment="Left" Margin="30,488,0,0" TextWrapping="Wrap" Text="{Binding BetalingsTextBlock}" VerticalAlignment="Top" Height="127" Width="300"/>
-
-                </Grid>
-            </PivotItem>
-
-            <PivotItem Header="Filer">
-                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                    <Button x:Name="button1" Content="Hent" HorizontalAlignment="Left" Margin="666,232,0,0" VerticalAlignment="Top" Height="127" Width="193" Command="{Binding Mindeltager.HentJsonCommand}">
-                        <Button.DataContext>
-                            <Viewmodel:DeltagereViewmodel/>
-                        </Button.DataContext>
-                    </Button>
-                    <Button x:Name="button1_Copy" Content="Gem" HorizontalAlignment="Left" Margin="419,232,1,0" VerticalAlignment="Top" Height="127" Width="193" Command="{Binding Mindeltager.GemJsonCommand}">
-                        <Button.DataContext>
-                            <Viewmodel:DeltagereViewmodel/>
-                        </Button.DataContext>
-                    </Button>
-                    <Button x:Name="button1_Copy2" Content="Vælg Fil" HorizontalAlignment="Left" Margin="1031,547,0,0" VerticalAlignment="Top" Height="55" Width="114"/>
-                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="-1063,-74,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
                 </Grid>
             </PivotItem>
             <PivotItem Header="Planlægning">
@@ -170,6 +134,40 @@
                     <TextBox x:Name="PlanlægningUdlægSøndag" HorizontalAlignment="Left" Margin="958,397,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)"/>
                     <TextBox x:Name="PlanlægningHusNRSøndag" HorizontalAlignment="Left" Margin="958,483,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Husnr. udlæg"/>
                     <TextBlock x:Name="PlanlægningSøndag" HorizontalAlignment="Left" Margin="958,10,0,0" TextWrapping="Wrap" Text="Søndag" VerticalAlignment="Top" Height="38" Width="146"/>
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="Budget">
+                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                    <Grid.DataContext>
+                        <Viewmodel:BudgetViewmodel/>
+                    </Grid.DataContext>
+                    <Grid HorizontalAlignment="Left" Height="605" Margin="30,30,0,0" VerticalAlignment="Top" Width="300">
+                        <TextBox x:Name="BudgetHusNR" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Indtast husnummer"/>
+                        <ListView x:Name="BudgetListview" BorderThickness="2" BorderBrush="Black" Margin="0,50,0,150"/>
+                        <TextBlock x:Name="PrintPris" HorizontalAlignment="Left" Margin="0,460,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="44" Width="280" ToolTipService.ToolTip="Her kan du se din pris"/>
+                    </Grid>
+                    <StackPanel HorizontalAlignment="Left" Height="591" Margin="886,44,0,0" VerticalAlignment="Top" Width="354">
+                        <TextBlock x:Name="BudgetKonto" TextWrapping="Wrap" Text="" Height="271"/>
+                        <Image x:Name="BudgetMobilepay" Height="319" Source="ms-appx:///Assets/mobilepay.png"/>
+                    </StackPanel>
+                    <TextBlock x:Name="BudgetTotalBetal" HorizontalAlignment="Left" Margin="30,488,0,0" TextWrapping="Wrap" Text="{Binding BetalingsTextBlock}" VerticalAlignment="Top" Height="127" Width="300"/>
+
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="Filer">
+                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                    <Button x:Name="button1" Content="Hent" HorizontalAlignment="Left" Margin="666,232,0,0" VerticalAlignment="Top" Height="127" Width="193" Command="{Binding Mindeltager.HentJsonCommand}">
+                        <Button.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </Button.DataContext>
+                    </Button>
+                    <Button x:Name="button1_Copy" Content="Gem" HorizontalAlignment="Left" Margin="419,232,1,0" VerticalAlignment="Top" Height="127" Width="193" Command="{Binding Mindeltager.GemJsonCommand}">
+                        <Button.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </Button.DataContext>
+                    </Button>
+                    <Button x:Name="button1_Copy2" Content="Vælg Fil" HorizontalAlignment="Left" Margin="1031,547,0,0" VerticalAlignment="Top" Height="55" Width="114"/>
+                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="-1063,-74,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
                 </Grid>
             </PivotItem>
 

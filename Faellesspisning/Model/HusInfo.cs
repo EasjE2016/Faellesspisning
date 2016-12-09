@@ -111,6 +111,7 @@ namespace Faellesspisning.Model
                 case 4: s += "Fredag"; break;
                 case 5: s += "Lørdag"; break;
                 case 6: s += "Søndag"; break;
+                case 7: s += "Alle hverdage"; break;
             }
             s +=
             ", " + "Voksne: " + AntalVoksneIHusstand +
