@@ -32,6 +32,7 @@ namespace Faellesspisning.Model
             AddCombobox();
             kokoghjælpere = DagsplanSingleton.Instance;
             localfolder = ApplicationData.Current.LocalFolder;
+            this.mandagpris= 0.0;
         }
 
 
@@ -215,16 +216,32 @@ namespace Faellesspisning.Model
 
 
         // prøver få userinput til at blive brugt i en beregning
-        public double kuvertPrisMandag()
+        //public double kuvertPrisMandag()
+        //{
+        //    return PrisMandag / GetKuvert;
+        //}
+
+        //public double prisMandag { get { return PrisMandag; } set { this.PrisMandag = value; this.OnPropertyChanged(nameof(prisMandag)); } }
+
+        //private double PrisMandag;
+
+        //public double KuvertPrisMandag { get { return kuvertPrisMandag(); }}
+
+
+// virker men kun hvis vi laber den anden textboks om til en textblock
+        private double mandagpris;
+
+        public double Mandagpris
         {
-            return PrisMandag / GetKuvert;
+            get { return mandagpris; }
+            set
+            {
+                mandagpris = value/GetKuvert;
+                OnPropertyChanged("Mandagpris");
+            }
         }
 
-        public double prisMandag { get { return PrisMandag; } set { this.PrisMandag = value; this.OnPropertyChanged(nameof(prisMandag)); } }
 
-        private double PrisMandag;
-
-        public double KuvertPrisMandag { get { return kuvertPrisMandag(); }}
 
 
 
