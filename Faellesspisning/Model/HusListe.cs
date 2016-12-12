@@ -57,7 +57,6 @@ namespace Faellesspisning.Model
         }
       
 
-
         //metoode til at hente json filen
         public string GetJson()
         {

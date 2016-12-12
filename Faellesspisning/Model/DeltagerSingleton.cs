@@ -29,6 +29,8 @@ namespace Faellesspisning.Model
             HentJsonCommand = new RelayCommand(HentDataFraDiskAsync);
             GemJsonCommand = new RelayCommand(GemDataTilDiskAsync);
             AddCombobox();
+            AntalMandag = MandagTilmeldte();
+
 
             localfolder = ApplicationData.Current.LocalFolder;
         }
@@ -52,6 +54,7 @@ namespace Faellesspisning.Model
         public RelayCommand HentJsonCommand { get; set; }
         public List<string> ComboBox { get; set; }
         public int ComboBoxIndex { get; set; }
+        public int AntalMandag { get; set; }
 
         StorageFolder localfolder = null;
 
@@ -102,9 +105,10 @@ namespace Faellesspisning.Model
             temphusinfo.AntalVoksneIHusstand = Newhus.AntalVoksneIHusstand;
             temphusinfo.HusNummer = Newhus.HusNummer;
             temphusinfo.ComboBoxIndex2 = ComboBoxIndex;
-            
-
             HList.Add(temphusinfo);
+
+            AntalMandag = MandagTilmeldte();
+
 
             //HList.Remove(temphusinfo);
         }
@@ -149,7 +153,7 @@ namespace Faellesspisning.Model
             int Antal = 0;
             foreach (var i in DeltagerListe)
             {
-                Antal += i.AntalPersonerIHusstand;
+                Antal += i.AntalTeenagerIHusstand; //i.AntalPersonerIHusstand;
             }
             return Antal;
         }

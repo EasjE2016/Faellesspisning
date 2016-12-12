@@ -53,7 +53,7 @@
                             <Viewmodel:DeltagereViewmodel/>
                         </Button.DataContext>
                     </Button>
-                    <TextBox x:Name="DeltagereHusNR" HorizontalAlignment="Left" Margin="121,96,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.HusNummer, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Hus Nummer"/>
+                    <TextBox x:Name="DeltagereHusNR" HorizontalAlignment="Left" Margin="121,96,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.HusNummer, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Hus Nummer" TextChanged="DeltagereHusNR_TextChanged"/>
                     <TextBox x:Name="DeltagereAntalVoksne" HorizontalAlignment="Left" Margin="121,150,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalVoksneIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Antal Voksne" ToolTipService.ToolTip="Antal Voksne"/>
                     <TextBox x:Name="DeltagereUng715" HorizontalAlignment="Left" Margin="121,206,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalTeenagerIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Unge 7-15 år"/>
                     <TextBox x:Name="DeltagereUng36" HorizontalAlignment="Left" Margin="121,261,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalBarnIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Unge 3-6 år"/>
@@ -70,6 +70,7 @@
                     <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="382,48,0,0" TextWrapping="Wrap" Text="Denne Uge" VerticalAlignment="Top"/>
                     <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="646,52,0,0" TextWrapping="Wrap" Text="Fast alle uger" VerticalAlignment="Top" SelectionChanged="textBlock1_Copy_SelectionChanged"/>
                     <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="628,107,0,0" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="733,293,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.AntalMandag, Mode=TwoWay}" VerticalAlignment="Top"/>
 
                 </Grid>
             </PivotItem>
