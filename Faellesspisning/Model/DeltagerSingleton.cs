@@ -54,6 +54,7 @@ namespace Faellesspisning.Model
         public RelayCommand HentJsonCommand { get; set; }
         public List<string> ComboBox { get; set; }
         public int ComboBoxIndex { get; set; }
+        public RelayCommand Tilmeldknap { get; set; }
 
         StorageFolder localfolder = null;
 
@@ -93,6 +94,7 @@ namespace Faellesspisning.Model
 
         List<Model.HusInfo> DeltagerListe = new List<Model.HusInfo>();
 
+
         //metode til at lave nyt hus
         public void AddNewHus()
         {
@@ -103,7 +105,8 @@ namespace Faellesspisning.Model
             temphusinfo.AntalVoksneIHusstand = Newhus.AntalVoksneIHusstand;
             temphusinfo.HusNummer = Newhus.HusNummer;
             temphusinfo.ComboBoxIndex2 = ComboBoxIndex;
-            
+
+            AntalKuverterMandag();
 
             HList.Add(temphusinfo);
         }
@@ -175,6 +178,52 @@ namespace Faellesspisning.Model
         {
             ComboBox = new List<string>() { "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag", "Alle hverdage" };
         }
+
+
+
+        //public double PrisPrKuvertMandag
+        //{
+        //    get
+        //    {
+        //        double KuvertPris = 0;
+        //        foreach (var kuverter in KuvertListenMandag)
+        //        {
+        //            KuvertPris = (+(kuverter.AntalVoksne * 1) + (kuverter.AntalTeen * 0.5) + (kuverter.AntalBoern * 0.25) + (kuverter.AntalBaby * 0)) / TestPrisMandag;
+        //        }
+        //        return PrisPrKuvert;
+
+        //    }
+        //}
+        public double AntalKuverterMandag()
+        {
+            double  kuverter = 0.0;
+            foreach (var i in HList)
+            {
+                if (ComboBoxIndex == 0)
+                {
+                    kuverter += (i.AntalBarnIHusstand * 0.25) + (i.AntalTeenagerIHusstand * 0.5) + (i.AntalVoksneIHusstand);
+                } 
+            }
+            return kuverter;
+        }
+
+        public double GetKuvert { get { return AntalKuverterMandag(); }}
+
+
+
+
+        //public double test()
+        //      {
+        //          double KuvertPris = 0;
+        //          foreach (var i in DeltagerListe)
+        //          {
+        //              KuvertPris += i.
+        //          }
+        //      }
+
+
+
+
 
     }
 }

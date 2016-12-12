@@ -52,16 +52,6 @@ namespace Faellesspisning.Model
         #endregion
 
 
-        #region instance field kok dage
-        private string kokMandag;
-        private string kokTirsdag;
-        private string kokOnsdag;
-        private string kokTorsdag;
-        private string kokFredag;
-        private string kokLørdag;
-        private string kokSøndag;
-        #endregion
-
         #region Menu
 
         public string MandagMenu
