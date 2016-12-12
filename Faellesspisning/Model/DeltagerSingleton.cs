@@ -33,6 +33,8 @@ namespace Faellesspisning.Model
             kokoghjælpere = DagsplanSingleton.Instance;
             localfolder = ApplicationData.Current.LocalFolder;
             this.mandagpris= 0.0;
+            Test = 0.0;
+
         }
 
 
@@ -108,6 +110,7 @@ namespace Faellesspisning.Model
             temphusinfo.ComboBoxIndex2 = ComboBoxIndex;
 
             AntalKuverterMandag();
+            this.Test = 0.0;
 
             HList.Add(temphusinfo);
         }
@@ -196,8 +199,33 @@ namespace Faellesspisning.Model
         //    }
         //}
 
-        // udregning per dag (kuvert)
 
+
+
+        // udregning per dag (kuvert)
+        #region Test af AntalkuverterMandag
+            // det virker men den lægger altid beløbet oven i sig selv
+        private double test;
+
+        public double Test
+        {
+            get{ return test; }
+            set
+            {
+                foreach (var i in HList)
+                {
+                    if (ComboBoxIndex == 0)
+                    {
+                        test += (i.AntalBarnIHusstand * 0.25) + (i.AntalTeenagerIHusstand * 0.5) + (i.AntalVoksneIHusstand);
+                        
+                    }
+                }
+                OnPropertyChanged("Test");
+                
+                
+            }
+        }
+        #endregion
 
         public double AntalKuverterMandag()
         {
@@ -228,7 +256,7 @@ namespace Faellesspisning.Model
         //public double KuvertPrisMandag { get { return kuvertPrisMandag(); }}
 
 
-// virker men kun hvis vi laber den anden textboks om til en textblock
+// virker men kun hvis vi laver den anden textboks om til en textblock
         private double mandagpris;
 
         public double Mandagpris

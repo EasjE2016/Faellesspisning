@@ -70,7 +70,7 @@
                     <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="382,48,0,0" TextWrapping="Wrap" Text="Denne Uge" VerticalAlignment="Top"/>
                     <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="646,52,0,0" TextWrapping="Wrap" Text="Fast alle uger" VerticalAlignment="Top" SelectionChanged="textBlock1_Copy_SelectionChanged"/>
                     <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="628,107,0,0" VerticalAlignment="Top" Width="120"/>
-                    <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="456,547,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.GetKuvert, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="55" Width="153"/>
+                    <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="456,547,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Test}" VerticalAlignment="Top" Height="55" Width="153"/>
 
                 </Grid>
             </PivotItem>
