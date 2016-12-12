@@ -8,14 +8,6 @@ namespace Faellesspisning.Model
 {
    public class HusInfo
     {
-        
-        public HusInfo()
-        {
-
-        }
-
-
-
 
 
         //instance field
@@ -36,13 +28,9 @@ namespace Faellesspisning.Model
             return GetAntalBabyIHusstandKuvert() + GetAntalBabyIHusstandKuvert() + GetAntalTeenagerIHusstandKuvert() + GetAntalVoksneIHusstandKuvert();
         }
 
-        //TODO: Få metode til at virke fejl pga ""
-        //public double GetAntalPersonerIHusstand()
-        //{
-        //    return AntalPersonerIHusstand = AntalBabyIHusstand + AntalBarnIHusstand + AntalTeenagerIHusstand + AntalVoksneIHusstand;
-        //}
 
-    public double GetAntalVoksneIHusstandKuvert()
+
+        public double GetAntalVoksneIHusstandKuvert()
         {
             return AntalVoksneIHusstand * 1.0;
         }
@@ -120,9 +108,6 @@ namespace Faellesspisning.Model
             ", " + "Baby: " + AntalBabyIHusstand;
             return s;
         }
-        // vi skal havde lavet en metode (selectedhus) som kan vælge et hus og se hvor mange der er i den valgte husstand
-
-
-
+      
     }   
 }

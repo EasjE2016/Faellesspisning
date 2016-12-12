@@ -57,8 +57,7 @@ namespace Faellesspisning.Model
 
         StorageFolder localfolder = null;
 
-        // public RelayCommand AddHusCommand {get; set; }
-        // test commit
+
 
         #region vores PropertyChangedEventHandler 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -107,8 +106,6 @@ namespace Faellesspisning.Model
             
 
             HList.Add(temphusinfo);
-
-            //HList.Remove(temphusinfo);
         }
 
 

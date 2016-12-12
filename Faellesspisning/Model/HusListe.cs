@@ -51,19 +51,8 @@ namespace Faellesspisning.Model
                 AntalBarnIHusstand = 0,
                 AntalBabyIHusstand = 1,
             });
-                
-
-            //TODO: tilføj set metoder i husinfo
         }
 
-
-
-        //metoode til at hente json filen
-        //public string GetJson()
-        //{
-        //    string json = JsonConvert.SerializeObject(this);
-        //    return json;
-        //}
 
         public void IndsætJson(string JsonText)
         {
