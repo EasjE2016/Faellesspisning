@@ -70,7 +70,7 @@
                     <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="382,48,0,0" TextWrapping="Wrap" Text="Denne Uge" VerticalAlignment="Top"/>
                     <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="646,52,0,0" TextWrapping="Wrap" Text="Fast alle uger" VerticalAlignment="Top" SelectionChanged="textBlock1_Copy_SelectionChanged"/>
                     <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="628,107,0,0" VerticalAlignment="Top" Width="120"/>
-                    <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="456,547,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.GetKuvert, Mode=OneWay}" VerticalAlignment="Top" Height="55" Width="153"/>
+                    <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="456,547,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.GetKuvert, Mode=TwoWay}" VerticalAlignment="Top" Height="55" Width="153"/>
 
                 </Grid>
             </PivotItem>
@@ -90,12 +90,16 @@
                     <TextBox x:Name="PlanlægningKokMandag" HorizontalAlignment="Left" Margin="52,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewMandag[0],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
                     <TextBox x:Name="PlanlægningHjælpMandag" HorizontalAlignment="Left" Margin="52,225,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewMandag[1],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Hjælpere"/>
                     <TextBox x:Name="PlanlægningOprydMandag" HorizontalAlignment="Left" Margin="52,311,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewMandag[2],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Oprydere"/>
-                    <TextBox x:Name="PlanlægningUdlægMandag" HorizontalAlignment="Left" Margin="52,397,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.GetKuvert, Mode=OneWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)">
+                    <TextBox x:Name="PlanlægningUdlægMandag" HorizontalAlignment="Left" Margin="52,397,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.prisMandag, Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)">
                         <TextBox.DataContext>
                             <Viewmodel:DeltagereViewmodel/>
                         </TextBox.DataContext>
                     </TextBox>
-                    <TextBox x:Name="PlanlægningHusNRMandag" HorizontalAlignment="Left" Margin="52,483,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Husnr. udlæg"/>
+                    <TextBox x:Name="PlanlægningHusNRMandag" HorizontalAlignment="Left" Margin="52,483,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.KuvertPrisMandag, Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Husnr. udlæg">
+                        <TextBox.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBox.DataContext>
+                    </TextBox>
                     <TextBlock x:Name="PlanlægningMandag" HorizontalAlignment="Left" Margin="52,10,0,0" TextWrapping="Wrap" Text="Mandag" VerticalAlignment="Top" Height="38" Width="146"/>
                     <TextBox x:Name="PlanlægningMenuTirsdag" HorizontalAlignment="Left" Margin="203,53,0,0" TextWrapping="Wrap" Text="{Binding Minplan.TirsdagMenu, Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Menu"/>
                     <TextBox x:Name="PlanlægningKokTirsdag" HorizontalAlignment="Left" Margin="203,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewTirsdag[0],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>

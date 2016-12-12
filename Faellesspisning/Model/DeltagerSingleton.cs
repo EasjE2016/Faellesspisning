@@ -194,6 +194,10 @@ namespace Faellesspisning.Model
 
         //    }
         //}
+
+        // udregning per dag (kuvert)
+
+
         public double AntalKuverterMandag()
         {
             double  kuverter = 0.0;
@@ -210,6 +214,37 @@ namespace Faellesspisning.Model
         public double GetKuvert { get { return AntalKuverterMandag(); }}
 
 
+        // prøver få userinput til at blive brugt i en beregning
+        public double kuvertPrisMandag()
+        {
+            return PrisMandag / GetKuvert;
+        }
+
+        public double prisMandag { get { return PrisMandag; } set { this.PrisMandag = value; this.OnPropertyChanged(nameof(prisMandag)); } }
+
+        private double PrisMandag;
+
+        public double KuvertPrisMandag { get { return kuvertPrisMandag(); }}
+
+
+
+
+
+        //betaling per husstand
+        //public string Husnummertest()
+        //{
+        //    double HusstandKuvert = 0.0;
+        //    foreach (var i in HList)
+        //    {
+        //        if (this.UserInputHusNummer == i.HusNummer)
+        //        {
+        //            HusstandKuvert += 
+        //        }
+        //    }
+        //}
+        private string UserInputHusNummer;
+
+        public string UserInput { set { this.UserInputHusNummer = value; } }
 
 
         //public double test()
