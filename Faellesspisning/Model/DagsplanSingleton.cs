@@ -189,12 +189,6 @@ namespace Faellesspisning.Model
            
         }
 
-        public void IndsætUdlægJson (string JsonText)
-        {
-            DeltagerSingleton MinListe = JsonConvert.DeserializeObject<DeltagerSingleton>(JsonText);
-            
-            
-        }
 
 
     }

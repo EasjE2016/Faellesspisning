@@ -31,6 +31,7 @@ namespace Faellesspisning.Model
             GemJsonCommand = new RelayCommand(GemData);
             AddCombobox();
             kokoghjælpere = DagsplanSingleton.Instance;
+            udlæg = DeltagerSingleton.Instance;
             localfolder = ApplicationData.Current.LocalFolder;
             this.mandagpris = 0.0;
             this.tirsdagpris = 0.0;
@@ -128,7 +129,7 @@ namespace Faellesspisning.Model
         {
             GemDataTilDiskAsync(HList, filnavn);
             GemDataTilDiskAsync(kokoghjælpere, filnavn2);
-            GemDataTilDiskAsync(udlæg, filnavn2);
+            GemDataTilDiskAsync(udlæg, filnavn3);
         }
 
 
@@ -142,9 +143,9 @@ namespace Faellesspisning.Model
 
         public void HentData()
         {
-            HentDataFraDiskAsync3();
-            HentDataFraDiskAsync2();
             HentDataFraDiskAsync();
+            HentDataFraDiskAsync2();          
+            HentDataFraDiskAsync3();
         }
 
         public async void HentDataFraDiskAsync()
@@ -173,10 +174,34 @@ namespace Faellesspisning.Model
             StorageFile file = await localfolder.GetFileAsync(filnavn3);
             string jsonText = await FileIO.ReadTextAsync(file);
 
-            kokoghjælpere.IndsætJson(jsonText);
+            instance.IndsætUdlægJson(jsonText);
 
         }
 
+        private void IndsætUdlægJson(string jsonText)
+        {
+            DeltagerSingleton MinListe = JsonConvert.DeserializeObject<DeltagerSingleton>(jsonText);
+            //udlæg.Mandagpris = MinListe.Mandagpris;
+            //udlæg.Tirsdagpris = MinListe.Tirsdagpris;
+            //udlæg.Onsdagpris = MinListe.Onsdagpris;
+            //udlæg.Torsdagpris = MinListe.Torsdagpris;
+            //udlæg.Fredagpris = MinListe.Fredagpris;
+            //udlæg.Lørdagpris = MinListe.Lørdagpris;
+            //udlæg.søndagpris = MinListe.søndagpris;
+            //udlæg.udlæg = MinListe.udlæg;
+
+            //virker heller ikke
+            //null ref
+            instance.Mandagpris = MinListe.Mandagpris;
+            instance.Tirsdagpris = MinListe.Tirsdagpris;
+            instance.Onsdagpris = MinListe.Onsdagpris;
+            instance.Torsdagpris = MinListe.Torsdagpris;
+            instance.Fredagpris = MinListe.Fredagpris;
+            instance.Lørdagpris = MinListe.Lørdagpris;
+            instance.søndagpris = MinListe.søndagpris;
+            instance.udlæg = MinListe.udlæg;
+
+        }
 
         public void Rydliste()
         {
