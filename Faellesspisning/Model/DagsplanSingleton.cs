@@ -19,6 +19,10 @@ namespace Faellesspisning.Model
             get { return instance; }
         }
 
+
+        public Dictionary<String, String[]> kokoghjælpere { get; set; }
+
+
         public string[] CrewMandag { get { return kokoghjælpere["Mandag"]; } }
         public string[] CrewTirsdag { get { return kokoghjælpere["Tirsdag"]; } }
         public string[] CrewOnsdag { get { return kokoghjælpere["Onsdag"]; } }
@@ -27,7 +31,18 @@ namespace Faellesspisning.Model
         public string[] CrewLørdag { get { return kokoghjælpere["Lørdag"]; } }
         public string[] CrewSøndag { get { return kokoghjælpere["Søndag"]; } }
 
-        public Dictionary<String, String[]> kokoghjælpere { get; set; }
+        
+
+        public Dictionary<String, string[]> udlæg { get; set; }
+        public string[] udlægMandag { get { return udlæg["Mandag"]; } }
+        public string[] udlægTirsdag { get { return udlæg["Tirsdag"]; } }
+        public string[] udlægOnsdag { get { return udlæg["Onsdag"]; } }
+        public string[] udlægTorsdag { get { return udlæg["Torsdag"]; } }
+        public string[] udlægFredag { get { return udlæg["Fredag"]; } }
+        public string[] udlægLørdag { get { return udlæg["Lørdag"]; } }
+        public string[] udlægSøndag { get { return udlæg["Søndag"]; } }
+
+
 
         #region vores PropertyChangedEventHandler 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -143,8 +158,20 @@ namespace Faellesspisning.Model
             kokoghjælpere.Add("Fredag", new string[3]);
             kokoghjælpere.Add("Lørdag", new string[3]);
             kokoghjælpere.Add("Søndag", new string[3]);
-            
-           
+
+
+
+            udlæg = new Dictionary<String, String[]>();
+
+            udlæg.Add("Mandag", new string[0]);
+            udlæg.Add("Tirsdag", new string[0]);
+            udlæg.Add("Onsdag", new string[0]);
+            udlæg.Add("Torsdag", new string[0]);
+            udlæg.Add("Fredag", new string[0]);
+            udlæg.Add("Lørdag", new string[0]);
+            udlæg.Add("Søndag", new string[0]);
+
+
 
         }
 
@@ -160,6 +187,13 @@ namespace Faellesspisning.Model
             instance.SøndagMenu = nyListe.SøndagMenu;
             instance.kokoghjælpere = nyListe.kokoghjælpere;
            
+        }
+
+        public void IndsætUdlægJson (string JsonText)
+        {
+            DeltagerSingleton MinListe = JsonConvert.DeserializeObject<DeltagerSingleton>(JsonText);
+            
+            
         }
 
 

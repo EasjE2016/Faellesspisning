@@ -45,9 +45,11 @@ namespace Faellesspisning.Model
 
         private readonly string filnavn = "HusListe.json";
         private readonly string filnavn2 = "Planlægning.json";
+        private readonly string filnavn3 = "Udlæg.json";
         public Model.HusListe HList { get; set; }
         public Model.HusInfo Newhus { get; set; }
         public Model.DagsplanSingleton kokoghjælpere { get; set; }
+        public DeltagerSingleton udlæg { get; set; }
 
 
 
@@ -126,6 +128,7 @@ namespace Faellesspisning.Model
         {
             GemDataTilDiskAsync(HList, filnavn);
             GemDataTilDiskAsync(kokoghjælpere, filnavn2);
+            GemDataTilDiskAsync(udlæg, filnavn2);
         }
 
 
@@ -139,8 +142,20 @@ namespace Faellesspisning.Model
 
         public void HentData()
         {
+            HentDataFraDiskAsync3();
             HentDataFraDiskAsync2();
             HentDataFraDiskAsync();
+        }
+
+        public async void HentDataFraDiskAsync()
+        {
+            this.HList.Clear();
+
+            StorageFile file = await localfolder.GetFileAsync(filnavn);
+            string jsonText = await FileIO.ReadTextAsync(file);
+
+            HList.IndsætJson(jsonText);
+
         }
 
         public async void HentDataFraDiskAsync2()
@@ -152,17 +167,16 @@ namespace Faellesspisning.Model
             kokoghjælpere.IndsætJson(jsonText);
 
         }
-
-        public async void HentDataFraDiskAsync()
+        public async void HentDataFraDiskAsync3()
         {
-            this.HList.Clear();
 
-            StorageFile file = await localfolder.GetFileAsync(filnavn);
+            StorageFile file = await localfolder.GetFileAsync(filnavn3);
             string jsonText = await FileIO.ReadTextAsync(file);
 
-            HList.IndsætJson(jsonText);
-            
+            kokoghjælpere.IndsætJson(jsonText);
+
         }
+
 
         public void Rydliste()
         {
