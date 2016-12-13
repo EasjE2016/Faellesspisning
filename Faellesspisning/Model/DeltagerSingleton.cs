@@ -175,6 +175,7 @@ namespace Faellesspisning.Model
             string jsonText = await FileIO.ReadTextAsync(file);
 
             instance.IndsætUdlægJson(jsonText);
+            //udlæg.IndsætUdlægJson(jsonText);
 
         }
 
