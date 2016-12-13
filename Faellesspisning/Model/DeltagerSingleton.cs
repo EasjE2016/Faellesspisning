@@ -33,17 +33,11 @@ namespace Faellesspisning.Model
             kokoghjælpere = DagsplanSingleton.Instance;
             localfolder = ApplicationData.Current.LocalFolder;
             this.mandagpris = 0.0;
-            OpdateringMandag = 0.0;
             this.tirsdagpris = 0.0;
-            OpdateringTirsdag = 0.0;
             this.onsdagpris = 0.0;
-            OpdateringOnsdag = 0.0;
             this.torsdagpris = 0.0;
-            OpdateringTorsdag = 0.0;
             this.fredagpris = 0.0;
-            OpdateringFredag = 0.0;
             this.lørdagpris = 0.0;
-            OpdateringLørdag = 0.0;
 
         }
 
@@ -119,23 +113,14 @@ namespace Faellesspisning.Model
             temphusinfo.HusNummer = Newhus.HusNummer;
             temphusinfo.ComboBoxIndex2 = ComboBoxIndex;
             HList.Add(temphusinfo);
-
-            //AntalKuverterMandag();
-            this.OpdateringMandag = AntalKuverterMandag();
-            this.OpdateringTirsdag = AntalKuverterTirsdag();
-            this.OpdateringOnsdag = AntalKuverterOnsdag();
-            this.OpdateringTorsdag = AntalKuverterTorsdag();
-            this.OpdateringFredag = AntalKuverterFredag();
-            this.OpdateringLørdag = AntalKuverterLørdag();
-
-          
+       
         }
 
 
         public void Slethus()
         {
             HList.Remove(SelectedHus);
-            this.OpdateringMandag = AntalKuverterMandag();
+            //this.OpdateringMandag = AntalKuverterMandag();
         }
 
         public void GemData()
@@ -205,21 +190,6 @@ namespace Faellesspisning.Model
 
         #region Mandag Pris beregning
 
-        //opdatering af pris
-
-        private double opdateringMandag;
-
-        public double OpdateringMandag
-        {
-            get { return opdateringMandag; }
-            set
-            {
-                opdateringMandag = value;
-                OnPropertyChanged(nameof(OpdateringMandag));
-            }
-        }
-
-
         // udregning per dag (kuvert)
         public double AntalKuverterMandag()
         {
@@ -238,50 +208,18 @@ namespace Faellesspisning.Model
             set
             {
                 mandagpris = value/GetKuvertMandag;
-                OnPropertyChanged("Mandagpris");
+                OnPropertyChanged(nameof(Mandagpris));
             }
         }
         #endregion
 
         #region Tirsdag Pris beregning
 
-        //opdatering af pris
-
-        private double opdateringTirsdag;
-
-        public double OpdateringTirsdag
-        {
-            get { return opdateringTirsdag; }
-            set
-            {
-                opdateringTirsdag = value;
-                OnPropertyChanged(nameof(OpdateringTirsdag));
-            }
-        }
-
-
         // udregning per dag (kuvert)
         public double AntalKuverterTirsdag()
         {
             return Antalkuverter(1);
         }
-
-        // ikke en del af tirsdag, men virker i hele programmet.....
-        private double Antalkuverter(int dag)
-        {
-            double kuverter = 0.0;
-            foreach (var i in HList)
-            {
-                if (i.ComboBoxIndex2 == dag)
-                {
-                    kuverter += (i.Antalkuverter());
-                }
-            }
-            return kuverter;
-        }
-
-        public double GetKuvertTirsdag { get { return AntalKuverterTirsdag(); } }
-
 
         // virker men kun hvis vi laver den anden textboks om til en textblock
         private double tirsdagpris;
@@ -292,27 +230,12 @@ namespace Faellesspisning.Model
             set
             {
                 tirsdagpris = value / GetKuvertTirsdag;
-                OnPropertyChanged("Tirsdagpris");
+                OnPropertyChanged(nameof(Tirsdagpris));
             }
         }
         #endregion
 
         #region Onsdag Pris beregning
-
-        //opdatering af pris
-
-        private double opdateringOnsdag;
-
-        public double OpdateringOnsdag
-        {
-            get { return opdateringOnsdag; }
-            set
-            {
-                opdateringOnsdag = value;
-                OnPropertyChanged(nameof(OpdateringOnsdag));
-            }
-        }
-
 
         // udregning per dag (kuvert)
         public double AntalKuverterOnsdag()
@@ -332,40 +255,17 @@ namespace Faellesspisning.Model
             set
             {
                 onsdagpris = value / GetKuvertOnsdag;
-                OnPropertyChanged("Onsdagpris");
+                OnPropertyChanged(nameof(Onsdagpris));
             }
         }
         #endregion
 
         #region Torsdag Pris beregning
 
-        //opdatering af pris
-
-        private double opdateringTorsdag;
-
-        public double OpdateringTorsdag
-        {
-            get { return opdateringTorsdag; }
-            set
-            {
-                opdateringTorsdag = value;
-                OnPropertyChanged(nameof(OpdateringTorsdag));
-            }
-        }
-
-
         // udregning per dag (kuvert)
         public double AntalKuverterTorsdag()
         {
-            double kuverter = 0.0;
-            foreach (var i in HList)
-            {
-                if (ComboBoxIndex == 3)
-                {
-                    kuverter += (i.AntalBarnIHusstand * 0.25) + (i.AntalTeenagerIHusstand * 0.5) + (i.AntalVoksneIHusstand);
-                }
-            }
-            return kuverter;
+            return Antalkuverter(3);
         }
 
         public double GetKuvertTorsdag { get { return AntalKuverterTorsdag(); } }
@@ -380,44 +280,20 @@ namespace Faellesspisning.Model
             set
             {
                 torsdagpris = value / GetKuvertTorsdag;
-                OnPropertyChanged("Torsdagpris");
+                OnPropertyChanged(nameof(Torsdagpris));
             }
         }
         #endregion
 
         #region Fredag Pris beregning
 
-        //opdatering af pris
-
-        private double opdateringFredag;
-
-        public double OpdateringFredag
-        {
-            get { return opdateringFredag; }
-            set
-            {
-                opdateringFredag = value;
-                OnPropertyChanged(nameof(OpdateringFredag));
-            }
-        }
-
-
         // udregning per dag (kuvert)
         public double AntalKuverterFredag()
         {
-            double kuverter = 0.0;
-            foreach (var i in HList)
-            {
-                if (ComboBoxIndex == 4)
-                {
-                    kuverter += (i.AntalBarnIHusstand * 0.25) + (i.AntalTeenagerIHusstand * 0.5) + (i.AntalVoksneIHusstand);
-                }
-            }
-            return kuverter;
+            return Antalkuverter(4);
         }
 
         public double GetKuvertFredag { get { return AntalKuverterFredag(); } }
-
 
         // virker men kun hvis vi laver den anden textboks om til en textblock
         private double fredagpris;
@@ -428,40 +304,17 @@ namespace Faellesspisning.Model
             set
             {
                 fredagpris = value / GetKuvertFredag;
-                OnPropertyChanged("Fredagpris");
+                OnPropertyChanged(nameof(Fredagpris));
             }
         }
         #endregion
 
         #region Lørdag Pris beregning
 
-        //opdatering af pris
-
-        private double opdateringLørdag;
-
-        public double OpdateringLørdag
-        {
-            get { return opdateringLørdag; }
-            set
-            {
-                opdateringLørdag = value;
-                OnPropertyChanged(nameof(OpdateringLørdag));
-            }
-        }
-
-
         // udregning per dag (kuvert)
         public double AntalKuverterLørdag()
         {
-            double kuverter = 0.0;
-            foreach (var i in HList)
-            {
-                if (ComboBoxIndex == 5)
-                {
-                    kuverter += (i.AntalBarnIHusstand * 0.25) + (i.AntalTeenagerIHusstand * 0.5) + (i.AntalVoksneIHusstand);
-                }
-            }
-            return kuverter;
+            return Antalkuverter(5);
         }
 
         public double GetKuvertLørdag { get { return AntalKuverterLørdag(); } }
@@ -476,10 +329,50 @@ namespace Faellesspisning.Model
             set
             {
                 lørdagpris = value / GetKuvertLørdag;
-                OnPropertyChanged("Lørdagpris");
+                OnPropertyChanged(nameof(Lørdagpris));
             }
         }
         #endregion
 
+        #region Søndag Pris beregning
+
+        // udregning per dag (kuvert)
+        public double AntalKuverterSøndag()
+        {
+            return Antalkuverter(6);
+        }
+
+        public double GetKuvertSøndag { get { return AntalKuverterSøndag(); } }
+
+
+        // virker men kun hvis vi laver den anden textboks om til en textblock
+        private double søndagpris;
+
+        public double Søndagpris
+        {
+            get { return søndagpris; }
+            set
+            {
+                søndagpris = value / GetKuvertSøndag;
+                OnPropertyChanged(nameof(Søndagpris));
+            }
+        }
+        #endregion
+
+        // beregner antal kurverter
+        private double Antalkuverter(int dag)
+        {
+            double kuverter = 0.0;
+            foreach (var i in HList)
+            {
+                if (i.ComboBoxIndex2 == dag)
+                {
+                    kuverter += (i.Antalkuverter());
+                }
+            }
+            return kuverter;
+        }
+
+        public double GetKuvertTirsdag { get { return AntalKuverterTirsdag(); } }
     }
 }
