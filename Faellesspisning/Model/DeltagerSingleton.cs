@@ -108,11 +108,12 @@ namespace Faellesspisning.Model
             temphusinfo.AntalVoksneIHusstand = Newhus.AntalVoksneIHusstand;
             temphusinfo.HusNummer = Newhus.HusNummer;
             temphusinfo.ComboBoxIndex2 = ComboBoxIndex;
-
-            AntalKuverterMandag();
-            this.Test = 0.0;
-
             HList.Add(temphusinfo);
+
+            //AntalKuverterMandag();
+            this.Test = AntalKuverterMandag();
+
+          
         }
 
 
@@ -184,24 +185,6 @@ namespace Faellesspisning.Model
         }
 
 
-
-        //public double PrisPrKuvertMandag
-        //{
-        //    get
-        //    {
-        //        double KuvertPris = 0;
-        //        foreach (var kuverter in KuvertListenMandag)
-        //        {
-        //            KuvertPris = (+(kuverter.AntalVoksne * 1) + (kuverter.AntalTeen * 0.5) + (kuverter.AntalBoern * 0.25) + (kuverter.AntalBaby * 0)) / TestPrisMandag;
-        //        }
-        //        return PrisPrKuvert;
-
-        //    }
-        //}
-
-
-
-
         // udregning per dag (kuvert)
         #region Test af AntalkuverterMandag
             // det virker men den lægger altid beløbet oven i sig selv
@@ -212,20 +195,12 @@ namespace Faellesspisning.Model
             get{ return test; }
             set
             {
-                foreach (var i in HList)
-                {
-                    if (ComboBoxIndex == 0)
-                    {
-                        test += (i.AntalBarnIHusstand * 0.25) + (i.AntalTeenagerIHusstand * 0.5) + (i.AntalVoksneIHusstand);
-                        
-                    }
-                }
-                OnPropertyChanged("Test");
-                
-                
+                test = value;
+                OnPropertyChanged("Test");    
             }
         }
         #endregion
+
 
         public double AntalKuverterMandag()
         {
@@ -243,17 +218,6 @@ namespace Faellesspisning.Model
         public double GetKuvert { get { return AntalKuverterMandag(); }}
 
 
-        // prøver få userinput til at blive brugt i en beregning
-        //public double kuvertPrisMandag()
-        //{
-        //    return PrisMandag / GetKuvert;
-        //}
-
-        //public double prisMandag { get { return PrisMandag; } set { this.PrisMandag = value; this.OnPropertyChanged(nameof(prisMandag)); } }
-
-        //private double PrisMandag;
-
-        //public double KuvertPrisMandag { get { return kuvertPrisMandag(); }}
 
 
 // virker men kun hvis vi laver den anden textboks om til en textblock
@@ -275,31 +239,6 @@ namespace Faellesspisning.Model
 
 
 
-        //betaling per husstand
-        //public string Husnummertest()
-        //{
-        //    double HusstandKuvert = 0.0;
-        //    foreach (var i in HList)
-        //    {
-        //        if (this.UserInputHusNummer == i.HusNummer)
-        //        {
-        //            HusstandKuvert += 
-        //        }
-        //    }
-        //}
-        private string UserInputHusNummer;
-
-        public string UserInput { set { this.UserInputHusNummer = value; } }
-
-
-        //public double test()
-        //      {
-        //          double KuvertPris = 0;
-        //          foreach (var i in DeltagerListe)
-        //          {
-        //              KuvertPris += i.
-        //          }
-        //      }
 
 
 
