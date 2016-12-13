@@ -120,7 +120,6 @@ namespace Faellesspisning.Model
         public void Slethus()
         {
             HList.Remove(SelectedHus);
-            //this.OpdateringMandag = AntalKuverterMandag();
         }
 
         public void GemData()

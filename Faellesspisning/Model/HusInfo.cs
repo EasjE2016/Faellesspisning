@@ -11,13 +11,13 @@ namespace Faellesspisning.Model
 
 
         //instance field
-        public double Mandag;
-        public double Tirsdag;
-        public double Onsdag;
-        public double Torsdag;
-        public double Fredag;
-        public double Lørdag;
-        public double Søndag;
+        //public double Mandag;
+        //public double Tirsdag;
+        //public double Onsdag;
+        //public double Torsdag;
+        //public double Fredag;
+        //public double Lørdag;
+        //public double Søndag;
         //public int AntalPersonerIHusstand;
         //public double TotalDagsPris;
         //public double TotalAntalKuverter;
