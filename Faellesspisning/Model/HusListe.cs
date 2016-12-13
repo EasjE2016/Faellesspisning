@@ -18,39 +18,39 @@ namespace Faellesspisning.Model
             
             DeltagerListe.Add(new HusInfo() {});
 
-            this.Add(new HusInfo()
-            {
-                HusNummer = "22a",
-                ComboBoxIndex2=0,
-                AntalVoksneIHusstand = 2,
-                AntalTeenagerIHusstand = 1,
-                AntalBarnIHusstand = 2,
-                AntalBabyIHusstand = 2
-            });
+        //    this.Add(new HusInfo()
+        //    {
+        //        HusNummer = "22a",
+        //        ComboBoxIndex2=0,
+        //        AntalVoksneIHusstand = 2,
+        //        AntalTeenagerIHusstand = 1,
+        //        AntalBarnIHusstand = 2,
+        //        AntalBabyIHusstand = 2
+        //    });
 
 
 
-            this.Add(new HusInfo()
-            {
-                HusNummer = "69",
-                ComboBoxIndex2 = 5,
-                AntalVoksneIHusstand = 2,
-                AntalTeenagerIHusstand = 3,
-                AntalBarnIHusstand = 1,
-                AntalBabyIHusstand = 4,
-            });
+        //    this.Add(new HusInfo()
+        //    {
+        //        HusNummer = "69",
+        //        ComboBoxIndex2 = 5,
+        //        AntalVoksneIHusstand = 2,
+        //        AntalTeenagerIHusstand = 3,
+        //        AntalBarnIHusstand = 1,
+        //        AntalBabyIHusstand = 4,
+        //    });
 
 
 
-            this.Add(new HusInfo()
-            {
-                HusNummer = "420",
-                ComboBoxIndex2 = 3,
-                AntalVoksneIHusstand = 3,
-                AntalTeenagerIHusstand = 1,
-                AntalBarnIHusstand = 0,
-                AntalBabyIHusstand = 1,
-            });
+        //    this.Add(new HusInfo()
+        //    {
+        //        HusNummer = "420",
+        //        ComboBoxIndex2 = 3,
+        //        AntalVoksneIHusstand = 3,
+        //        AntalTeenagerIHusstand = 1,
+        //        AntalBarnIHusstand = 0,
+        //        AntalBabyIHusstand = 1,
+        //    });
         }
 
 

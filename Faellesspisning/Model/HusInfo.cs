@@ -108,6 +108,17 @@ namespace Faellesspisning.Model
             ", " + "Baby: " + AntalBabyIHusstand;
             return s;
         }
-      
+
+        public double Antalkuverter()
+        {
+        return (AntalBarnIHusstand * 0.25) + (AntalTeenagerIHusstand * 0.5) + (AntalVoksneIHusstand);
+        }
+
+        public double Dagspris(double kuvertpris)
+        {
+            return kuvertpris * Antalkuverter();
+        }
+
+
     }   
 }

@@ -160,13 +160,6 @@ namespace Faellesspisning.Model
             instance.SøndagMenu = nyListe.SøndagMenu;
             instance.kokoghjælpere = nyListe.kokoghjælpere;
            
-            //TODO:
-            
-
-            //foreach (KeyValuePair<String, string[]> item in nyListe)
-            //{
-            //    kokoghjælpere.Add(item.Key, item.Value);
-            //}
         }
 
 
