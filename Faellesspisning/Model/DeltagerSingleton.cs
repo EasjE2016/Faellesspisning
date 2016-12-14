@@ -31,7 +31,6 @@ namespace Faellesspisning.Model
             GemJsonCommand = new RelayCommand(GemData);
             AddCombobox();
             kokoghjælpere = DagsplanSingleton.Instance;
-            udlæg = DeltagerSingleton.Instance;
             localfolder = ApplicationData.Current.LocalFolder;
             this.mandagpris = 0.0;
             this.tirsdagpris = 0.0;
@@ -50,7 +49,6 @@ namespace Faellesspisning.Model
         public Model.HusListe HList { get; set; }
         public Model.HusInfo Newhus { get; set; }
         public Model.DagsplanSingleton kokoghjælpere { get; set; }
-        public DeltagerSingleton udlæg { get; set; }
 
 
 
@@ -129,7 +127,6 @@ namespace Faellesspisning.Model
         {
             GemDataTilDiskAsync(HList, filnavn);
             GemDataTilDiskAsync(kokoghjælpere, filnavn2);
-            GemDataTilDiskAsync(udlæg, filnavn3);
         }
 
 
@@ -145,7 +142,6 @@ namespace Faellesspisning.Model
         {
             HentDataFraDiskAsync();
             HentDataFraDiskAsync2();          
-            HentDataFraDiskAsync3();
         }
 
         public async void HentDataFraDiskAsync()
@@ -168,41 +164,8 @@ namespace Faellesspisning.Model
             kokoghjælpere.IndsætJson(jsonText);
 
         }
-        public async void HentDataFraDiskAsync3()
-        {
 
-            StorageFile file = await localfolder.GetFileAsync(filnavn3);
-            string jsonText = await FileIO.ReadTextAsync(file);
 
-            instance.IndsætUdlægJson(jsonText);
-            //udlæg.IndsætUdlægJson(jsonText);
-
-        }
-
-        private void IndsætUdlægJson(string jsonText)
-        {
-            DeltagerSingleton MinListe = JsonConvert.DeserializeObject<DeltagerSingleton>(jsonText);
-            //udlæg.Mandagpris = MinListe.Mandagpris;
-            //udlæg.Tirsdagpris = MinListe.Tirsdagpris;
-            //udlæg.Onsdagpris = MinListe.Onsdagpris;
-            //udlæg.Torsdagpris = MinListe.Torsdagpris;
-            //udlæg.Fredagpris = MinListe.Fredagpris;
-            //udlæg.Lørdagpris = MinListe.Lørdagpris;
-            //udlæg.søndagpris = MinListe.søndagpris;
-            //udlæg.udlæg = MinListe.udlæg;
-
-            //virker heller ikke
-            //null ref
-            instance.Mandagpris = MinListe.Mandagpris;
-            instance.Tirsdagpris = MinListe.Tirsdagpris;
-            instance.Onsdagpris = MinListe.Onsdagpris;
-            instance.Torsdagpris = MinListe.Torsdagpris;
-            instance.Fredagpris = MinListe.Fredagpris;
-            instance.Lørdagpris = MinListe.Lørdagpris;
-            instance.søndagpris = MinListe.søndagpris;
-            instance.udlæg = MinListe.udlæg;
-
-        }
 
         public void Rydliste()
         {
@@ -263,6 +226,7 @@ namespace Faellesspisning.Model
                 OnPropertyChanged(nameof(Tirsdagpris));
             }
         }
+        public double GetKuvertTirsdag { get { return AntalKuverterTirsdag(); } }
         #endregion
 
         #region Onsdag Pris beregning
@@ -403,6 +367,6 @@ namespace Faellesspisning.Model
             return kuverter;
         }
 
-        public double GetKuvertTirsdag { get { return AntalKuverterTirsdag(); } }
+        
     }
 }

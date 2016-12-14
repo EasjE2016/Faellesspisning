@@ -33,14 +33,6 @@ namespace Faellesspisning.Model
 
         
 
-        public Dictionary<String, string[]> udlæg { get; set; }
-        public string[] udlægMandag { get { return udlæg["Mandag"]; } }
-        public string[] udlægTirsdag { get { return udlæg["Tirsdag"]; } }
-        public string[] udlægOnsdag { get { return udlæg["Onsdag"]; } }
-        public string[] udlægTorsdag { get { return udlæg["Torsdag"]; } }
-        public string[] udlægFredag { get { return udlæg["Fredag"]; } }
-        public string[] udlægLørdag { get { return udlæg["Lørdag"]; } }
-        public string[] udlægSøndag { get { return udlæg["Søndag"]; } }
 
 
 
@@ -161,15 +153,7 @@ namespace Faellesspisning.Model
 
 
 
-            udlæg = new Dictionary<String, String[]>();
 
-            udlæg.Add("Mandag", new string[0]);
-            udlæg.Add("Tirsdag", new string[0]);
-            udlæg.Add("Onsdag", new string[0]);
-            udlæg.Add("Torsdag", new string[0]);
-            udlæg.Add("Fredag", new string[0]);
-            udlæg.Add("Lørdag", new string[0]);
-            udlæg.Add("Søndag", new string[0]);
 
 
 
