@@ -45,7 +45,6 @@ namespace Faellesspisning.Model
 
         private readonly string filnavn = "HusListe.json";
         private readonly string filnavn2 = "Planlægning.json";
-        private readonly string filnavn3 = "Udlæg.json";
         public Model.HusListe HList { get; set; }
         public Model.HusInfo Newhus { get; set; }
         public Model.DagsplanSingleton kokoghjælpere { get; set; }
