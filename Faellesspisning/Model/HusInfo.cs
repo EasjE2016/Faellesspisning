@@ -14,7 +14,18 @@ namespace Faellesspisning.Model
         public int AntalTeenagerIHusstand { get; set; }
         public int AntalBarnIHusstand { get; set; }
         public int AntalBabyIHusstand { get; set; }
-        public string HusNummer { get; set; }
+        private string _husNummer;
+
+        public string HusNummer
+        {
+            get { return _husNummer; }
+            set {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Husk husnummer");
+                _husNummer = value;
+            }
+        }
+
 
 
         public override string ToString()
