@@ -209,15 +209,6 @@ namespace Faellesspisning.Model
             this.HList.Clear();
         }
 
-        //public int MandagTilmeldte()
-        //{
-        //    int Antal = 0;
-        //    foreach (var i in DeltagerListe)
-        //    {
-        //        Antal += i.AntalPersonerIHusstand;
-        //    }
-        //    return Antal;
-        //}
 
         public void AddCombobox()
         {
