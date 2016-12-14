@@ -23,26 +23,6 @@ namespace UnitTest
 
                 Assert.AreEqual("Husk husnummer", ex.Message);
             }
-            
-            
-        }
-
-        [TestMethod]
-        public void TestMethod2()
-        {
-            try
-            {
-                deltager.Newhus.HusNummer = "23";
-                deltager.AddNewHus();
-                Assert.AreEqual("23", deltager.Newhus.HusNummer);
-
-            }
-            catch (Exception ex)
-            {
-                Assert.Fail(ex.Message);
-            }
-
-
         }
     }
 }
