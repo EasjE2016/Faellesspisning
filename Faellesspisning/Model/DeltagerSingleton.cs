@@ -38,7 +38,6 @@ namespace Faellesspisning.Model
             this.torsdagpris = 0.0;
             this.fredagpris = 0.0;
             this.lørdagpris = 0.0;
-
         }
 
 
