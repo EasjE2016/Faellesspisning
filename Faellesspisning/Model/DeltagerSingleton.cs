@@ -7,6 +7,7 @@ using System.ComponentModel;
 using Faellesspinsning;
 using Windows.Storage;
 using Newtonsoft.Json;
+using Windows.UI.Popups;
 
 namespace Faellesspisning.Model
 {
@@ -102,17 +103,27 @@ namespace Faellesspisning.Model
 
 
         //metode til at lave nyt hus
-        public void AddNewHus()
+        public async void AddNewHus()
         {
-            Model.HusInfo temphusinfo = new Model.HusInfo();
-            temphusinfo.AntalBabyIHusstand = Newhus.AntalBabyIHusstand;
-            temphusinfo.AntalBarnIHusstand = Newhus.AntalBarnIHusstand;
-            temphusinfo.AntalTeenagerIHusstand = Newhus.AntalTeenagerIHusstand;
-            temphusinfo.AntalVoksneIHusstand = Newhus.AntalVoksneIHusstand;
-            temphusinfo.HusNummer = Newhus.HusNummer;
-            temphusinfo.ComboBoxIndex2 = ComboBoxIndex;
-            HList.Add(temphusinfo);
-       
+
+            try
+            {
+                Model.HusInfo temphusinfo = new Model.HusInfo();
+                temphusinfo.AntalBabyIHusstand = Newhus.AntalBabyIHusstand;
+                temphusinfo.AntalBarnIHusstand = Newhus.AntalBarnIHusstand;
+                temphusinfo.AntalTeenagerIHusstand = Newhus.AntalTeenagerIHusstand;
+                temphusinfo.AntalVoksneIHusstand = Newhus.AntalVoksneIHusstand;
+                temphusinfo.HusNummer = Newhus.HusNummer;
+                temphusinfo.ComboBoxIndex2 = ComboBoxIndex;
+                HList.Add(temphusinfo);
+            }
+            catch (Exception x)
+            {
+                var dialog = new MessageDialog(x.Message);
+                await dialog.ShowAsync();
+            }
+
+
         }
 
 
