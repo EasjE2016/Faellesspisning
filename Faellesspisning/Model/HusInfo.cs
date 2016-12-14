@@ -14,6 +14,7 @@ namespace Faellesspisning.Model
         public int AntalTeenagerIHusstand { get; set; }
         public int AntalBarnIHusstand { get; set; }
         public int AntalBabyIHusstand { get; set; }
+
         private string _husNummer;
 
         public string HusNummer
