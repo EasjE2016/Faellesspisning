@@ -199,7 +199,11 @@
                         <Viewmodel:BudgetViewmodel/>
                     </Grid.DataContext>
                     <Grid HorizontalAlignment="Left" Height="605" Margin="30,30,0,0" VerticalAlignment="Top" Width="300">
-                        <TextBox x:Name="BudgetHusNR" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" PlaceholderText="Indtast husnummer" Margin="0,0,0,573"/>
+                        <TextBox x:Name="BudgetHusNR" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Mindeltager.Henterhusnummer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Bottom" PlaceholderText="Indtast husnummer" Margin="0,0,0,573">
+                            <TextBox.DataContext>
+                                <Viewmodel:DeltagereViewmodel/>
+                            </TextBox.DataContext>
+                        </TextBox>
                         <ListView x:Name="BudgetListview" BorderThickness="2" BorderBrush="Black" Margin="0,50,0,150"/>
                         <TextBlock x:Name="PrintPris" HorizontalAlignment="Left" Margin="0,460,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="44" Width="280" ToolTipService.ToolTip="Her kan du se din pris"/>
                     </Grid>
@@ -207,7 +211,11 @@
                         <TextBlock x:Name="BudgetKonto" TextWrapping="Wrap" Text="" Height="271"/>
                         <Image x:Name="BudgetMobilepay" Height="319" Source="ms-appx:///Assets/mobilepay.png"/>
                     </StackPanel>
-                    <TextBlock x:Name="BudgetTotalBetal" HorizontalAlignment="Left" Margin="30,488,0,0" TextWrapping="Wrap" Text="{Binding BetalingsTextBlock}" VerticalAlignment="Top" Height="127" Width="300"/>
+                    <TextBlock x:Name="BudgetTotalBetal" HorizontalAlignment="Left" Margin="30,488,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Henterhusnummer}" VerticalAlignment="Top" Height="127" Width="300">
+                        <TextBlock.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBlock.DataContext>
+                    </TextBlock>
 
                 </Grid>
             </PivotItem>

@@ -38,6 +38,8 @@ namespace Faellesspisning.Model
             this.torsdagpris = 0.0;
             this.fredagpris = 0.0;
             this.lørdagpris = 0.0;
+            this.søndagpris = 0.0;
+
         }
 
 
@@ -366,6 +368,50 @@ namespace Faellesspisning.Model
             return kuverter;
         }
 
+
+        //ide til foreach
+
+        double ugeKuvert()
+        {
+           return Antalkuverter(0) + Antalkuverter(1) + Antalkuverter(2) + Antalkuverter(3) + Antalkuverter(4) + Antalkuverter(5) + Antalkuverter(6);
+        }
+
+        double ugePris()
+        {
+            return this.mandagpris + this.tirsdagpris + this.onsdagpris + this.torsdagpris + this.fredagpris + this.lørdagpris + this.søndagpris;
+        }
+
+        double ugeKuvertPris()
+        {
+            return ugePris() / ugeKuvert();
+        }
+
+
+        private string henterhusnummer;
+
+        public string Henterhusnummer
+        {
+            get { return henterhusnummer; }
+            set { henterhusnummer = value; OnPropertyChanged(nameof(Henterhusnummer)); }
+        }
+
+
+        public double HusPris()
+        {
+            double huskuvertpådag = 0;
+            
+            foreach (var i in HList)
+            {
+                if (Henterhusnummer == i.HusNummer)
+                {
+                    huskuvertpådag+= ((i.AntalBarnIHusstand*0.25) + (i.AntalTeenagerIHusstand*0.5) + i.AntalVoksneIHusstand);
+                }
+            }
+
+            return huskuvertpådag*ugeKuvertPris();
+        }
+
+        public double Vishuspris { get { return HusPris(); }}
         
     }
 }
