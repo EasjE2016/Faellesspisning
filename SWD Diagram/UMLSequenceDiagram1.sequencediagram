@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="065fc3a4-a2dc-4b4c-b76a-9097c1a38a3c" name="Sequence1" linkedPackageId="8c30ed3b-1f6c-4a22-94e8-a0a64bef6d1e" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="eb6d58a8-c33d-4b40-9642-44f16f5ca9ea">
+      <profileInstance Id="b689b347-4f35-4134-aa65-62cb52fab8c8" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="357f283b-d080-4119-9bb7-11c9301dbd65">
+      <profileInstance Id="28590e22-7242-436b-895e-50b799fea0fb" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="1de45c0d-4a61-4892-822f-81836e1c24ea" name="Sequence1" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <elementDefinition Id="d506a5d9-557f-4c81-946d-948219ade7b3" />
+        <lifelines>
+          <lifeline Id="dd0dd09d-3d62-405f-914b-240231ae5706" name="DeltagerSingleton" isActor="false" lifelineDisplayName="DeltagerSingleton">
+            <elementDefinition Id="ff02d833-8025-4b64-9e2a-68b509af83fa" />
+          </lifeline>
+        </lifelines>
+      </interaction>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="8c30ed3b-1f6c-4a22-94e8-a0a64bef6d1e" name="SWD Diagram">
+    <elementDefinition Id="ed2b9f08-7d47-43b9-a286-4a110d8e3733" />
+  </package>
+</SequenceDesignerModel>

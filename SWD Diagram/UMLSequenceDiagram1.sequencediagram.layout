@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UMLSequenceDiagram1">
+  <SequenceDesignerModelMoniker Id="065fc3a4-a2dc-4b4c-b76a-9097c1a38a3c" />
+  <nestedChildShapes>
+    <lifelineShape Id="56b4ce73-c116-4535-8f07-7a65a9f16bb4" absoluteBounds="1.025, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
+      <lifelineMoniker Id="dd0dd09d-3d62-405f-914b-240231ae5706" LastKnownName="DeltagerSingleton" />
+      <relativeChildShapes>
+        <umlLifelineHeadShape Id="42f2c89e-0724-4696-9db0-fe45f5730a53" absoluteBounds="0.45589231967926014, 0.6, 1.2882153606414795, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="dd0dd09d-3d62-405f-914b-240231ae5706" LastKnownName="DeltagerSingleton" />
+          <relativeChildShapes />
+        </umlLifelineHeadShape>
+        <lifelineHoverShape Id="0c13decf-825a-4b34-87a2-0802413c44e3" absoluteBounds="1.025, 1, 0, 7">
+          <lifelineMoniker Id="dd0dd09d-3d62-405f-914b-240231ae5706" LastKnownName="DeltagerSingleton" />
+        </lifelineHoverShape>
+      </relativeChildShapes>
+    </lifelineShape>
+  </nestedChildShapes>
+</sequenceDesignerDiagram>
