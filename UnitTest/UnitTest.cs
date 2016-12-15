@@ -8,14 +8,32 @@ namespace UnitTest
     public class UnitTest1
     {
         private DeltagerSingleton deltager = DeltagerSingleton.Instance;
-        
+        HusInfo mithus = new HusInfo();
 
      [TestMethod]
-        public void TestMethod1()
+        public void TestHusNummerKanIkkeVæreBlank()
         {
             try
             {
-                deltager.AddNewHus();
+                mithus.HusNummer = "   ";
+
+                Assert.Fail();
+            }
+            catch (Exception ex)
+            {
+
+                Assert.AreEqual("Husk husnummer", ex.Message);
+            }
+        }
+
+
+        [TestMethod]
+        public void TestHusNummerKanIkkeVæreNull()
+        {
+            try
+            {
+                mithus.HusNummer = null;
+
                 Assert.Fail();
             }
             catch (Exception ex)
