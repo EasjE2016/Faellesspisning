@@ -114,17 +114,6 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="df81de6f-57e2-475d-81be-89d9e1a40e45"
-            name="int Teenagere"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
             Id="0fd037d2-9b4b-4633-9857-0e5c855ffff4"
             name="stinrg Voksne"
             isLeaf="false"
@@ -1202,6 +1191,26 @@
             isComposite="false" />
         </ownedAttributesInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="2aa57b31-7579-40b7-8497-3bbd70aba46f"
+        LastKnownName="Model"
+        LastKnownLocation="Package_1217.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="09ebc7c2-7344-4947-906a-85004e4262f9"
+        LastKnownName="Viewmodel"
+        LastKnownLocation="Package_1219.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="dc0ebe90-3151-4003-8799-258c0ab7b784"
+        name="RelauCommand"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
