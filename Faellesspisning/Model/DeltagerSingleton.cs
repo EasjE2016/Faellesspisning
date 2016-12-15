@@ -39,7 +39,8 @@ namespace Faellesspisning.Model
             this.fredagpris = 0.0;
             this.lørdagpris = 0.0;
             this.søndagpris = 0.0;
-
+            this.huspris = 0.0;
+            this.Vishuspris = 0.0;
         }
 
 
@@ -395,7 +396,7 @@ namespace Faellesspisning.Model
             set { henterhusnummer = value; OnPropertyChanged(nameof(Henterhusnummer)); }
         }
 
-
+        
         public double HusPris()
         {
             double huskuvertpådag = 0;
@@ -408,10 +409,18 @@ namespace Faellesspisning.Model
                 }
             }
 
-            return huskuvertpådag*ugeKuvertPris();
-        }
+            huspris = huskuvertpådag*ugeKuvertPris();
+            return huspris;
 
-        public double Vishuspris { get { return HusPris(); }}
+
+        }
+        private double huspris;
+        public double Vishuspris
+        {
+            get { return huspris; }
+            set { huspris = value; OnPropertyChanged(nameof(Vishuspris)); }
+        }
         
+
     }
 }
