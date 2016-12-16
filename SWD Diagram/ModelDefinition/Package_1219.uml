@@ -78,6 +78,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="95e0f349-3620-46f5-8a01-dac5733e81c0">
+            <classMoniker
+              Id="a0d93d7e-edc6-491a-8527-85d924582010"
+              LastKnownName="DeltagerSingleton"
+              LastKnownLocation="Package_1217.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property
             Id="c8d65f88-a9f1-49f0-be99-41f57ed9b2e2"
@@ -107,6 +116,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="307d530b-b107-44df-882c-e13e7d8381c8">
+            <classMoniker
+              Id="b069c90f-cd04-49da-8f79-f32df1f2845a"
+              LastKnownName="DagsplanSingleton"
+              LastKnownLocation="Package_1217.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property
             Id="e62ea4bc-5a83-4b5d-bd19-abe86e6f6470"

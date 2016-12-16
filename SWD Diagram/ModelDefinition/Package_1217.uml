@@ -11,6 +11,47 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="426317de-9825-4fb5-8094-8463872fdd23"
+            isDerived="false"
+            sourceEndRoleName="DagsplanSingleton"
+            targetEndRoleName="HusListe"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e3861b42-9cf0-46c1-85e1-ab692d231ccf"
+              LastKnownName="HusListe"
+              LastKnownLocation="Package_1217.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="07a89d73-367e-4659-95d0-d66edc77818a"
+                  name="DagsplanSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6b0d3be8-ed8e-4a8c-bfc7-aff8947f7800"
+                  name="HusListe"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="8b4991d0-cb5f-4d93-89c1-bcfb1fecb1fd"
@@ -584,6 +625,47 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="b2586628-6f15-4923-84f4-79ba1180b5b8"
+            isDerived="false"
+            sourceEndRoleName="Husinfo"
+            targetEndRoleName="DagsplanSingleton"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b069c90f-cd04-49da-8f79-f32df1f2845a"
+              LastKnownName="DagsplanSingleton"
+              LastKnownLocation="Package_1217.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5fd4b94f-2524-4049-bc16-645cabfbb868"
+                  name="Husinfo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0848a168-a7f1-4b95-81b6-4964bc0acfac"
+                  name="DagsplanSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="7fed66a2-24f4-4657-8be1-fade1e5f079e"
@@ -1306,6 +1388,47 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="c894f84b-f9ab-439a-bdf3-a5650b1b4e1d"
+            isDerived="false"
+            sourceEndRoleName="DeltagerSingleton"
+            targetEndRoleName="Husinfo"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3942a1b1-c296-41c2-a614-4d8181dfa665"
+              LastKnownName="Husinfo"
+              LastKnownLocation="Package_1217.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="86b7b013-8f8a-4f03-b1d3-f48540af4644"
+                  name="DeltagerSingleton"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8173531f-1de9-4923-9522-e8acd1c82fcc"
+                  name="Husinfo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="75f87622-509b-4c6b-9322-af3e90a5f7a3"

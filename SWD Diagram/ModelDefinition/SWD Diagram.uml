@@ -1210,7 +1210,177 @@
         name="RelauCommand"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="a6059f3d-911f-4536-9145-aaabce8fa6d5"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a0d93d7e-edc6-491a-8527-85d924582010"
+              LastKnownName="DeltagerSingleton"
+              LastKnownLocation="Package_1217.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4c19a590-4e15-4b92-a2fe-b9a42ba5733c"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a06043ee-8f0e-4dfe-a3d9-415e28a6eacc"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ec03fc79-d994-4965-94e4-7a5a1b1330bf"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6ff2fa74-4258-4ad6-a033-9f7f9dc7055d"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="eeff92ad-b2db-4cb8-9834-30936478df2d"
+            isDerived="false"
+            sourceEndRoleName="RelauCommand"
+            targetEndRoleName="DeltagerViewmodel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c887e225-0efc-4392-8e1b-7f358bad6969"
+              LastKnownName="DeltagerViewmodel"
+              LastKnownLocation="Package_1219.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ca0ce819-7ee3-4238-b963-ae3e239a0fc3"
+                  name="RelauCommand"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c219d025-b09e-461b-9de9-7dc8749df7a4"
+                  name="DeltagerViewmodel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7029360b-f3e9-4d67-af6d-5287372aa674"
+            isDerived="false"
+            sourceEndRoleName="RelauCommand"
+            targetEndRoleName="BudgetViewmodel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="0f0e9d7c-6b20-4498-8e9c-3a21e70c7cff"
+              LastKnownName="BudgetViewmodel"
+              LastKnownLocation="Package_1219.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="10259a3a-7e77-47b6-b7c0-2a3076b3ec51"
+                  name="RelauCommand"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="36fa8c00-7cf2-4d29-8983-463db06f78f8"
+                  name="BudgetViewmodel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="43d47d62-cd23-4165-8f40-2c075ce765f0"
+            isDerived="false"
+            sourceEndRoleName="RelauCommand"
+            targetEndRoleName="PlanlægningsViewmodel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3291ef61-b4a0-459e-89e1-768b05e505eb"
+              LastKnownName="PlanlægningsViewmodel"
+              LastKnownLocation="Package_1219.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a5d17581-b867-4bc3-89e4-6bafadcfaa02"
+                  name="RelauCommand"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f8f1dcc9-1d13-4b8d-afc4-889b83e0d494"
+                  name="PlanlægningsViewmodel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <interaction
