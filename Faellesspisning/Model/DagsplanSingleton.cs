@@ -158,7 +158,7 @@ namespace Faellesspisning.Model
 
 
         }
-
+        
         public void IndsætJson(string JsonText)
         {
             DagsplanSingleton nyListe = JsonConvert.DeserializeObject<DagsplanSingleton>(JsonText);
