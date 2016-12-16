@@ -398,7 +398,6 @@ namespace Faellesspisning.Model
             set
             {
                 henterhusnummer = value;
-                OnPropertyChanged(nameof(Henterhusnummer));
                 OnPropertyChanged(nameof(Vishuspris));
             }
         }

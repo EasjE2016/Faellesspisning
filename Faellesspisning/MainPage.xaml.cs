@@ -77,5 +77,10 @@ namespace Faellesspisning
         {
 
         }
+
+        private void Huset_skal_for_hele_ugen_betale___SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
