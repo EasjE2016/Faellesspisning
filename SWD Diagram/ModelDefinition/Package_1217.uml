@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="2aa57b31-7579-40b7-8497-3bbd70aba46f"
   name="Model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -10,7 +10,572 @@
         name="DagsplanSingleton"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="8b4991d0-cb5f-4d93-89c1-bcfb1fecb1fd"
+            name="CrewMandag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8c006beb-e08b-49e1-b4c6-5fdb8477d639"
+                LastKnownName="string[]"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="03942062-7e41-458f-9f27-82f44f18191c"
+            name="CrewTirsdag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8c006beb-e08b-49e1-b4c6-5fdb8477d639"
+                LastKnownName="string[]"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="20591987-d865-4193-9d17-07718d22df2d"
+            name="CrewOnsdag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8c006beb-e08b-49e1-b4c6-5fdb8477d639"
+                LastKnownName="string[]"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="90a09864-d4f1-4477-8807-d7aed530b5f2"
+            name="CrewTorsdag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8c006beb-e08b-49e1-b4c6-5fdb8477d639"
+                LastKnownName="string[]"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9ad12e0e-96ce-48cd-bf81-1d93f7b5cb5c"
+            name="CrewFredag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8c006beb-e08b-49e1-b4c6-5fdb8477d639"
+                LastKnownName="string[]"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="eef6a6e2-d985-4136-9f5b-db672c8d8aa9"
+            name="CrewLørdag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8c006beb-e08b-49e1-b4c6-5fdb8477d639"
+                LastKnownName="string[]"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="992f08bd-a3cb-4add-ad54-84f8097744aa"
+            name="CrewSøndag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8c006beb-e08b-49e1-b4c6-5fdb8477d639"
+                LastKnownName="string[]"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f5dcd9ff-e7bc-4cf1-a81e-77878e282cb8"
+            name="MandagMenu"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                LastKnownName="string"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e9fcd7c0-e9c9-43ff-856a-12a2dcb79552"
+            name="TirsdagMenu"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                LastKnownName="string"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e84f9f8b-b371-4c38-8758-a58dc8b601ef"
+            name="OnsdagMenu"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                LastKnownName="string"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3ae435bc-1f04-4ae3-b2c3-79845312e49f"
+            name="TorsdagMenu"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                LastKnownName="string"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ad749606-8aed-446f-a5b5-d6a4c5115208"
+            name="FredagMenu"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                LastKnownName="string"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3cd18971-3611-43a8-a10e-4eca5f32ee48"
+            name="LørdagMenu"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                LastKnownName="string"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7a0a6d3a-2f2b-47af-bb42-e080c7eb1a5e"
+            name="SøndagMenu"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                LastKnownName="string"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9ee4ff57-3a87-4be6-99a8-72e4ed985b9f"
+            name="KokMandag"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                LastKnownName="string"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="22ffa769-a5f3-42fc-ac10-486fa6d75d4d"
+            name="KokTirsdag"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                LastKnownName="string"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="17acdec1-dd97-4a4e-bbed-8ebabd93c3e3"
+            name="KokOnsdag"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                LastKnownName="string"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c3f52269-cc39-4327-95ec-df7dc48696ea"
+            name="kokTorsdag"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                LastKnownName="string"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f7f44b3b-1e39-49b7-a228-f441687d31ba"
+            name="KokFredag"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                LastKnownName="string"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="40db9562-0ad2-428f-a7cb-1792623081a8"
+            name="kokLørdag"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                LastKnownName="string"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ad4253a7-8cdc-4566-966d-45925141e3bd"
+            name="Koksøndag"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                LastKnownName="string"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="4a42ef5d-ed64-403c-8591-f852abf34345"
+            name="mandagMenu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e590f099-b495-43d5-a4b7-c3c74820cc94"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                      LastKnownName="string"
+                      LastKnownLocation="Package_1217.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="eedbc9e5-1421-4b90-985a-bac6ac33ab50"
+            name="tirsdagMenu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="196f0d98-075d-45a6-8ad6-4c25f9eb9f8f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SWD Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d384c21b-ab7e-48ef-9f26-fac50e83788b"
+            name="OnsdagMenu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0cc0dd4f-308b-44db-bef8-f82282d6fd1a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SWD Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c5feebc7-ed8c-44c5-8a8c-756aff25d26b"
+            name="torsdagMenu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a57543a0-5344-4a22-a365-f06d1206662e"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SWD Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4cf5df1c-8591-491d-a307-30a5f06e4321"
+            name="fredagMenu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8a0874fb-701d-48e4-9af7-ae3fd4ecdd15"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SWD Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="64658d3b-1123-465d-852a-932a2996cb47"
+            name="lørdagMenu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7f89424e-8da4-4fae-977a-7826be47e3fb"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SWD Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="006e5908-8498-4cec-8c7d-624f5daef907"
+            name="SøndagMenu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="18b703b2-61f9-448a-9bee-a46bcad51c9c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="SWD Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -22,7 +587,7 @@
         <ownedAttributesInternal>
           <property
             Id="7fed66a2-24f4-4657-8be1-fade1e5f079e"
-            name="double KommerMandag-Kommersøndag"
+            name="KommerMandag"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -30,10 +595,17 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="411b6297-4efb-4018-9528-4c6fdfd2db93"
-            name="int AntalTeenagerIhusstand"
+            name="AntalTeenagerIhusstand"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -41,10 +613,17 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="3b7816f8-a12b-4aad-99cf-d0b3dafd5c85"
+                LastKnownName="int"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="25d9527d-d1f6-4974-a323-acc23048e457"
-            name="int AntalBarnIHusstand"
+            name="AntalBarnIHusstand"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -52,10 +631,17 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="3b7816f8-a12b-4aad-99cf-d0b3dafd5c85"
+                LastKnownName="int"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="3d95dc3d-7372-4d51-8ca4-ef3817065fbb"
-            name="int AntalBabyIhusstand"
+            name="AntalBabyIhusstand"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -63,10 +649,17 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="3b7816f8-a12b-4aad-99cf-d0b3dafd5c85"
+                LastKnownName="int"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="7cbac3b2-c76f-4479-8122-f55d43c9ffc2"
-            name="int AntalVoksneIHusstand"
+            name="AntalVoksneIHusstand"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -74,10 +667,17 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="3b7816f8-a12b-4aad-99cf-d0b3dafd5c85"
+                LastKnownName="int"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="804b1466-17db-4417-abb8-cb58e895eb1f"
-            name="string HusNummer"
+            name="HusNummer"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -85,10 +685,17 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                LastKnownName="string"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="f2202d72-ff20-4d79-9c86-539a1962025a"
-            name="int AntalPersonerIhusstand"
+            name="AntalPersonerIhusstand"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -96,10 +703,17 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="3b7816f8-a12b-4aad-99cf-d0b3dafd5c85"
+                LastKnownName="int"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="e227aab5-3875-44b0-baaf-615b9f9aae77"
-            name="double TotalDagsPris"
+            name="TotalDagsPris"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -107,10 +721,17 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="46b91eee-e0ce-4713-8155-b4ab829500fd"
-            name="double TotalAntalKurverter"
+            name="TotalAntalKurverter"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -118,10 +739,17 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="d27dbf8b-5b2a-401b-8715-df29c27b86c9"
-            name="double Mandag-Søndag"
+            name="Mandag"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -129,10 +757,17 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
           <property
             Id="3e5ef4df-70c4-4819-aa38-be302dea693d"
-            name="double AntalKuverterIHusstand"
+            name="AntalKuverterIHusstand"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -140,8 +775,449 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="855ade1b-c125-4822-bfcc-6dfe45389342"
+            name="KommerTirsdag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5b88b709-915b-401e-8be2-ccc88168379d"
+            name="kommerOnsdag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="19b59b98-3910-4342-93ba-82315081b3fb"
+            name="kommerTorsdag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f3c11d22-09c7-487e-a89d-3d48c73e7192"
+            name="kommerFredag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="da39a7de-bdbf-4cb4-af6d-7d87531716cc"
+            name="kommerLørdag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f9dc6eb6-6bc9-47bd-ae19-a239bc5f2a57"
+            name="KommerSøndag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ddd7c08e-6b08-4fb5-8050-413a7f4c3345"
+            name="Tirsdag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6fbafef9-3a40-4d51-b7c3-7b0d876d9dad"
+            name="Onsdag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9e7829fe-9030-42d7-b6e2-58e9e5d667ac"
+            name="Torsdag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5aeb18ca-0682-42da-b96d-879bf8192e8a"
+            name="Fredag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="cc2450d4-6f66-483e-9651-8ecede945c04"
+            name="Lørdag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5f4a93b7-4af1-4483-91cd-4cf41f6ce97d"
+            name="Søndag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                LastKnownName="double"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="faa3c058-c457-4b3e-9f02-f6393d50b418"
+            name="GetAntalKurverIhusstandKuvert"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="646f5182-26ce-41bd-8c0e-526b96b8c676"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                      LastKnownName="double"
+                      LastKnownLocation="Package_1217.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cea3764f-7206-491e-8550-a4ba92533697"
+            name="GetAntalVoksneHusstandKuvert"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7388ccd1-5ece-471c-86f4-e7ca2d10ffc2"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                      LastKnownName="double"
+                      LastKnownLocation="Package_1217.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="15b9e9dd-578a-488f-ba21-967598eb7bd9"
+            name="GetAntalTeenagerIHusstandKuvert"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2894805f-63eb-40be-9ed8-4af46632f306"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                      LastKnownName="double"
+                      LastKnownLocation="Package_1217.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d049a117-9172-4fd0-94e1-2aeb4ed667e4"
+            name="GetAntalBarnIHusstandKuvert"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6c95f625-4f69-493d-9dac-3119dde59ff7"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                      LastKnownName="double"
+                      LastKnownLocation="Package_1217.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="89e2dbf5-1984-4809-bfba-75341552a3d3"
+            name="GetAntalBabyIHusstandKuvert"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c159c38d-8c13-4b06-aee8-296113a0b377"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                      LastKnownName="double"
+                      LastKnownLocation="Package_1217.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f1746b1f-5a76-4420-8b29-2aa249b76d9c"
+            name="GetPrisPerKuvert"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3216739b-7a40-4ee6-9b2a-ad1750509daa"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                      LastKnownName="double"
+                      LastKnownLocation="Package_1217.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="73b0730f-4cb1-49bb-a65e-c45c285e1fe5"
+            name="GetPrisPerHusstand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="331503ad-ff53-4f3e-9be1-7dd80ef99390"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                      LastKnownName="double"
+                      LastKnownLocation="Package_1217.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cfab9a19-89a1-4fb3-a9d2-04f5a62539ad"
+            name="TotalUgePris"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e6c21901-0444-4d06-880f-2cc3693fbae6"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+                      LastKnownName="double"
+                      LastKnownLocation="Package_1217.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9ad0fd8d-ba2e-48c8-b68a-8d7e05bb43c5"
+            name="&quot;override&quot; Tostring"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b07eff00-2a46-4fab-9c94-3174eda99fd4"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+                      LastKnownName="string"
+                      LastKnownLocation="Package_1217.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -150,7 +1226,78 @@
         name="HusListe"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="5e0d1e5a-9245-4698-95b6-543787890343"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3942a1b1-c296-41c2-a614-4d8181dfa665"
+              LastKnownName="Husinfo"
+              LastKnownLocation="Package_1217.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="175be086-f45a-4b74-b76e-5e78aab6cca1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c402d65f-5a08-4064-a6d0-0645fd7b9325"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3151ef5d-dec7-4487-b31c-ce0f9d6f5661"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="acb743a0-1470-44d5-b43c-ef9e3a162db7"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="85bf09e9-ac9e-432d-b42e-46473db1bb73"
+            name="GetJson"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b039d1ff-c954-47d8-bc8f-efd56e750a9f"
+            name="IndsætJson"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -161,8 +1308,9 @@
         isActiveClass="false">
         <ownedAttributesInternal>
           <property
-            Id="d3639f05-e3f7-4819-87b4-703d1b6ebf54"
-            name="string[] CrewMandag-CrewSøndag"
+            Id="75f87622-509b-4c6b-9322-af3e90a5f7a3"
+            name="filnavn"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -170,19 +1318,427 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fc837409-8c40-4001-b5df-9fbccb7d5724"
+                LastKnownName="readonly string"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
           <property
-            Id="334fbf08-9ce1-4a74-b044-494d0fc0e0c4"
-            name="Attribute1"
+            Id="f0624105-590f-46c5-a91b-43927794c455"
+            name="filnavn2"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false" />
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8ad9c376-8aa6-41c2-869c-4bfbf63bd762"
+                LastKnownName="readonly String"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="715f95ba-d9ef-4a2c-b84d-f505bf8a7c3b"
+            name="HList"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="e3861b42-9cf0-46c1-85e1-ab692d231ccf"
+                LastKnownName="HusListe"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b6cbd9c6-708b-4e90-8bde-ac2313c3e437"
+            name="Newhus"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1e9f945-97f1-4208-a1ac-6001014fafe3"
+                LastKnownName="HusInfo"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="289868c1-7e67-4e4f-9630-1c384beade10"
+            name="AddHusCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="17a2abcd-b022-4d1d-832f-bc7909a51015"
+                LastKnownName="RelayCommand"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e44ebd65-91a7-44bb-86e3-2732d516f82d"
+            name="SletHusCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="17a2abcd-b022-4d1d-832f-bc7909a51015"
+                LastKnownName="RelayCommand"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5b9d2b61-e633-4fef-98c3-ed32f9c45ea9"
+            name="BeregnPrisCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="17a2abcd-b022-4d1d-832f-bc7909a51015"
+                LastKnownName="RelayCommand"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="22becfb8-935f-4a03-aaaf-76cf0cb26f9b"
+            name="PlanlægCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="17a2abcd-b022-4d1d-832f-bc7909a51015"
+                LastKnownName="RelayCommand"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="585a203c-9caa-4dd8-8940-8ba82119a1d5"
+            name="SletAlleCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="17a2abcd-b022-4d1d-832f-bc7909a51015"
+                LastKnownName="RelayCommand"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7eb83fc4-9356-41ec-a518-88e683fdfd39"
+            name="GemJsonCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="17a2abcd-b022-4d1d-832f-bc7909a51015"
+                LastKnownName="RelayCommand"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e62806b8-3bb1-4f4b-b44e-a4ecf0c1bb6c"
+            name="HentJsonCommand"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="17a2abcd-b022-4d1d-832f-bc7909a51015"
+                LastKnownName="RelayCommand"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="96dbdd87-6d7c-4eeb-b77d-c9f8ade2b7d9"
+            name="ComboBox"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="879a3981-a8d6-47a6-9f6b-57d8263a94ef"
+                LastKnownName="List&lt;String&gt;"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c98f5e36-47db-4873-8663-db451ec09d4b"
+            name="ComboBoxIndex"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="3b7816f8-a12b-4aad-99cf-d0b3dafd5c85"
+                LastKnownName="int"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9d6ca788-dec5-4f4c-b87c-def7ab38bbe2"
+            name="AntalMandag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="3b7816f8-a12b-4aad-99cf-d0b3dafd5c85"
+                LastKnownName="int"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="01c62f21-e7b9-4ba8-b846-da44b9a8b324"
+            name="SelectedHus"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a1e9f945-97f1-4208-a1ac-6001014fafe3"
+                LastKnownName="HusInfo"
+                LastKnownLocation="Package_1217.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8007aa4d-d6e8-400e-bab4-68d1de839a8d"
+            name="SelectedHus"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="28cee3bd-a7bf-49b7-82fe-045975ffd643"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="27dbd47e-bd45-477e-a88f-2a709f840670"
+                      LastKnownName="selectedHus"
+                      LastKnownLocation="Package_1217.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b7ba973c-1229-4d92-bd63-e6f926f72e0b"
+            name="AddNewHus"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0ba3effd-0189-4ddb-98fd-cf1b8d89a2ea"
+            name="SletHus"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="611e69b2-a5f1-4e65-9aa5-8c2cdcc0926d"
+            name="GemDataTilDiskAsync"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a2cabb7e-60a4-4543-8c75-9479f51d14ae"
+            name="HentDataFraDiskAsync"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ab304845-6357-4937-b4c3-a4e55b8dbb8e"
+            name="RydListe"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="09015fb3-af7a-49e9-92ca-aa34fcd0d5a0"
+            name="MandagTilmedlte"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a6c109d1-f267-4ea7-894b-26b69f023031"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="3b7816f8-a12b-4aad-99cf-d0b3dafd5c85"
+                      LastKnownName="int"
+                      LastKnownLocation="Package_1217.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f0ea1b73-f398-477e-b69d-24170b960639"
+            name="AddCombobox"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0a485ff9-afe5-4256-95e6-dd5a02c741c9"
+        name="double" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
+        name="string" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="3b7816f8-a12b-4aad-99cf-d0b3dafd5c85"
+        name="int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8c006beb-e08b-49e1-b4c6-5fdb8477d639"
+        name="string[]" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="d4f51bce-7ffd-4eab-90c7-ee100c2c77c3"
+        name="string(" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a695f8c8-cc79-4e7b-af57-bd80f8fc6dc5"
+        name="readonly" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="fc837409-8c40-4001-b5df-9fbccb7d5724"
+        name="readonly string" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8ad9c376-8aa6-41c2-869c-4bfbf63bd762"
+        name="readonly String" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a1e9f945-97f1-4208-a1ac-6001014fafe3"
+        name="HusInfo" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="17a2abcd-b022-4d1d-832f-bc7909a51015"
+        name="RelayCommand" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="879a3981-a8d6-47a6-9f6b-57d8263a94ef"
+        name="List&lt;String&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="27dbd47e-bd45-477e-a88f-2a709f840670"
+        name="selectedHus" />
     </packageHasNamedElement>
   </packagedElements>
 </package>
