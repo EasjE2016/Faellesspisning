@@ -77,5 +77,10 @@ namespace Faellesspisning
         {
 
         }
+
+        private void DeltagereHusNR_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
