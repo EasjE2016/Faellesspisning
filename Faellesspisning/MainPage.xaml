@@ -53,7 +53,7 @@
                             <Viewmodel:DeltagereViewmodel/>
                         </Button.DataContext>
                     </Button>
-                    <TextBox x:Name="DeltagereHusNR" HorizontalAlignment="Left" Margin="121,96,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.HusNummer, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Hus Nummer" TextChanged="DeltagereHusNR_TextChanged"/>
+                    <TextBox x:Name="DeltagereHusNR" HorizontalAlignment="Left" Margin="121,96,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.HusNummer, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Hus Nummer"/>
                     <TextBox x:Name="DeltagereAntalVoksne" HorizontalAlignment="Left" Margin="121,150,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalVoksneIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Antal Voksne" ToolTipService.ToolTip="Antal Voksne"/>
                     <TextBox x:Name="DeltagereUng715" HorizontalAlignment="Left" Margin="121,206,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalTeenagerIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Unge 7-15 år"/>
                     <TextBox x:Name="DeltagereUng36" HorizontalAlignment="Left" Margin="121,261,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Newhus.AntalBarnIHusstand, Mode=TwoWay}" VerticalAlignment="Top" Width="176" PlaceholderText="Unge 3-6 år"/>
@@ -70,7 +70,7 @@
                     <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="382,48,0,0" TextWrapping="Wrap" Text="Denne Uge" VerticalAlignment="Top"/>
                     <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="646,52,0,0" TextWrapping="Wrap" Text="Fast alle uger" VerticalAlignment="Top" SelectionChanged="textBlock1_Copy_SelectionChanged"/>
                     <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="628,107,0,0" VerticalAlignment="Top" Width="120"/>
-                    <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="733,293,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.AntalMandag, Mode=TwoWay}" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="456,547,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Test}" VerticalAlignment="Top" Height="55" Width="153"/>
 
                 </Grid>
             </PivotItem>
@@ -87,53 +87,109 @@
                             <Viewmodel:PlanlægningViewmodel/>
                         </TextBox.DataContext>
                     </TextBox>
-                    <TextBox x:Name="PlanlægningKokMandag" HorizontalAlignment="Left" Margin="52,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewMandag[0]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
-                    <TextBox x:Name="PlanlægningHjælpMandag" HorizontalAlignment="Left" Margin="52,225,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewMandag[1]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Hjælpere"/>
-                    <TextBox x:Name="PlanlægningOprydMandag" HorizontalAlignment="Left" Margin="52,311,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewMandag[2]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Oprydere"/>
-                    <TextBox x:Name="PlanlægningUdlægMandag" HorizontalAlignment="Left" Margin="52,397,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)"/>
-                    <TextBox x:Name="PlanlægningHusNRMandag" HorizontalAlignment="Left" Margin="52,483,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Husnr. udlæg"/>
+                    <TextBox x:Name="PlanlægningKokMandag" HorizontalAlignment="Left" Margin="52,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewMandag[0],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
+                    <TextBox x:Name="PlanlægningHjælpMandag" HorizontalAlignment="Left" Margin="52,225,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewMandag[1],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Hjælpere"/>
+                    <TextBox x:Name="PlanlægningOprydMandag" HorizontalAlignment="Left" Margin="52,311,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewMandag[2],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Oprydere"/>
+                    <TextBox x:Name="PlanlægningUdlægMandag" HorizontalAlignment="Left" Margin="52,397,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Mandagpris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)">
+                        <TextBox.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBox.DataContext>
+                    </TextBox>
+                    <TextBlock x:Name="PlanlægningHusNRMandag" HorizontalAlignment="Left" Margin="52,483,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Mandagpris}" VerticalAlignment="Top" Height="81" Width="146" >
+                        <TextBlock.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBlock.DataContext>
+                    </TextBlock>
                     <TextBlock x:Name="PlanlægningMandag" HorizontalAlignment="Left" Margin="52,10,0,0" TextWrapping="Wrap" Text="Mandag" VerticalAlignment="Top" Height="38" Width="146"/>
                     <TextBox x:Name="PlanlægningMenuTirsdag" HorizontalAlignment="Left" Margin="203,53,0,0" TextWrapping="Wrap" Text="{Binding Minplan.TirsdagMenu, Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Menu"/>
-                    <TextBox x:Name="PlanlægningKokTirsdag" HorizontalAlignment="Left" Margin="203,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewTirsdag[0]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
-                    <TextBox x:Name="PlanlægningHjælpTirsdag" HorizontalAlignment="Left" Margin="203,225,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewTirs[1]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Hjælpere"/>
-                    <TextBox x:Name="PlanlægningOprydTirdag" HorizontalAlignment="Left" Margin="203,311,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewTirsdag[2]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Oprydere"/>
-                    <TextBox x:Name="PlanlægningUdlægTirdag" HorizontalAlignment="Left" Margin="203,397,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)"/>
-                    <TextBox x:Name="PlanlægningHusNRTirsdag" HorizontalAlignment="Left" Margin="203,483,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Husnr. udlæg"/>
+                    <TextBox x:Name="PlanlægningKokTirsdag" HorizontalAlignment="Left" Margin="203,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewTirsdag[0],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
+                    <TextBox x:Name="PlanlægningHjælpTirsdag" HorizontalAlignment="Left" Margin="203,225,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewTirsdag[1],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Hjælpere"/>
+                    <TextBox x:Name="PlanlægningOprydTirdag" HorizontalAlignment="Left" Margin="203,311,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewTirsdag[2],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Oprydere"/>
+                    <TextBox x:Name="PlanlægningUdlægTirdag" HorizontalAlignment="Left" Margin="203,397,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Tirsdagpris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)">
+                        <TextBox.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBox.DataContext>
+                    </TextBox>
+                    <TextBlock x:Name="PlanlægningHusNRTirsdag" HorizontalAlignment="Left" Margin="203,483,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Tirsdagpris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" >
+                        <TextBlock.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBlock.DataContext>
+                    </TextBlock>
                     <TextBlock x:Name="PlanlægningTirsdag" HorizontalAlignment="Left" Margin="203,10,0,0" TextWrapping="Wrap" Text="Tirsdag&#x9;" VerticalAlignment="Top" Height="38" Width="146"/>
                     <TextBox x:Name="PlanlægningMenuOnsdag" HorizontalAlignment="Left" Margin="354,53,0,0" TextWrapping="Wrap" Text="{Binding Minplan.OnsdagMenu, Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Menu"/>
-                    <TextBox x:Name="PlanlægningKokOnsdag" HorizontalAlignment="Left" Margin="354,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewOnsdag[0]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
-                    <TextBox x:Name="PlanlægningHjælpOnsdag" HorizontalAlignment="Left" Margin="354,225,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewOnsdag[1]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Hjælpere"/>
-                    <TextBox x:Name="PlanlægningOprydOnsdag" HorizontalAlignment="Left" Margin="354,311,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewOnsdag[2]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Oprydere"/>
-                    <TextBox x:Name="PlanlægningUdlægOnsdag" HorizontalAlignment="Left" Margin="354,397,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)"/>
-                    <TextBox x:Name="PlanlægningHusNROnsdag" HorizontalAlignment="Left" Margin="354,483,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Husnr. udlæg"/>
+                    <TextBox x:Name="PlanlægningKokOnsdag" HorizontalAlignment="Left" Margin="354,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewOnsdag[0],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
+                    <TextBox x:Name="PlanlægningHjælpOnsdag" HorizontalAlignment="Left" Margin="354,225,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewOnsdag[1],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Hjælpere"/>
+                    <TextBox x:Name="PlanlægningOprydOnsdag" HorizontalAlignment="Left" Margin="354,311,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewOnsdag[2],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Oprydere"/>
+                    <TextBox x:Name="PlanlægningUdlægOnsdag" HorizontalAlignment="Left" Margin="354,397,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Onsdagpris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)">
+                        <TextBox.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBox.DataContext>
+                    </TextBox>
+                    <TextBlock x:Name="PlanlægningHusNROnsdag" HorizontalAlignment="Left" Margin="354,483,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Onsdagpris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" >
+                        <TextBlock.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBlock.DataContext>
+                    </TextBlock>
                     <TextBlock x:Name="PlanlægningOnsdag" HorizontalAlignment="Left" Margin="354,10,0,0" TextWrapping="Wrap" Text="Onsdag" VerticalAlignment="Top" Height="38" Width="146"/>
                     <TextBox x:Name="PlanlægningMenuTorsdag" HorizontalAlignment="Left" Margin="505,53,0,0" TextWrapping="Wrap" Text="{Binding Minplan.TorsdagMenu, Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Menu"/>
-                    <TextBox x:Name="PlanlægningKokTorsdag" HorizontalAlignment="Left" Margin="505,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewTorsdag[0]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
-                    <TextBox x:Name="PlanlægningHjælpTorsdag" HorizontalAlignment="Left" Margin="505,225,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewTorsdag[1]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Hjælpere"/>
-                    <TextBox x:Name="PlanlægningOprydTorsdag" HorizontalAlignment="Left" Margin="505,311,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewTorsdag[2]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Oprydere"/>
-                    <TextBox x:Name="PlanlægningUdlægTorsdag" HorizontalAlignment="Left" Margin="505,397,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)"/>
-                    <TextBox x:Name="PlanlægningHusNRTorsdag" HorizontalAlignment="Left" Margin="505,483,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Husnr. udlæg"/>
+                    <TextBox x:Name="PlanlægningKokTorsdag" HorizontalAlignment="Left" Margin="505,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewTorsdag[0],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
+                    <TextBox x:Name="PlanlægningHjælpTorsdag" HorizontalAlignment="Left" Margin="505,225,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewTorsdag[1],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Hjælpere"/>
+                    <TextBox x:Name="PlanlægningOprydTorsdag" HorizontalAlignment="Left" Margin="505,311,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewTorsdag[2],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Oprydere"/>
+                    <TextBox x:Name="PlanlægningUdlægTorsdag" HorizontalAlignment="Left" Margin="505,397,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Torsdagpris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)">
+                        <TextBox.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBox.DataContext>
+                    </TextBox>
+                    <TextBlock x:Name="PlanlægningHusNRTorsdag" HorizontalAlignment="Left" Margin="505,483,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Torsdagpris}" VerticalAlignment="Top" Height="81" Width="146" >
+                        <TextBlock.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBlock.DataContext>
+                    </TextBlock>
                     <TextBlock x:Name="PlanlægningTorsdag" HorizontalAlignment="Left" Margin="505,10,0,0" TextWrapping="Wrap" Text="Torsdag" VerticalAlignment="Top" Height="38" Width="146"/>
                     <TextBox x:Name="PlanlægningMenuFredag" HorizontalAlignment="Left" Margin="656,53,0,0" TextWrapping="Wrap" Text="{Binding Minplan.FredagMenu, Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Menu"/>
-                    <TextBox x:Name="PlanlægningKokFredag" HorizontalAlignment="Left" Margin="656,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewFredag[0]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
-                    <TextBox x:Name="PlanlægningHjælpFredag" HorizontalAlignment="Left" Margin="656,225,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewFredag[1]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Hjælpere"/>
-                    <TextBox x:Name="PlanlægningOprydFredag" HorizontalAlignment="Left" Margin="656,311,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewFredag[2]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Oprydere"/>
-                    <TextBox x:Name="PlanlægningUdlægFredag" HorizontalAlignment="Left" Margin="656,397,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)"/>
-                    <TextBox x:Name="PlanlægningHusNRFredag" HorizontalAlignment="Left" Margin="656,483,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Husnr. udlæg"/>
+                    <TextBox x:Name="PlanlægningKokFredag" HorizontalAlignment="Left" Margin="656,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewFredag[0],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
+                    <TextBox x:Name="PlanlægningHjælpFredag" HorizontalAlignment="Left" Margin="656,225,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewFredag[1],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Hjælpere"/>
+                    <TextBox x:Name="PlanlægningOprydFredag" HorizontalAlignment="Left" Margin="656,311,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewFredag[2],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Oprydere"/>
+                    <TextBox x:Name="PlanlægningUdlægFredag" HorizontalAlignment="Left" Margin="656,397,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Fredagpris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)">
+                        <TextBox.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBox.DataContext>
+                    </TextBox>
+                    <TextBlock x:Name="PlanlægningHusNRFredag" HorizontalAlignment="Left" Margin="656,483,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Fredagpris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" >
+                        <TextBlock.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBlock.DataContext>
+                    </TextBlock>
                     <TextBlock x:Name="PlanlægningFredag" HorizontalAlignment="Left" Margin="656,10,0,0" TextWrapping="Wrap" Text="Fredag" VerticalAlignment="Top" Height="38" Width="146"/>
                     <TextBox x:Name="PlanlægningMenuLørdag" HorizontalAlignment="Left" Margin="807,53,0,0" TextWrapping="Wrap" Text="{Binding Minplan.LørdagMenu, Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Menu"/>
-                    <TextBox x:Name="PlanlægningKokLørdag" HorizontalAlignment="Left" Margin="807,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewLørdag[0]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
-                    <TextBox x:Name="PlanlægningHjælpLørdag" HorizontalAlignment="Left" Margin="807,225,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewLørdag[1]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Hjælpere"/>
-                    <TextBox x:Name="PlanlægningOprydLørdag" HorizontalAlignment="Left" Margin="807,311,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewLørdag[2]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Oprydere"/>
-                    <TextBox x:Name="PlanlægningUdlægLørdag" HorizontalAlignment="Left" Margin="807,397,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)"/>
-                    <TextBox x:Name="PlanlægningHusNRLørdag" HorizontalAlignment="Left" Margin="807,483,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Husnr. udlæg"/>
+                    <TextBox x:Name="PlanlægningKokLørdag" HorizontalAlignment="Left" Margin="807,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewLørdag[0],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
+                    <TextBox x:Name="PlanlægningHjælpLørdag" HorizontalAlignment="Left" Margin="807,225,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewLørdag[1],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Hjælpere"/>
+                    <TextBox x:Name="PlanlægningOprydLørdag" HorizontalAlignment="Left" Margin="807,311,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewLørdag[2],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Oprydere"/>
+                    <TextBox x:Name="PlanlægningUdlægLørdag" HorizontalAlignment="Left" Margin="807,397,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Lørdagpris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)">
+                        <TextBox.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBox.DataContext>
+                    </TextBox>
+                    <TextBlock x:Name="PlanlægningHusNRLørdag" HorizontalAlignment="Left" Margin="802,483,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Lørdagpris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" >
+                        <TextBlock.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBlock.DataContext>
+                    </TextBlock>
                     <TextBlock x:Name="PlanlægningLørdag" HorizontalAlignment="Left" Margin="807,10,0,0" TextWrapping="Wrap" Text="Lørdag" VerticalAlignment="Top" Height="38" Width="146"/>
                     <TextBox x:Name="PlanlægningMenuSøndag" HorizontalAlignment="Left" Margin="958,53,0,0" TextWrapping="Wrap" Text="{Binding Minplan.SøndagMenu, Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Menu"/>
-                    <TextBox x:Name="PlanlægningKokSøndag" HorizontalAlignment="Left" Margin="958,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewSøndag[0]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
-                    <TextBox x:Name="PlanlægningHjælpSøndag" HorizontalAlignment="Left" Margin="958,225,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewSøndag[1]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Hjælpere"/>
-                    <TextBox x:Name="PlanlægningOprydSøndag" HorizontalAlignment="Left" Margin="958,311,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewSøndag[2]}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Oprydere"/>
-                    <TextBox x:Name="PlanlægningUdlægSøndag" HorizontalAlignment="Left" Margin="958,397,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)"/>
-                    <TextBox x:Name="PlanlægningHusNRSøndag" HorizontalAlignment="Left" Margin="958,483,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Husnr. udlæg"/>
+                    <TextBox x:Name="PlanlægningKokSøndag" HorizontalAlignment="Left" Margin="958,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewSøndag[0],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
+                    <TextBox x:Name="PlanlægningHjælpSøndag" HorizontalAlignment="Left" Margin="958,225,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewSøndag[1],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Hjælpere"/>
+                    <TextBox x:Name="PlanlægningOprydSøndag" HorizontalAlignment="Left" Margin="958,311,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewSøndag[2],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Oprydere"/>
+                    <TextBox x:Name="PlanlægningUdlægSøndag" HorizontalAlignment="Left" Margin="958,397,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Søndagpris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Udlæg (kr.)" InputScope="DateDayNumber">
+                        <TextBox.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBox.DataContext>
+                    </TextBox>
+                    <TextBlock x:Name="PlanlægningHusNRSøndag" HorizontalAlignment="Left" Margin="958,483,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Søndagpris, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" >
+                        <TextBlock.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBlock.DataContext>
+                    </TextBlock>
                     <TextBlock x:Name="PlanlægningSøndag" HorizontalAlignment="Left" Margin="958,10,0,0" TextWrapping="Wrap" Text="Søndag" VerticalAlignment="Top" Height="38" Width="146"/>
                 </Grid>
             </PivotItem>
@@ -157,12 +213,12 @@
             </PivotItem>
             <PivotItem Header="Filer">
                 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                    <Button x:Name="button1" Content="Hent" HorizontalAlignment="Left" Margin="666,232,0,0" VerticalAlignment="Top" Height="127" Width="193" Command="{Binding Mindeltager.HentJsonCommand}">
+                    <Button x:Name="Hentknap" Content="Hent" HorizontalAlignment="Left" Margin="666,232,0,0" VerticalAlignment="Top" Height="127" Width="193" Command="{Binding Mindeltager.HentJsonCommand}">
                         <Button.DataContext>
                             <Viewmodel:DeltagereViewmodel/>
                         </Button.DataContext>
                     </Button>
-                    <Button x:Name="button1_Copy" Content="Gem" HorizontalAlignment="Left" Margin="419,232,1,0" VerticalAlignment="Top" Height="127" Width="193" Command="{Binding Mindeltager.GemJsonCommand}">
+                    <Button x:Name="Gemknap" Content="Gem" HorizontalAlignment="Left" Margin="419,232,1,0" VerticalAlignment="Top" Height="127" Width="193" Command="{Binding Mindeltager.GemJsonCommand}">
                         <Button.DataContext>
                             <Viewmodel:DeltagereViewmodel/>
                         </Button.DataContext>

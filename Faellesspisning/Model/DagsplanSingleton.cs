@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using Windows.UI.Xaml.Controls;
+using Newtonsoft.Json;
 
 namespace Faellesspisning.Model 
 {
@@ -18,6 +19,10 @@ namespace Faellesspisning.Model
             get { return instance; }
         }
 
+
+        public Dictionary<String, String[]> kokoghjælpere { get; set; }
+
+
         public string[] CrewMandag { get { return kokoghjælpere["Mandag"]; } }
         public string[] CrewTirsdag { get { return kokoghjælpere["Tirsdag"]; } }
         public string[] CrewOnsdag { get { return kokoghjælpere["Onsdag"]; } }
@@ -25,6 +30,11 @@ namespace Faellesspisning.Model
         public string[] CrewFredag { get { return kokoghjælpere["Fredag"]; } }
         public string[] CrewLørdag { get { return kokoghjælpere["Lørdag"]; } }
         public string[] CrewSøndag { get { return kokoghjælpere["Søndag"]; } }
+
+        
+
+
+
 
         #region vores PropertyChangedEventHandler 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -48,16 +58,6 @@ namespace Faellesspisning.Model
         private string søndagMenu;
         #endregion
 
-
-        #region instance field kok dage
-        private string kokMandag;
-        private string kokTirsdag;
-        private string kokOnsdag;
-        private string kokTorsdag;
-        private string kokFredag;
-        private string kokLørdag;
-        private string kokSøndag;
-        #endregion
 
         #region Menu
 
@@ -127,80 +127,8 @@ namespace Faellesspisning.Model
         }
 #endregion
 
-        //#region Kokke
-        //public string KokMandag
-        //{
-        //    get { return kokMandag; }
-        //    set
-        //    {
-        //        kokMandag = value;
-        //        OnPropertyChanged("KokMandag");
-        //    }
-        //}
-
-        //public string KokTirsdag
-        //{
-        //    get { return kokTirsdag; }
-        //    set
-        //    {
-        //        kokTirsdag = value;
-        //        OnPropertyChanged("KokTirsdag");
-        //    }
-        //}
-
-        //public string KokOnsdag
-        //{
-        //    get { return kokOnsdag; }
-        //    set
-        //    {
-        //        kokOnsdag = value;
-        //        OnPropertyChanged("KokOnsdag");
-        //    }
-        //}
-
-        //public string KokTorsdag
-        //{
-        //    get { return kokTorsdag; }
-        //    set
-        //    {
-        //        kokTorsdag = value;
-        //        OnPropertyChanged("KokTorsdag");
-        //    }
-        //}
-
-        //public string KokFredag
-        //{
-        //    get { return kokFredag; }
-        //    set
-        //    {
-        //        kokFredag = value;
-        //        OnPropertyChanged("KokFredag");
-        //    }
-        //}
-
-        //public string KokLørdag
-        //{
-        //    get { return kokLørdag; }
-        //    set
-        //    {
-        //        kokLørdag = value;
-        //        OnPropertyChanged("KokLørdag");
-        //    }
-        //}
-
-        //public string KokSøndag
-        //{
-        //    get { return kokSøndag; }
-        //    set
-        //    {
-        //        kokSøndag = value;
-        //        OnPropertyChanged("KokSøndag");
-        //    }
-        //}
-
         
 
-        //#endregion
 
         //ctor
         private DagsplanSingleton()
@@ -213,14 +141,7 @@ namespace Faellesspisning.Model
             this.lørdagMenu = "";
             this.søndagMenu = "";
 
-            //this.kokMandag = "";
-            //this.kokTirsdag = "";
-            //this.kokOnsdag = "";
-            //this.kokTorsdag = "";
-            //this.kokFredag = "";
-            //this.kokLørdag = "";
-            //this.kokSøndag = "";
-
+            kokoghjælpere = new Dictionary<string, string[]>();
 
             kokoghjælpere.Add("Mandag", new string[3]);
             kokoghjælpere.Add("Tirsdag", new string[3]);
@@ -230,10 +151,27 @@ namespace Faellesspisning.Model
             kokoghjælpere.Add("Lørdag", new string[3]);
             kokoghjælpere.Add("Søndag", new string[3]);
 
+
+
+
+
+
+
         }
 
-        Dictionary<string, string[]> kokoghjælpere = new Dictionary<string, string[]>();
-
+        public void IndsætJson(string JsonText)
+        {
+            DagsplanSingleton nyListe = JsonConvert.DeserializeObject<DagsplanSingleton>(JsonText);
+            instance.MandagMenu = nyListe.MandagMenu;
+            instance.TirsdagMenu = nyListe.TirsdagMenu;
+            instance.OnsdagMenu = nyListe.OnsdagMenu;
+            instance.TorsdagMenu = nyListe.TorsdagMenu;
+            instance.FredagMenu = nyListe.FredagMenu;
+            instance.LørdagMenu = nyListe.LørdagMenu;
+            instance.SøndagMenu = nyListe.SøndagMenu;
+            instance.kokoghjælpere = nyListe.kokoghjælpere;
+           
+        }
 
 
 
