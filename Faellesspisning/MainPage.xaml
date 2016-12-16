@@ -211,7 +211,7 @@
                         <TextBlock x:Name="BudgetKonto" TextWrapping="Wrap" Text="" Height="271"/>
                         <Image x:Name="BudgetMobilepay" Height="319" Source="ms-appx:///Assets/mobilepay.png"/>
                     </StackPanel>
-                    <TextBlock x:Name="BudgetTotalBetal" HorizontalAlignment="Left" Margin="30,488,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Vishuspris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }" VerticalAlignment="Top" Height="127" Width="300">
+                    <TextBlock x:Name="BudgetTotalBetal" HorizontalAlignment="Left" Margin="30,488,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Vishuspris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="127" Width="300">
                         <TextBlock.DataContext>
                             <Viewmodel:DeltagereViewmodel/>
                         </TextBlock.DataContext>

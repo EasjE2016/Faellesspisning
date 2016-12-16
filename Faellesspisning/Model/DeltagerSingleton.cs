@@ -40,7 +40,8 @@ namespace Faellesspisning.Model
             this.lørdagpris = 0.0;
             this.søndagpris = 0.0;
             this.huspris = 0.0;
-            this.Vishuspris = 0.0;
+            HusPris();
+            
         }
 
 
@@ -116,6 +117,7 @@ namespace Faellesspisning.Model
             temphusinfo.HusNummer = Newhus.HusNummer;
             temphusinfo.ComboBoxIndex2 = ComboBoxIndex;
             HList.Add(temphusinfo);
+           
        
         }
 
@@ -393,19 +395,25 @@ namespace Faellesspisning.Model
         public string Henterhusnummer
         {
             get { return henterhusnummer; }
-            set { henterhusnummer = value; OnPropertyChanged(nameof(Henterhusnummer)); }
+            set
+            {
+                henterhusnummer = value;
+                OnPropertyChanged(nameof(Henterhusnummer));
+                OnPropertyChanged(nameof(Vishuspris));
+            }
         }
 
-        
+        private double huspris;
+
         public double HusPris()
         {
             double huskuvertpådag = 0;
             
             foreach (var i in HList)
             {
-                if (Henterhusnummer == i.HusNummer)
+                if (henterhusnummer == i.HusNummer)
                 {
-                    huskuvertpådag+= ((i.AntalBarnIHusstand*0.25) + (i.AntalTeenagerIHusstand*0.5) + i.AntalVoksneIHusstand);
+                        huskuvertpådag+= ((i.AntalBarnIHusstand*0.25) + (i.AntalTeenagerIHusstand*0.5) + i.AntalVoksneIHusstand);
                 }
             }
 
@@ -414,11 +422,10 @@ namespace Faellesspisning.Model
 
 
         }
-        private double huspris;
+        
         public double Vishuspris
         {
-            get { return huspris; }
-            set { huspris = value; OnPropertyChanged(nameof(Vishuspris)); }
+            get { return HusPris(); }
         }
         
 
