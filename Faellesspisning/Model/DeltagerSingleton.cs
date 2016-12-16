@@ -202,7 +202,7 @@ namespace Faellesspisning.Model
             get { return mandagpris; }
             set
             {
-                mandagpris = value/GetKuvertMandag;
+                mandagpris = value;//GetKuvertMandag;
                 OnPropertyChanged(nameof(Mandagpris));
             }
         }
@@ -224,7 +224,7 @@ namespace Faellesspisning.Model
             get { return tirsdagpris; }
             set
             {
-                tirsdagpris = value / GetKuvertTirsdag;
+                tirsdagpris = value; // GetKuvertTirsdag;
                 OnPropertyChanged(nameof(Tirsdagpris));
             }
         }
@@ -250,7 +250,7 @@ namespace Faellesspisning.Model
             get { return onsdagpris; }
             set
             {
-                onsdagpris = value / GetKuvertOnsdag;
+                onsdagpris = value; // GetKuvertOnsdag;
                 OnPropertyChanged(nameof(Onsdagpris));
             }
         }
@@ -275,7 +275,7 @@ namespace Faellesspisning.Model
             get { return torsdagpris; }
             set
             {
-                torsdagpris = value / GetKuvertTorsdag;
+                torsdagpris = value; // GetKuvertTorsdag;
                 OnPropertyChanged(nameof(Torsdagpris));
             }
         }
@@ -299,7 +299,7 @@ namespace Faellesspisning.Model
             get { return fredagpris; }
             set
             {
-                fredagpris = value / GetKuvertFredag;
+                fredagpris = value; // GetKuvertFredag;
                 OnPropertyChanged(nameof(Fredagpris));
             }
         }
@@ -324,7 +324,7 @@ namespace Faellesspisning.Model
             get { return lørdagpris; }
             set
             {
-                lørdagpris = value / GetKuvertLørdag;
+                lørdagpris = value; // GetKuvertLørdag;
                 OnPropertyChanged(nameof(Lørdagpris));
             }
         }
@@ -349,7 +349,7 @@ namespace Faellesspisning.Model
             get { return søndagpris; }
             set
             {
-                søndagpris = value / GetKuvertSøndag;
+                søndagpris = value; // GetKuvertSøndag;
                 OnPropertyChanged(nameof(Søndagpris));
             }
         }
