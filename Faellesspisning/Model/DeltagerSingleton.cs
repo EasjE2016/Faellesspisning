@@ -116,9 +116,7 @@ namespace Faellesspisning.Model
             temphusinfo.AntalVoksneIHusstand = Newhus.AntalVoksneIHusstand;
             temphusinfo.HusNummer = Newhus.HusNummer;
             temphusinfo.ComboBoxIndex2 = ComboBoxIndex;
-            HList.Add(temphusinfo);
-           
-       
+            HList.Add(temphusinfo);       
         }
 
 
