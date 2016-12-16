@@ -15,8 +15,8 @@
           <association
             Id="426317de-9825-4fb5-8094-8463872fdd23"
             isDerived="false"
-            sourceEndRoleName="DagsplanSingleton"
-            targetEndRoleName="HusListe"
+            sourceEndRoleName=""
+            targetEndRoleName=""
             isLeaf="false"
             isAbstract="false">
             <classMoniker
@@ -27,7 +27,6 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="07a89d73-367e-4659-95d0-d66edc77818a"
-                  name="DagsplanSingleton"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -40,7 +39,6 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="6b0d3be8-ed8e-4a8c-bfc7-aff8947f7800"
-                  name="HusListe"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -629,8 +627,8 @@
           <association
             Id="b2586628-6f15-4923-84f4-79ba1180b5b8"
             isDerived="false"
-            sourceEndRoleName="Husinfo"
-            targetEndRoleName="DagsplanSingleton"
+            sourceEndRoleName=""
+            targetEndRoleName=""
             isLeaf="false"
             isAbstract="false">
             <classMoniker
@@ -641,7 +639,6 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="5fd4b94f-2524-4049-bc16-645cabfbb868"
-                  name="Husinfo"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -654,7 +651,6 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="0848a168-a7f1-4b95-81b6-4964bc0acfac"
-                  name="DagsplanSingleton"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1275,30 +1271,6 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation
-            Id="9ad0fd8d-ba2e-48c8-b68a-8d7e05bb43c5"
-            name="&quot;override&quot; Tostring"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="b07eff00-2a46-4fab-9c94-3174eda99fd4"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="ef354243-22cb-4654-9fab-12910f4ef7ec"
-                      LastKnownName="string"
-                      LastKnownLocation="Package_1217.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1392,8 +1364,8 @@
           <association
             Id="c894f84b-f9ab-439a-bdf3-a5650b1b4e1d"
             isDerived="false"
-            sourceEndRoleName="DeltagerSingleton"
-            targetEndRoleName="Husinfo"
+            sourceEndRoleName=""
+            targetEndRoleName=""
             isLeaf="false"
             isAbstract="false">
             <classMoniker
@@ -1404,7 +1376,6 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="86b7b013-8f8a-4f03-b1d3-f48540af4644"
-                  name="DeltagerSingleton"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1417,7 +1388,6 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="8173531f-1de9-4923-9522-e8acd1c82fcc"
-                  name="Husinfo"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1425,6 +1395,56 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="be4d0ef0-813a-4a96-8c94-828ca2eb82b5"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="dc0ebe90-3151-4003-8799-258c0ab7b784"
+              LastKnownName="RelauCommand"
+              LastKnownLocation="SWD Diagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7420da21-6a62-4ea9-b3d8-cde96d02a7e3"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8ed658bb-1d3e-4cf2-b502-e91b8da27bd7"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d39cf9fc-1552-4f13-a33b-43c8a246373e"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f62eef9d-7f3e-4e4d-88f5-5c573237df38"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>

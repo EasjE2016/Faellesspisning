@@ -9,16 +9,16 @@
             <class Id="9c02202d-ef11-47e1-a58a-4d86fa4d401b" name="DagsplanSingleton" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="b069c90f-cd04-49da-8f79-f32df1f2845a" />
               <targetEnds>
-                <association Id="ea970a5f-b731-4e60-82c3-49e6859e6149" isDerived="false" sourceEndRoleName="DagsplanSingleton" targetEndRoleName="HusListe" isLeaf="false" isAbstract="false">
+                <association Id="ea970a5f-b731-4e60-82c3-49e6859e6149" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
                   <classMoniker Id="1feb3b84-5ad8-4bff-867a-47428e908b8e" LastKnownName="HusListe" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="34a41baf-bcf1-431a-b1ad-389a5e5a4e29" name="DagsplanSingleton" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                      <memberEnd Id="34a41baf-bcf1-431a-b1ad-389a5e5a4e29" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                         <elementDefinition Id="07a89d73-367e-4659-95d0-d66edc77818a" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="b7b5c4b7-39da-4f85-843a-5064d4e07401" name="HusListe" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                      <memberEnd Id="b7b5c4b7-39da-4f85-843a-5064d4e07401" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                         <elementDefinition Id="6b0d3be8-ed8e-4a8c-bfc7-aff8947f7800" />
                       </memberEnd>
                     </associationHasOwnedEnds>
@@ -253,16 +253,16 @@
             <class Id="d471a8fd-ae41-4b7e-9a55-870ad746ecf7" name="Husinfo" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="3942a1b1-c296-41c2-a614-4d8181dfa665" />
               <targetEnds>
-                <association Id="3296393d-4aa2-44f7-9864-a85c20f26477" isDerived="false" sourceEndRoleName="Husinfo" targetEndRoleName="DagsplanSingleton" isLeaf="false" isAbstract="false">
+                <association Id="3296393d-4aa2-44f7-9864-a85c20f26477" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
                   <classMoniker Id="9c02202d-ef11-47e1-a58a-4d86fa4d401b" LastKnownName="DagsplanSingleton" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="e7b185df-e6fb-4dd9-8196-6d40ae1d3dc1" name="Husinfo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                      <memberEnd Id="e7b185df-e6fb-4dd9-8196-6d40ae1d3dc1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                         <elementDefinition Id="5fd4b94f-2524-4049-bc16-645cabfbb868" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="b007d596-e0c6-4bc5-9193-389cdbbd8b5d" name="DagsplanSingleton" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                      <memberEnd Id="b007d596-e0c6-4bc5-9193-389cdbbd8b5d" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                         <elementDefinition Id="0848a168-a7f1-4b95-81b6-4964bc0acfac" />
                       </memberEnd>
                     </associationHasOwnedEnds>
@@ -515,19 +515,6 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
-                <operation Id="50eb0d00-64dc-4782-811d-475b66697c68" name="&quot;override&quot; Tostring" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="9ad0fd8d-ba2e-48c8-b68a-8d7e05bb43c5" />
-                  <ownedParameters>
-                    <operationHasOwnedParameters>
-                      <parameter Id="34aca3d2-f782-405b-b605-775e3ae04c9f" direction="Return" isUnique="false">
-                        <elementDefinition Id="b07eff00-2a46-4fab-9c94-3174eda99fd4" />
-                        <type_NamedElement>
-                          <referencedTypeMoniker Id="896fa636-0e7a-4674-9338-406a48e3477f" LastKnownName="string" />
-                        </type_NamedElement>
-                      </parameter>
-                    </operationHasOwnedParameters>
-                  </ownedParameters>
-                </operation>
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
@@ -576,21 +563,47 @@
             <class Id="e73c3cc8-a3c0-4fcc-a113-79d5489e47bd" name="DeltagerSingleton" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="a0d93d7e-edc6-491a-8527-85d924582010" />
               <targetEnds>
-                <association Id="252c4956-c096-4c0a-adbb-ccc8ff1df2a5" isDerived="false" sourceEndRoleName="DeltagerSingleton" targetEndRoleName="Husinfo" isLeaf="false" isAbstract="false">
+                <association Id="252c4956-c096-4c0a-adbb-ccc8ff1df2a5" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
                   <classMoniker Id="d471a8fd-ae41-4b7e-9a55-870ad746ecf7" LastKnownName="Husinfo" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="d93d789a-fe5b-48fa-b9ae-5d74d1267d56" name="DeltagerSingleton" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                      <memberEnd Id="d93d789a-fe5b-48fa-b9ae-5d74d1267d56" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                         <elementDefinition Id="86b7b013-8f8a-4f03-b1d3-f48540af4644" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="ad9d0e81-9be2-4209-b905-d757bab8f089" name="Husinfo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                      <memberEnd Id="ad9d0e81-9be2-4209-b905-d757bab8f089" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                         <elementDefinition Id="8173531f-1de9-4923-9522-e8acd1c82fcc" />
                       </memberEnd>
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="c894f84b-f9ab-439a-bdf3-a5650b1b4e1d" />
+                </association>
+                <association Id="5a032efe-9c7c-42da-b477-afa486544696" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="b2b2f015-3269-4a1b-8615-f93ebb1aa9d7" LastKnownName="RelauCommand" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="0761a27b-3c89-495b-9a7e-9d384ac0e029" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="7420da21-6a62-4ea9-b3d8-cde96d02a7e3" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="cc4714d0-e7d5-4edd-8fc9-97b98711ec6a" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <lowerValueInternal>
+                          <literalString Id="5205879b-474c-40f6-9501-e72a5462371a" name="Lower" value="*">
+                            <elementDefinition Id="d39cf9fc-1552-4f13-a33b-43c8a246373e" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="a0430ef8-e7c4-4829-a014-72679c0a7fb4" name="Upper" value="*">
+                            <elementDefinition Id="f62eef9d-7f3e-4e4d-88f5-5c573237df38" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="8ed658bb-1d3e-4cf2-b502-e91b8da27bd7" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="be4d0ef0-813a-4a96-8c94-828ca2eb82b5" />
                 </association>
               </targetEnds>
               <ownedAttributesInternal>
@@ -818,74 +831,32 @@
       <class Id="b2b2f015-3269-4a1b-8615-f93ebb1aa9d7" name="RelauCommand" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="dc0ebe90-3151-4003-8799-258c0ab7b784" />
         <targetEnds>
-          <association Id="55c07bdb-f4ac-4292-8b27-d668ec0b320e" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
-            <classMoniker Id="e73c3cc8-a3c0-4fcc-a113-79d5489e47bd" LastKnownName="DeltagerSingleton" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="444be915-9cca-471a-b4d2-2eb890e65eb1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString Id="17d4987e-1645-427d-8e78-0202e8df0651" name="Lower" value="*">
-                      <elementDefinition Id="a06043ee-8f0e-4dfe-a3d9-415e28a6eacc" />
-                    </literalString>
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString Id="3d8c4969-b299-41bb-8380-45402fbfbd16" name="Upper" value="*">
-                      <elementDefinition Id="ec03fc79-d994-4965-94e4-7a5a1b1330bf" />
-                    </literalString>
-                  </upperValueInternal>
-                  <elementDefinition Id="4c19a590-4e15-4b92-a2fe-b9a42ba5733c" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="c778fd59-2f55-446e-a6f5-98aa950aa678" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
-                  <elementDefinition Id="6ff2fa74-4258-4ad6-a033-9f7f9dc7055d" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="a6059f3d-911f-4536-9145-aaabce8fa6d5" />
-          </association>
-          <association Id="58fe66e8-1d12-4e22-a879-b330068a609b" isDerived="false" sourceEndRoleName="RelauCommand" targetEndRoleName="DeltagerViewmodel" isLeaf="false" isAbstract="false">
+          <association Id="58fe66e8-1d12-4e22-a879-b330068a609b" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
             <classMoniker Id="9d5f55d7-64ce-420c-a010-bd1311b637af" LastKnownName="DeltagerViewmodel" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="cfa44525-7bfe-4b24-9fe8-23733ecb4f84" name="RelauCommand" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                <memberEnd Id="cfa44525-7bfe-4b24-9fe8-23733ecb4f84" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="ca0ce819-7ee3-4238-b963-ae3e239a0fc3" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="ecae60ae-5248-4172-9113-6349caf9d307" name="DeltagerViewmodel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="ecae60ae-5248-4172-9113-6349caf9d307" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="c219d025-b09e-461b-9de9-7dc8749df7a4" />
                 </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="eeff92ad-b2db-4cb8-9834-30936478df2d" />
           </association>
-          <association Id="d29f882b-a6c3-4360-8b39-856a2d845189" isDerived="false" sourceEndRoleName="RelauCommand" targetEndRoleName="BudgetViewmodel" isLeaf="false" isAbstract="false">
-            <classMoniker Id="f6b08a03-d368-473b-a0fb-f1da06802086" LastKnownName="BudgetViewmodel" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="fabdaf17-7f55-4d7e-bf1c-1c4bfef20e0a" name="RelauCommand" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="10259a3a-7e77-47b6-b7c0-2a3076b3ec51" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="d0343e40-760e-429f-980b-bb016e0bf312" name="BudgetViewmodel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="36fa8c00-7cf2-4d29-8983-463db06f78f8" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="7029360b-f3e9-4d67-af6d-5287372aa674" />
-          </association>
-          <association Id="f4209cef-16e1-48e0-82d7-ef77cf6f7dc7" isDerived="false" sourceEndRoleName="RelauCommand" targetEndRoleName="PlanlægningsViewmodel" isLeaf="false" isAbstract="false">
+          <association Id="f4209cef-16e1-48e0-82d7-ef77cf6f7dc7" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
             <classMoniker Id="6d6653ea-1ef7-48da-9cb6-4d1f9b5f1936" LastKnownName="PlanlægningsViewmodel" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="799ba0dd-2497-465b-b312-a68b7054dbbd" name="RelauCommand" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                <memberEnd Id="799ba0dd-2497-465b-b312-a68b7054dbbd" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <elementDefinition Id="a5d17581-b867-4bc3-89e4-6bafadcfaa02" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="b8b11bee-f9f0-4091-a9d3-41d7ac96df63" name="PlanlægningsViewmodel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="b8b11bee-f9f0-4091-a9d3-41d7ac96df63" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="f8f1dcc9-1d13-4b8d-afc4-889b83e0d494" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -985,6 +956,45 @@
         <elementDefinition Id="be10c46b-c8d5-4457-b1f7-6fbd5d080946" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ba8eb15d-c8a6-45f3-9f6b-007fa428b024" name="MainPage" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="86bfdcba-53f3-4aaa-abb2-18d508c5b88a" />
+        <targetEnds>
+          <association Id="3b2f5e64-f31f-43e0-9c9a-d319fe4f674e" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6d6653ea-1ef7-48da-9cb6-4d1f9b5f1936" LastKnownName="PlanlægningsViewmodel" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d978e1a7-6d8a-4522-a1e8-d7bb6715c364" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e63f8ea0-dc69-4328-b7a7-c79602a79d5c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="91eaa633-d4cd-4de0-99ed-b0369c2d12a7" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="adcf3e82-8859-4814-bd3e-4b473aea1096" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fb714abf-b39d-41a2-912f-0c26e4bd97fa" />
+          </association>
+          <association Id="cfb8ecbe-35da-404a-a3fc-5f35fe8f49f9" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="9d5f55d7-64ce-420c-a010-bd1311b637af" LastKnownName="DeltagerViewmodel" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="062d1aed-b2b0-42f1-8ae5-33e769fa5b8c" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e31ea1b8-9c0a-4006-87ab-a0044d795d61" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="37e4f4f9-bc90-48b9-a048-399657aaff02" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="aec8e515-bf26-4469-8e59-d6436847ecc1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="faebeba7-b0ef-4b20-919b-d7e8dbd9e8c3" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="21c73f0b-67c6-4d99-821b-4dd8959d5075" name="SWD Diagram">
     <elementDefinition Id="ed2b9f08-7d47-43b9-a286-4a110d8e3733" />
