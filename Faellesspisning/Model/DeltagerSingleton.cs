@@ -145,7 +145,7 @@ namespace Faellesspisning.Model
             StorageFile file = await localfolder.CreateFileAsync(FileName, CreationCollisionOption.ReplaceExisting);
             await FileIO.WriteTextAsync(file, jsonText);
 
-        }
+        } 
 
         public void HentData()
         {
