@@ -146,7 +146,7 @@ namespace Faellesspisning.Model
             await FileIO.WriteTextAsync(file, jsonText);
 
         }
-
+         
         public void HentData()
         {
             HentDataFraDiskAsync();
