@@ -11,7 +11,7 @@ using Windows.UI.Popups;
 
 namespace Faellesspisning.Model
 {
-   public class DeltagerSingleton :INotifyPropertyChanged
+    public class DeltagerSingleton : INotifyPropertyChanged
     {
         private static DeltagerSingleton instance = new DeltagerSingleton();
 
@@ -42,7 +42,8 @@ namespace Faellesspisning.Model
             this.søndagpris = 0.0;
             this.huspris = 0.0;
             HusPris();
-            
+            HentData();
+
         }
 
         private readonly string filnavn = "HusListe.json";
@@ -116,6 +117,7 @@ namespace Faellesspisning.Model
                 temphusinfo.HusNummer = Newhus.HusNummer;
                 temphusinfo.ComboBoxIndex2 = ComboBoxIndex;
                 HList.Add(temphusinfo);
+                GemData();
             }
             catch (Exception x)
             {
@@ -130,6 +132,7 @@ namespace Faellesspisning.Model
         public void Slethus()
         {
             HList.Remove(SelectedHus);
+            GemData();
         }
 
         public void GemData()
@@ -145,12 +148,12 @@ namespace Faellesspisning.Model
             StorageFile file = await localfolder.CreateFileAsync(FileName, CreationCollisionOption.ReplaceExisting);
             await FileIO.WriteTextAsync(file, jsonText);
 
-        } 
+        }
 
         public void HentData()
         {
             HentDataFraDiskAsync();
-            HentDataFraDiskAsync2();          
+            HentDataFraDiskAsync2();
         }
 
         public async void HentDataFraDiskAsync()
@@ -179,6 +182,7 @@ namespace Faellesspisning.Model
         public void Rydliste()
         {
             this.HList.Clear();
+            GemData();
         }
 
 
@@ -196,10 +200,8 @@ namespace Faellesspisning.Model
             return Antalkuverter(0);
         }
 
-        public double GetKuvertMandag { get { return AntalKuverterMandag(); }}
+        public double GetKuvertMandag { get { return AntalKuverterMandag(); } }
 
-
-// virker men kun hvis vi laver den anden textboks om til en textblock
         private double mandagpris;
 
         public double Mandagpris
@@ -379,7 +381,7 @@ namespace Faellesspisning.Model
 
         double ugeKuvert()
         {
-           return Antalkuverter(0) + Antalkuverter(1) + Antalkuverter(2) + Antalkuverter(3) + Antalkuverter(4) + Antalkuverter(5) + Antalkuverter(6);
+            return Antalkuverter(0) + Antalkuverter(1) + Antalkuverter(2) + Antalkuverter(3) + Antalkuverter(4) + Antalkuverter(5) + Antalkuverter(6);
         }
 
         double ugePris()
@@ -410,24 +412,22 @@ namespace Faellesspisning.Model
         public double HusPris()
         {
             double huskuvertpådag = 0;
-            
+
             foreach (var i in HList)
             {
                 if (henterhusnummer == i.HusNummer)
                 {
-                        huskuvertpådag+= ((i.AntalBarnIHusstand*0.25) + (i.AntalTeenagerIHusstand*0.5) + i.AntalVoksneIHusstand);
+                    huskuvertpådag += ((i.AntalBarnIHusstand * 0.25) + (i.AntalTeenagerIHusstand * 0.5) + i.AntalVoksneIHusstand);
                 }
             }
 
-            huspris = huskuvertpådag*ugeKuvertPris();
+            huspris = huskuvertpådag * ugeKuvertPris();
             return huspris;
         }
-        
+
         public double Vishuspris
         {
             get { return HusPris(); }
         }
-        
-
     }
 }

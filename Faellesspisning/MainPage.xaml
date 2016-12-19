@@ -95,11 +95,6 @@
                             <Viewmodel:DeltagereViewmodel/>
                         </TextBox.DataContext>
                     </TextBox>
-                    <TextBlock x:Name="PlanlægningHusNRMandag" HorizontalAlignment="Left" Margin="52,483,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Mandagpris}" VerticalAlignment="Top" Height="81" Width="146" >
-                        <TextBlock.DataContext>
-                            <Viewmodel:DeltagereViewmodel/>
-                        </TextBlock.DataContext>
-                    </TextBlock>
                     <TextBlock x:Name="PlanlægningMandag" HorizontalAlignment="Left" Margin="52,10,0,0" TextWrapping="Wrap" Text="Mandag" VerticalAlignment="Top" Height="38" Width="146"/>
                     <TextBox x:Name="PlanlægningMenuTirsdag" HorizontalAlignment="Left" Margin="203,53,0,0" TextWrapping="Wrap" Text="{Binding Minplan.TirsdagMenu, Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Menu"/>
                     <TextBox x:Name="PlanlægningKokTirsdag" HorizontalAlignment="Left" Margin="203,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewTirsdag[0],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
@@ -110,11 +105,6 @@
                             <Viewmodel:DeltagereViewmodel/>
                         </TextBox.DataContext>
                     </TextBox>
-                    <TextBlock x:Name="PlanlægningHusNRTirsdag" HorizontalAlignment="Left" Margin="203,483,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Tirsdagpris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" >
-                        <TextBlock.DataContext>
-                            <Viewmodel:DeltagereViewmodel/>
-                        </TextBlock.DataContext>
-                    </TextBlock>
                     <TextBlock x:Name="PlanlægningTirsdag" HorizontalAlignment="Left" Margin="203,10,0,0" TextWrapping="Wrap" Text="Tirsdag&#x9;" VerticalAlignment="Top" Height="38" Width="146"/>
                     <TextBox x:Name="PlanlægningMenuOnsdag" HorizontalAlignment="Left" Margin="354,53,0,0" TextWrapping="Wrap" Text="{Binding Minplan.OnsdagMenu, Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Menu"/>
                     <TextBox x:Name="PlanlægningKokOnsdag" HorizontalAlignment="Left" Margin="354,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewOnsdag[0],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
@@ -125,11 +115,6 @@
                             <Viewmodel:DeltagereViewmodel/>
                         </TextBox.DataContext>
                     </TextBox>
-                    <TextBlock x:Name="PlanlægningHusNROnsdag" HorizontalAlignment="Left" Margin="354,483,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Onsdagpris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" >
-                        <TextBlock.DataContext>
-                            <Viewmodel:DeltagereViewmodel/>
-                        </TextBlock.DataContext>
-                    </TextBlock>
                     <TextBlock x:Name="PlanlægningOnsdag" HorizontalAlignment="Left" Margin="354,10,0,0" TextWrapping="Wrap" Text="Onsdag" VerticalAlignment="Top" Height="38" Width="146"/>
                     <TextBox x:Name="PlanlægningMenuTorsdag" HorizontalAlignment="Left" Margin="505,53,0,0" TextWrapping="Wrap" Text="{Binding Minplan.TorsdagMenu, Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Menu"/>
                     <TextBox x:Name="PlanlægningKokTorsdag" HorizontalAlignment="Left" Margin="505,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewTorsdag[0],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
@@ -140,11 +125,6 @@
                             <Viewmodel:DeltagereViewmodel/>
                         </TextBox.DataContext>
                     </TextBox>
-                    <TextBlock x:Name="PlanlægningHusNRTorsdag" HorizontalAlignment="Left" Margin="505,483,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Torsdagpris}" VerticalAlignment="Top" Height="81" Width="146" >
-                        <TextBlock.DataContext>
-                            <Viewmodel:DeltagereViewmodel/>
-                        </TextBlock.DataContext>
-                    </TextBlock>
                     <TextBlock x:Name="PlanlægningTorsdag" HorizontalAlignment="Left" Margin="505,10,0,0" TextWrapping="Wrap" Text="Torsdag" VerticalAlignment="Top" Height="38" Width="146"/>
                     <TextBox x:Name="PlanlægningMenuFredag" HorizontalAlignment="Left" Margin="656,53,0,0" TextWrapping="Wrap" Text="{Binding Minplan.FredagMenu, Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Menu"/>
                     <TextBox x:Name="PlanlægningKokFredag" HorizontalAlignment="Left" Margin="656,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewFredag[0],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
@@ -155,11 +135,6 @@
                             <Viewmodel:DeltagereViewmodel/>
                         </TextBox.DataContext>
                     </TextBox>
-                    <TextBlock x:Name="PlanlægningHusNRFredag" HorizontalAlignment="Left" Margin="656,483,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Fredagpris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" >
-                        <TextBlock.DataContext>
-                            <Viewmodel:DeltagereViewmodel/>
-                        </TextBlock.DataContext>
-                    </TextBlock>
                     <TextBlock x:Name="PlanlægningFredag" HorizontalAlignment="Left" Margin="656,10,0,0" TextWrapping="Wrap" Text="Fredag" VerticalAlignment="Top" Height="38" Width="146"/>
                     <TextBox x:Name="PlanlægningMenuLørdag" HorizontalAlignment="Left" Margin="807,53,0,0" TextWrapping="Wrap" Text="{Binding Minplan.LørdagMenu, Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Menu"/>
                     <TextBox x:Name="PlanlægningKokLørdag" HorizontalAlignment="Left" Margin="807,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewLørdag[0],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
@@ -170,11 +145,6 @@
                             <Viewmodel:DeltagereViewmodel/>
                         </TextBox.DataContext>
                     </TextBox>
-                    <TextBlock x:Name="PlanlægningHusNRLørdag" HorizontalAlignment="Left" Margin="802,483,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Lørdagpris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" >
-                        <TextBlock.DataContext>
-                            <Viewmodel:DeltagereViewmodel/>
-                        </TextBlock.DataContext>
-                    </TextBlock>
                     <TextBlock x:Name="PlanlægningLørdag" HorizontalAlignment="Left" Margin="807,10,0,0" TextWrapping="Wrap" Text="Lørdag" VerticalAlignment="Top" Height="38" Width="146"/>
                     <TextBox x:Name="PlanlægningMenuSøndag" HorizontalAlignment="Left" Margin="958,53,0,0" TextWrapping="Wrap" Text="{Binding Minplan.SøndagMenu, Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Menu"/>
                     <TextBox x:Name="PlanlægningKokSøndag" HorizontalAlignment="Left" Margin="958,139,0,0" TextWrapping="Wrap" Text="{Binding Minplan.CrewSøndag[0],Mode=TwoWay}" VerticalAlignment="Top" Height="81" Width="146" PlaceholderText="Kok"/>
@@ -185,11 +155,6 @@
                             <Viewmodel:DeltagereViewmodel/>
                         </TextBox.DataContext>
                     </TextBox>
-                    <TextBlock x:Name="PlanlægningHusNRSøndag" HorizontalAlignment="Left" Margin="958,483,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Søndagpris, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="81" Width="146" >
-                        <TextBlock.DataContext>
-                            <Viewmodel:DeltagereViewmodel/>
-                        </TextBlock.DataContext>
-                    </TextBlock>
                     <TextBlock x:Name="PlanlægningSøndag" HorizontalAlignment="Left" Margin="958,10,0,0" TextWrapping="Wrap" Text="Søndag" VerticalAlignment="Top" Height="38" Width="146"/>
                 </Grid>
             </PivotItem>
