@@ -39,6 +39,10 @@ namespace Faellesspisning.Model
             this.torsdagpris = 0.0;
             this.fredagpris = 0.0;
             this.lørdagpris = 0.0;
+            this.søndagpris = 0.0;
+            this.huspris = 0.0;
+            HusPris();
+            
         }
 
 
@@ -209,7 +213,7 @@ namespace Faellesspisning.Model
             get { return mandagpris; }
             set
             {
-                mandagpris = value/GetKuvertMandag;
+                mandagpris = value;//GetKuvertMandag;
                 OnPropertyChanged(nameof(Mandagpris));
             }
         }
@@ -231,7 +235,7 @@ namespace Faellesspisning.Model
             get { return tirsdagpris; }
             set
             {
-                tirsdagpris = value / GetKuvertTirsdag;
+                tirsdagpris = value; // GetKuvertTirsdag;
                 OnPropertyChanged(nameof(Tirsdagpris));
             }
         }
@@ -257,7 +261,7 @@ namespace Faellesspisning.Model
             get { return onsdagpris; }
             set
             {
-                onsdagpris = value / GetKuvertOnsdag;
+                onsdagpris = value; // GetKuvertOnsdag;
                 OnPropertyChanged(nameof(Onsdagpris));
             }
         }
@@ -282,7 +286,7 @@ namespace Faellesspisning.Model
             get { return torsdagpris; }
             set
             {
-                torsdagpris = value / GetKuvertTorsdag;
+                torsdagpris = value; // GetKuvertTorsdag;
                 OnPropertyChanged(nameof(Torsdagpris));
             }
         }
@@ -306,7 +310,7 @@ namespace Faellesspisning.Model
             get { return fredagpris; }
             set
             {
-                fredagpris = value / GetKuvertFredag;
+                fredagpris = value; // GetKuvertFredag;
                 OnPropertyChanged(nameof(Fredagpris));
             }
         }
@@ -331,7 +335,7 @@ namespace Faellesspisning.Model
             get { return lørdagpris; }
             set
             {
-                lørdagpris = value / GetKuvertLørdag;
+                lørdagpris = value; // GetKuvertLørdag;
                 OnPropertyChanged(nameof(Lørdagpris));
             }
         }
@@ -356,7 +360,7 @@ namespace Faellesspisning.Model
             get { return søndagpris; }
             set
             {
-                søndagpris = value / GetKuvertSøndag;
+                søndagpris = value; // GetKuvertSøndag;
                 OnPropertyChanged(nameof(Søndagpris));
             }
         }
@@ -376,6 +380,62 @@ namespace Faellesspisning.Model
             return kuverter;
         }
 
+
+        //ide til foreach
+
+        double ugeKuvert()
+        {
+           return Antalkuverter(0) + Antalkuverter(1) + Antalkuverter(2) + Antalkuverter(3) + Antalkuverter(4) + Antalkuverter(5) + Antalkuverter(6);
+        }
+
+        double ugePris()
+        {
+            return this.mandagpris + this.tirsdagpris + this.onsdagpris + this.torsdagpris + this.fredagpris + this.lørdagpris + this.søndagpris;
+        }
+
+        double ugeKuvertPris()
+        {
+            return ugePris() / ugeKuvert();
+        }
+
+
+        private string henterhusnummer;
+
+        public string Henterhusnummer
+        {
+            get { return henterhusnummer; }
+            set
+            {
+                henterhusnummer = value;
+                OnPropertyChanged(nameof(Vishuspris));
+            }
+        }
+
+        private double huspris;
+
+        public double HusPris()
+        {
+            double huskuvertpådag = 0;
+            
+            foreach (var i in HList)
+            {
+                if (henterhusnummer == i.HusNummer)
+                {
+                        huskuvertpådag+= ((i.AntalBarnIHusstand*0.25) + (i.AntalTeenagerIHusstand*0.5) + i.AntalVoksneIHusstand);
+                }
+            }
+
+            huspris = huskuvertpådag*ugeKuvertPris();
+            return huspris;
+
+
+        }
         
+        public double Vishuspris
+        {
+            get { return HusPris(); }
+        }
+        
+
     }
 }

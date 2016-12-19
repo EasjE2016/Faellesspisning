@@ -199,15 +199,22 @@
                         <Viewmodel:BudgetViewmodel/>
                     </Grid.DataContext>
                     <Grid HorizontalAlignment="Left" Height="605" Margin="30,30,0,0" VerticalAlignment="Top" Width="300">
-                        <TextBox x:Name="BudgetHusNR" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" PlaceholderText="Indtast husnummer" Margin="0,0,0,573"/>
-                        <ListView x:Name="BudgetListview" BorderThickness="2" BorderBrush="Black" Margin="0,50,0,150"/>
+                        <TextBox x:Name="BudgetHusNR" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Mindeltager.Henterhusnummer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Bottom" PlaceholderText="Indtast husnummer" Margin="0,0,0,573">
+                            <TextBox.DataContext>
+                                <Viewmodel:DeltagereViewmodel/>
+                            </TextBox.DataContext>
+                        </TextBox>
                         <TextBlock x:Name="PrintPris" HorizontalAlignment="Left" Margin="0,460,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="44" Width="280" ToolTipService.ToolTip="Her kan du se din pris"/>
                     </Grid>
                     <StackPanel HorizontalAlignment="Left" Height="591" Margin="886,44,0,0" VerticalAlignment="Top" Width="354">
-                        <TextBlock x:Name="BudgetKonto" TextWrapping="Wrap" Text="" Height="271"/>
                         <Image x:Name="BudgetMobilepay" Height="319" Source="ms-appx:///Assets/mobilepay.png"/>
                     </StackPanel>
-                    <TextBlock x:Name="BudgetTotalBetal" HorizontalAlignment="Left" Margin="30,488,0,0" TextWrapping="Wrap" Text="{Binding BetalingsTextBlock}" VerticalAlignment="Top" Height="127" Width="300"/>
+                    <TextBlock x:Name="BudgetTotalBetal" HorizontalAlignment="Left" Margin="30,150,0,0" TextWrapping="Wrap" Text="{Binding Mindeltager.Vishuspris, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="127" Width="300" FontSize="24">
+                        <TextBlock.DataContext>
+                            <Viewmodel:DeltagereViewmodel/>
+                        </TextBlock.DataContext>
+                    </TextBlock>
+                    <TextBlock x:Name="Huset_skal_for_hele_ugen_betale__" Margin="30,114,862,0" TextWrapping="Wrap" Text="Huset skal for hele ugen betale (kr.): " VerticalAlignment="Top" SelectionChanged="Huset_skal_for_hele_ugen_betale___SelectionChanged"/>
 
                 </Grid>
             </PivotItem>

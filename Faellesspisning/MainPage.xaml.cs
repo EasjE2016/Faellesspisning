@@ -78,7 +78,7 @@ namespace Faellesspisning
 
         }
 
-        private void DeltagereHusNR_TextChanged(object sender, TextChangedEventArgs e)
+        private void Huset_skal_for_hele_ugen_betale___SelectionChanged(object sender, RoutedEventArgs e)
         {
 
         }
