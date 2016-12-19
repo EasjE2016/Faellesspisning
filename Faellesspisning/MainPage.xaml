@@ -10,7 +10,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Pivot x:Name="Startside" Title="Fællesspisning version 69.420">
+        <Pivot x:Name="Startside" Title="Fællesspisning">
 
             <PivotItem Header="Menu">
                 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -195,9 +195,6 @@
             </PivotItem>
             <PivotItem Header="Budget">
                 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                    <Grid.DataContext>
-                        <Viewmodel:BudgetViewmodel/>
-                    </Grid.DataContext>
                     <Grid HorizontalAlignment="Left" Height="605" Margin="30,30,0,0" VerticalAlignment="Top" Width="300">
                         <TextBox x:Name="BudgetHusNR" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Mindeltager.Henterhusnummer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Bottom" PlaceholderText="Indtast husnummer" Margin="0,0,0,573">
                             <TextBox.DataContext>

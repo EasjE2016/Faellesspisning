@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 
 
-
-//bliver ikke brugt kunne være en fælles class for alle knapper
 namespace Faellesspinsning
 {
     public class RelayCommand : ICommand

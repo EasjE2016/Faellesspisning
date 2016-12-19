@@ -110,7 +110,6 @@
     <Compile Include="Sider\Planlægning.xaml.cs">
       <DependentUpon>Planlægning.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Viewmodel\BudgetViewmodel.cs" />
     <Compile Include="Viewmodel\DeltagereViewmodel.cs" />
     <Compile Include="Viewmodel\PlanlægningViewmodel.cs" />
   </ItemGroup>

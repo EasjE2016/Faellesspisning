@@ -9,12 +9,10 @@ namespace Faellesspisning.Model
    public class HusInfo
     {
         public int ComboBoxIndex2 { get; set; }
-
         public int AntalVoksneIHusstand { get; set; }
         public int AntalTeenagerIHusstand { get; set; }
         public int AntalBarnIHusstand { get; set; }
         public int AntalBabyIHusstand { get; set; }
-
         private string _husNummer;
 
         public string HusNummer
@@ -26,7 +24,6 @@ namespace Faellesspisning.Model
                 _husNummer = value;
             }
         }
-
 
 
         public override string ToString()
@@ -63,7 +60,5 @@ namespace Faellesspisning.Model
             return kuvertpris * Antalkuverter();
            
         }
-
-
     }   
 }

@@ -59,7 +59,7 @@ namespace Faellesspisning.Model
         #endregion
 
 
-        #region Menu
+        #region Menu opdatering fra view til view
 
         public string MandagMenu
         {
@@ -127,9 +127,6 @@ namespace Faellesspisning.Model
         }
 #endregion
 
-        
-
-
         //ctor
         private DagsplanSingleton()
         {
@@ -150,12 +147,6 @@ namespace Faellesspisning.Model
             kokoghjælpere.Add("Fredag", new string[3]);
             kokoghjælpere.Add("Lørdag", new string[3]);
             kokoghjælpere.Add("Søndag", new string[3]);
-
-
-
-
-
-
 
         }
         

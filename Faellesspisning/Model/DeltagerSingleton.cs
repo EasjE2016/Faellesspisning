@@ -45,16 +45,12 @@ namespace Faellesspisning.Model
             
         }
 
-
-
         private readonly string filnavn = "HusListe.json";
         private readonly string filnavn2 = "Planlægning.json";
+
         public Model.HusListe HList { get; set; }
         public Model.HusInfo Newhus { get; set; }
         public Model.DagsplanSingleton kokoghjælpere { get; set; }
-
-
-
         public RelayCommand AddHusCommand { get; set; }
         public RelayCommand SletHusCommand { get; set; }
         public RelayCommand RedigerCommand { get; set; }
@@ -192,8 +188,6 @@ namespace Faellesspisning.Model
         }
 
 
-
-
         #region Mandag Pris beregning
 
         // udregning per dag (kuvert)
@@ -213,7 +207,7 @@ namespace Faellesspisning.Model
             get { return mandagpris; }
             set
             {
-                mandagpris = value;//GetKuvertMandag;
+                mandagpris = value;
                 OnPropertyChanged(nameof(Mandagpris));
             }
         }
@@ -235,7 +229,7 @@ namespace Faellesspisning.Model
             get { return tirsdagpris; }
             set
             {
-                tirsdagpris = value; // GetKuvertTirsdag;
+                tirsdagpris = value;
                 OnPropertyChanged(nameof(Tirsdagpris));
             }
         }
@@ -261,7 +255,7 @@ namespace Faellesspisning.Model
             get { return onsdagpris; }
             set
             {
-                onsdagpris = value; // GetKuvertOnsdag;
+                onsdagpris = value;
                 OnPropertyChanged(nameof(Onsdagpris));
             }
         }
@@ -286,7 +280,7 @@ namespace Faellesspisning.Model
             get { return torsdagpris; }
             set
             {
-                torsdagpris = value; // GetKuvertTorsdag;
+                torsdagpris = value;
                 OnPropertyChanged(nameof(Torsdagpris));
             }
         }
@@ -310,7 +304,7 @@ namespace Faellesspisning.Model
             get { return fredagpris; }
             set
             {
-                fredagpris = value; // GetKuvertFredag;
+                fredagpris = value;
                 OnPropertyChanged(nameof(Fredagpris));
             }
         }
@@ -335,7 +329,7 @@ namespace Faellesspisning.Model
             get { return lørdagpris; }
             set
             {
-                lørdagpris = value; // GetKuvertLørdag;
+                lørdagpris = value;
                 OnPropertyChanged(nameof(Lørdagpris));
             }
         }
@@ -360,7 +354,7 @@ namespace Faellesspisning.Model
             get { return søndagpris; }
             set
             {
-                søndagpris = value; // GetKuvertSøndag;
+                søndagpris = value;
                 OnPropertyChanged(nameof(Søndagpris));
             }
         }
@@ -427,8 +421,6 @@ namespace Faellesspisning.Model
 
             huspris = huskuvertpådag*ugeKuvertPris();
             return huspris;
-
-
         }
         
         public double Vishuspris
