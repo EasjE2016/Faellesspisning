@@ -394,7 +394,6 @@ namespace Faellesspisning.Model
             return ugePris() / ugeKuvert();
         }
 
-
         private string henterhusnummer;
 
         public string Henterhusnummer
